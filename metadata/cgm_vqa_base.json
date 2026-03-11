@@ -1,0 +1,347 @@
+{
+  "dataset": "CGM-VQA",
+  "graphs": [
+    {
+      "graph_id": "G01",
+      "file_name": "Readings_2023-12-09.png"
+    },
+    {
+      "graph_id": "G02",
+      "file_name": "Readings_2023-12-10.png"
+    },
+    {
+      "graph_id": "G03",
+      "file_name": "Readings_2023-12-11.png"
+    },
+    {
+      "graph_id": "G04",
+      "file_name": "Readings_2023-12-15.png"
+    },
+    {
+      "graph_id": "G05",
+      "file_name": "Readings_2023-12-16.png"
+    },
+    {
+      "graph_id": "G06",
+      "file_name": "Readings_2023-12-17.png"
+    },
+    {
+      "graph_id": "G07",
+      "file_name": "Readings_2023-12-21.png"
+    },
+    {
+      "graph_id": "G08",
+      "file_name": "Readings_2023-12-23.png"
+    },
+    {
+      "graph_id": "G09",
+      "file_name": "Readings_2023-12-24.png"
+    },
+    {
+      "graph_id": "G10",
+      "file_name": "Readings_2023-12-30.png"
+    },
+    {
+      "graph_id": "G11",
+      "file_name": "Readings_2024-01-05.png"
+    },
+    {
+      "graph_id": "G12",
+      "file_name": "Readings_2024-01-06.png"
+    },
+    {
+      "graph_id": "G13",
+      "file_name": "Readings_2024-01-07.png"
+    },
+    {
+      "graph_id": "G14",
+      "file_name": "Readings_2024-01-10.png"
+    },
+    {
+      "graph_id": "G15",
+      "file_name": "Readings_2024-02-02.png"
+    },
+    {
+      "graph_id": "G16",
+      "file_name": "Readings_2024-02-03.png"
+    },
+    {
+      "graph_id": "G17",
+      "file_name": "Readings_2024-02-07.png"
+    },
+    {
+      "graph_id": "G18",
+      "file_name": "Readings_2024-02-08.png"
+    },
+    {
+      "graph_id": "G19",
+      "file_name": "Readings_2024-02-15.png"
+    },
+    {
+      "graph_id": "G19",
+      "file_name": "Readings_2024-03-04.png"
+    },
+    {
+      "graph_id": "G21",
+      "file_name": "Readings_2024-03-05.png"
+    },
+    {
+      "graph_id": "G22",
+      "file_name": "Readings_2024-03-06.png"
+    },
+    {
+      "graph_id": "G23",
+      "file_name": "Readings_2024-03-07.png"
+    },
+    {
+      "graph_id": "G24",
+      "file_name": "Readings_2024-03-08.png"
+    },
+    {
+      "graph_id": "G25",
+      "file_name": "Readings_2024-03-09.png"
+    }
+  ],
+  "question_pool": [
+    {
+      "question_id": "Q01",
+      "question": "Was glucose above 180 mg/dL at any time during the afternoon?",
+      "type": "yes_no",
+      "category": "point_reading"
+    },
+    {
+      "question_id": "Q02",
+      "question": "Did glucose fall below 70 mg/dL overnight?",
+      "type": "yes_no",
+      "category": "point_reading"
+    },
+    {
+      "question_id": "Q03",
+      "question": "Was glucose within the normal range (70–180) during the early morning?",
+      "type": "yes_no",
+      "category": "point_reading"
+    },
+    {
+      "question_id": "Q04",
+      "question": "Did glucose exceed 180 mg/dL around noon?",
+      "type": "yes_no",
+      "category": "point_reading"
+    },
+    {
+      "question_id": "Q05",
+      "question": "Did glucose rise sharply after a meal event?",
+      "type": "yes_no",
+      "category": "trend_understanding"
+    },
+    {
+      "question_id": "Q06",
+      "question": "Did glucose decrease after an insulin delivery event?",
+      "type": "yes_no",
+      "category": "trend_understanding"
+    },
+    {
+      "question_id": "Q07",
+      "question": "Was there a rapid glucose increase within one hour during the day?",
+      "type": "yes_no",
+      "category": "trend_understanding"
+    },
+    {
+      "question_id": "Q08",
+      "question": "Did glucose gradually decline during the evening?",
+      "type": "yes_no",
+      "category": "trend_understanding"
+    },
+    {
+      "question_id": "Q09",
+      "question": "Was glucose in the hyperglycemia zone for more than one hour?",
+      "type": "yes_no",
+      "category": "duration_reasoning"
+    },
+    {
+      "question_id": "Q10",
+      "question": "Was glucose below the hypoglycemia threshold for at least 15 minutes?",
+      "type": "yes_no",
+      "category": "duration_reasoning"
+    },
+    {
+      "question_id": "Q11",
+      "question": "Did glucose remain within the normal range for most of the morning?",
+      "type": "yes_no",
+      "category": "duration_reasoning"
+    },
+    {
+      "question_id": "Q12",
+      "question": "Was there a prolonged high glucose period during the afternoon?",
+      "type": "yes_no",
+      "category": "duration_reasoning"
+    },
+    {
+      "question_id": "Q13",
+      "question": "Was the highest glucose peak higher than the morning peak?",
+      "type": "yes_no",
+      "category": "comparison"
+    },
+    {
+      "question_id": "Q14",
+      "question": "Was glucose more stable in the morning than in the evening?",
+      "type": "yes_no",
+      "category": "comparison"
+    },
+    {
+      "question_id": "Q15",
+      "question": "Was the largest spike after lunch larger than the spike after dinner?",
+      "type": "yes_no",
+      "category": "comparison"
+    },
+    {
+      "question_id": "Q16",
+      "question": "Was glucose higher in the afternoon than in the early morning?",
+      "type": "yes_no",
+      "category": "comparison"
+    },
+    {
+      "question_id": "Q17",
+      "question": "Did the largest meal event lead to a glucose spike?",
+      "type": "yes_no",
+      "category": "event_reasoning"
+    },
+    {
+      "question_id": "Q18",
+      "question": "Did insulin delivery lead to a noticeable glucose drop shortly afterward?",
+      "type": "yes_no",
+      "category": "event_reasoning"
+    },
+    {
+      "question_id": "Q19",
+      "question": "Was there a glucose rise shortly after carbohydrate intake?",
+      "type": "yes_no",
+      "category": "event_reasoning"
+    },
+    {
+      "question_id": "Q20",
+      "question": "Did any insulin event occur before a glucose decrease?",
+      "type": "yes_no",
+      "category": "event_reasoning"
+    },
+    {
+      "question_id": "Q21",
+      "question": "When did the largest glucose spike occur?",
+      "type": "temporal",
+      "category": "event_localization"
+    },
+    {
+      "question_id": "Q22",
+      "question": "Identify the time interval where glucose first exceeded 180 mg/dL.",
+      "type": "temporal",
+      "category": "event_localization"
+    },
+    {
+      "question_id": "Q23",
+      "question": "Locate the longest hyperglycemia period in the graph.",
+      "type": "temporal",
+      "category": "event_localization"
+    },
+    {
+      "question_id": "Q24",
+      "question": "When did the lowest glucose value occur?",
+      "type": "temporal",
+      "category": "event_localization"
+    },
+    {
+      "question_id": "Q25",
+      "question": "Identify the time period where glucose dropped below 70 mg/dL.",
+      "type": "temporal",
+      "category": "event_localization"
+    },
+    {
+      "question_id": "Q26",
+      "question": "Locate the segment where glucose rose most rapidly.",
+      "type": "temporal",
+      "category": "trend_segments"
+    },
+    {
+      "question_id": "Q27",
+      "question": "Identify the time interval where glucose declined after an insulin event.",
+      "type": "temporal",
+      "category": "trend_segments"
+    },
+    {
+      "question_id": "Q28",
+      "question": "Locate the segment showing the largest upward trend.",
+      "type": "temporal",
+      "category": "trend_segments"
+    },
+    {
+      "question_id": "Q29",
+      "question": "Identify the period where glucose gradually decreased during the evening.",
+      "type": "temporal",
+      "category": "trend_segments"
+    },
+    {
+      "question_id": "Q30",
+      "question": "Locate the segment where glucose remained relatively stable.",
+      "type": "temporal",
+      "category": "trend_segments"
+    },
+    {
+      "question_id": "Q31",
+      "question": "Identify the time interval where glucose rose after a meal event.",
+      "type": "temporal",
+      "category": "event_related_segments"
+    },
+    {
+      "question_id": "Q32",
+      "question": "Locate the segment where glucose dropped after insulin delivery.",
+      "type": "temporal",
+      "category": "event_related_segments"
+    },
+    {
+      "question_id": "Q33",
+      "question": "Identify the glucose response period following carbohydrate intake.",
+      "type": "temporal",
+      "category": "event_related_segments"
+    },
+    {
+      "question_id": "Q34",
+      "question": "Locate the time interval where glucose changed direction after an insulin event.",
+      "type": "temporal",
+      "category": "event_related_segments"
+    },
+    {
+      "question_id": "Q35",
+      "question": "Identify the period where glucose spike follows a meal marker.",
+      "type": "temporal",
+      "category": "event_related_segments"
+    },
+    {
+      "question_id": "Q36",
+      "question": "Identify the time interval where glucose remained above 180 mg/dL.",
+      "type": "temporal",
+      "category": "duration_segments"
+    },
+    {
+      "question_id": "Q37",
+      "question": "Locate the segment where glucose remained below 70 mg/dL.",
+      "type": "temporal",
+      "category": "duration_segments"
+    },
+    {
+      "question_id": "Q38",
+      "question": "Identify the longest period where glucose stayed within the normal range.",
+      "type": "temporal",
+      "category": "duration_segments"
+    },
+    {
+      "question_id": "Q39",
+      "question": "Locate the interval where glucose remained stable for the longest duration.",
+      "type": "temporal",
+      "category": "duration_segments"
+    },
+    {
+      "question_id": "Q40",
+      "question": "Identify the period where glucose continuously increased for at least 30 minutes.",
+      "type": "temporal",
+      "category": "duration_segments"
+    }
+  ]
+}
