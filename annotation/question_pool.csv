@@ -1,0 +1,41 @@
+question_id,question,type,category
+Q01,Was glucose above 180 mg/dL at any time during the afternoon?,yes_no,point_reading
+Q02,Did glucose fall below 70 mg/dL overnight?,yes_no,point_reading
+Q03,Was glucose within the normal range (70–180) during the early morning?,yes_no,point_reading
+Q04,Did glucose exceed 180 mg/dL around noon?,yes_no,point_reading
+Q05,Did glucose rise sharply after a meal event?,yes_no,trend_understanding
+Q06,Did glucose decrease after an insulin delivery event?,yes_no,trend_understanding
+Q07,Was there a rapid glucose increase within one hour during the day?,yes_no,trend_understanding
+Q08,Did glucose gradually decline during the evening?,yes_no,trend_understanding
+Q09,Was glucose in the hyperglycemia zone for more than one hour?,yes_no,duration_reasoning
+Q10,Was glucose below the hypoglycemia threshold for at least 15 minutes?,yes_no,duration_reasoning
+Q11,Did glucose remain within the normal range for most of the morning?,yes_no,duration_reasoning
+Q12,Was there a prolonged high glucose period during the afternoon?,yes_no,duration_reasoning
+Q13,Was the highest glucose peak higher than the morning peak?,yes_no,comparison
+Q14,Was glucose more stable in the morning than in the evening?,yes_no,comparison
+Q15,Was the largest spike after lunch larger than the spike after dinner?,yes_no,comparison
+Q16,Was glucose higher in the afternoon than in the early morning?,yes_no,comparison
+Q17,Did the largest meal event lead to a glucose spike?,yes_no,event_reasoning
+Q18,Did insulin delivery lead to a noticeable glucose drop shortly afterward?,yes_no,event_reasoning
+Q19,Was there a glucose rise shortly after carbohydrate intake?,yes_no,event_reasoning
+Q20,Did any insulin event occur before a glucose decrease?,yes_no,event_reasoning
+Q21,When did the largest glucose spike occur?,temporal,event_localization
+Q22,Identify the time interval where glucose first exceeded 180 mg/dL.,temporal,event_localization
+Q23,Locate the longest hyperglycemia period in the graph.,temporal,event_localization
+Q24,When did the lowest glucose value occur?,temporal,event_localization
+Q25,Identify the time period where glucose dropped below 70 mg/dL.,temporal,event_localization
+Q26,Locate the segment where glucose rose most rapidly.,temporal,trend_segments
+Q27,Identify the time interval where glucose declined after an insulin event.,temporal,trend_segments
+Q28,Locate the segment showing the largest upward trend.,temporal,trend_segments
+Q29,Identify the period where glucose gradually decreased during the evening.,temporal,trend_segments
+Q30,Locate the segment where glucose remained relatively stable.,temporal,trend_segments
+Q31,Identify the time interval where glucose rose after a meal event.,temporal,event_related_segments
+Q32,Locate the segment where glucose dropped after insulin delivery.,temporal,event_related_segments
+Q33,Identify the glucose response period following carbohydrate intake.,temporal,event_related_segments
+Q34,Locate the time interval where glucose changed direction after an insulin event.,temporal,event_related_segments
+Q35,Identify the period where glucose spike follows a meal marker.,temporal,event_related_segments
+Q36,Identify the time interval where glucose remained above 180 mg/dL.,temporal,duration_segments
+Q37,Locate the segment where glucose remained below 70 mg/dL.,temporal,duration_segments
+Q38,Identify the longest period where glucose stayed within the normal range.,temporal,duration_segments
+Q39,Locate the interval where glucose remained stable for the longest duration.,temporal,duration_segments
+Q40,Identify the period where glucose continuously increased for at least 30 minutes.,temporal,duration_segments
