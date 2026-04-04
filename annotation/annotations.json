@@ -1,0 +1,1002 @@
+[
+  {
+    "sample_id": "S001",
+    "graph_id": "G01",
+    "question_id": "Q17",
+    "question": "Did the largest meal event lead to a glucose spike?",
+    "task_type": "yes_no",
+    "answer": "yes",
+    "t_start": null,
+    "t_end": null
+  },
+  {
+    "sample_id": "S002",
+    "graph_id": "G01",
+    "question_id": "Q02",
+    "question": "Did glucose fall below 70 mg/dL overnight?",
+    "task_type": "yes_no",
+    "answer": "no",
+    "t_start": null,
+    "t_end": null
+  },
+  {
+    "sample_id": "S003",
+    "graph_id": "G01",
+    "question_id": "Q39",
+    "question": "Locate the interval where glucose remained stable for the longest duration.",
+    "task_type": "temporal",
+    "answer": "06:00-09:00",
+    "t_start": "06:00",
+    "t_end": "09:00"
+  },
+  {
+    "sample_id": "S004",
+    "graph_id": "G01",
+    "question_id": "Q27",
+    "question": "Identify the time interval where glucose declined after an insulin event.",
+    "task_type": "temporal",
+    "answer": "12:30-14:00",
+    "t_start": "12:30",
+    "t_end": "14:00"
+  },
+  {
+    "sample_id": "S005",
+    "graph_id": "G02",
+    "question_id": "Q01",
+    "question": "Was glucose above 180 mg/dL at any time during the afternoon?",
+    "task_type": "yes_no",
+    "answer": "yes",
+    "t_start": null,
+    "t_end": null
+  },
+  {
+    "sample_id": "S006",
+    "graph_id": "G02",
+    "question_id": "Q14",
+    "question": "Was glucose more stable in the morning than in the evening?",
+    "task_type": "yes_no",
+    "answer": "no",
+    "t_start": null,
+    "t_end": null
+  },
+  {
+    "sample_id": "S007",
+    "graph_id": "G02",
+    "question_id": "Q27",
+    "question": "Identify the time interval where glucose declined after an insulin event.",
+    "task_type": "temporal",
+    "answer": "12:00-13:00",
+    "t_start": "12:00",
+    "t_end": "13:00"
+  },
+  {
+    "sample_id": "S008",
+    "graph_id": "G02",
+    "question_id": "Q21",
+    "question": "When did the largest glucose spike occur?",
+    "task_type": "temporal",
+    "answer": "11:30",
+    "t_start": "11:00",
+    "t_end": "12:00"
+  },
+  {
+    "sample_id": "S009",
+    "graph_id": "G03",
+    "question_id": "Q20",
+    "question": "Did any insulin event occur before a glucose decrease?",
+    "task_type": "yes_no",
+    "answer": "yes",
+    "t_start": null,
+    "t_end": null
+  },
+  {
+    "sample_id": "S010",
+    "graph_id": "G03",
+    "question_id": "Q04",
+    "question": "Did glucose exceed 180 mg/dL around noon?",
+    "task_type": "yes_no",
+    "answer": "yes",
+    "t_start": null,
+    "t_end": null
+  },
+  {
+    "sample_id": "S011",
+    "graph_id": "G03",
+    "question_id": "Q40",
+    "question": "Identify the period where glucose continuously increased for at least 30 minutes.",
+    "task_type": "temporal",
+    "answer": "10:30-11:30",
+    "t_start": "10:30",
+    "t_end": "11:30"
+  },
+  {
+    "sample_id": "S012",
+    "graph_id": "G03",
+    "question_id": "Q21",
+    "question": "When did the largest glucose spike occur?",
+    "task_type": "temporal",
+    "answer": "11:30",
+    "t_start": "11:00",
+    "t_end": "12:00"
+  },
+  {
+    "sample_id": "S013",
+    "graph_id": "G04",
+    "question_id": "Q16",
+    "question": "Was glucose higher in the afternoon than in the early morning?",
+    "task_type": "yes_no",
+    "answer": "yes",
+    "t_start": null,
+    "t_end": null
+  },
+  {
+    "sample_id": "S014",
+    "graph_id": "G04",
+    "question_id": "Q02",
+    "question": "Did glucose fall below 70 mg/dL overnight?",
+    "task_type": "yes_no",
+    "answer": "no",
+    "t_start": null,
+    "t_end": null
+  },
+  {
+    "sample_id": "S015",
+    "graph_id": "G04",
+    "question_id": "Q26",
+    "question": "Locate the segment where glucose rose most rapidly.",
+    "task_type": "temporal",
+    "answer": "11:00-12:30",
+    "t_start": "11:00",
+    "t_end": "12:30"
+  },
+  {
+    "sample_id": "S016",
+    "graph_id": "G04",
+    "question_id": "Q36",
+    "question": "Identify the time interval where glucose remained above 180 mg/dL.",
+    "task_type": "temporal",
+    "answer": "11:30-17:00",
+    "t_start": "11:30",
+    "t_end": "17:00"
+  },
+  {
+    "sample_id": "S017",
+    "graph_id": "G05",
+    "question_id": "Q20",
+    "question": "Did any insulin event occur before a glucose decrease?",
+    "task_type": "yes_no",
+    "answer": "yes",
+    "t_start": null,
+    "t_end": null
+  },
+  {
+    "sample_id": "S018",
+    "graph_id": "G05",
+    "question_id": "Q11",
+    "question": "Did glucose remain within the normal range for most of the morning?",
+    "task_type": "yes_no",
+    "answer": "yes",
+    "t_start": null,
+    "t_end": null
+  },
+  {
+    "sample_id": "S019",
+    "graph_id": "G05",
+    "question_id": "Q35",
+    "question": "Identify the period where glucose spike follows a meal marker.",
+    "task_type": "temporal",
+    "answer": "11:00-12:30",
+    "t_start": "11:00",
+    "t_end": "12:30"
+  },
+  {
+    "sample_id": "S020",
+    "graph_id": "G05",
+    "question_id": "Q21",
+    "question": "When did the largest glucose spike occur?",
+    "task_type": "temporal",
+    "answer": "12:30",
+    "t_start": "12:00",
+    "t_end": "13:00"
+  },
+  {
+    "sample_id": "S021",
+    "graph_id": "G06",
+    "question_id": "Q08",
+    "question": "Did glucose gradually decline during the evening?",
+    "task_type": "yes_no",
+    "answer": "no",
+    "t_start": null,
+    "t_end": null
+  },
+  {
+    "sample_id": "S022",
+    "graph_id": "G06",
+    "question_id": "Q12",
+    "question": "Was there a prolonged high glucose period during the afternoon?",
+    "task_type": "yes_no",
+    "answer": "yes",
+    "t_start": null,
+    "t_end": null
+  },
+  {
+    "sample_id": "S023",
+    "graph_id": "G06",
+    "question_id": "Q28",
+    "question": "Locate the segment showing the largest upward trend.",
+    "task_type": "temporal",
+    "answer": "15:00-16:45",
+    "t_start": "15:00",
+    "t_end": "16:45"
+  },
+  {
+    "sample_id": "S024",
+    "graph_id": "G06",
+    "question_id": "Q40",
+    "question": "Identify the period where glucose continuously increased for at least 30 minutes.",
+    "task_type": "temporal",
+    "answer": "15:00-16:45",
+    "t_start": "15:00",
+    "t_end": "16:45"
+  },
+  {
+    "sample_id": "S025",
+    "graph_id": "G07",
+    "question_id": "Q19",
+    "question": "Was there a glucose rise shortly after carbohydrate intake?",
+    "task_type": "yes_no",
+    "answer": "yes",
+    "t_start": null,
+    "t_end": null
+  },
+  {
+    "sample_id": "S026",
+    "graph_id": "G07",
+    "question_id": "Q04",
+    "question": "Did glucose exceed 180 mg/dL around noon?",
+    "task_type": "yes_no",
+    "answer": "yes",
+    "t_start": null,
+    "t_end": null
+  },
+  {
+    "sample_id": "S027",
+    "graph_id": "G07",
+    "question_id": "Q33",
+    "question": "Identify the glucose response period following carbohydrate intake.",
+    "task_type": "temporal",
+    "answer": "15:30-18:15",
+    "t_start": "15:30",
+    "t_end": "18:15"
+  },
+  {
+    "sample_id": "S028",
+    "graph_id": "G07",
+    "question_id": "Q21",
+    "question": "When did the largest glucose spike occur?",
+    "task_type": "temporal",
+    "answer": "18:15",
+    "t_start": "18:00",
+    "t_end": "18:30"
+  },
+  {
+    "sample_id": "S029",
+    "graph_id": "G08",
+    "question_id": "Q10",
+    "question": "Was glucose below the hypoglycemia threshold for at least 15 minutes?",
+    "task_type": "yes_no",
+    "answer": "no",
+    "t_start": null,
+    "t_end": null
+  },
+  {
+    "sample_id": "S030",
+    "graph_id": "G08",
+    "question_id": "Q17",
+    "question": "Did the largest meal event lead to a glucose spike?",
+    "task_type": "yes_no",
+    "answer": "yes",
+    "t_start": null,
+    "t_end": null
+  },
+  {
+    "sample_id": "S031",
+    "graph_id": "G08",
+    "question_id": "Q24",
+    "question": "When did the lowest glucose value occur?",
+    "task_type": "temporal",
+    "answer": "08:30",
+    "t_start": "08:00",
+    "t_end": "09:00"
+  },
+  {
+    "sample_id": "S032",
+    "graph_id": "G08",
+    "question_id": "Q21",
+    "question": "When did the largest glucose spike occur?",
+    "task_type": "temporal",
+    "answer": "17:00",
+    "t_start": "16:30",
+    "t_end": "17:30"
+  },
+  {
+    "sample_id": "S033",
+    "graph_id": "G09",
+    "question_id": "Q12",
+    "question": "Was there a prolonged high glucose period during the afternoon?",
+    "task_type": "yes_no",
+    "answer": "yes",
+    "t_start": null,
+    "t_end": null
+  },
+  {
+    "sample_id": "S034",
+    "graph_id": "G09",
+    "question_id": "Q01",
+    "question": "Was glucose above 180 mg/dL at any time during the afternoon?",
+    "task_type": "yes_no",
+    "answer": "yes",
+    "t_start": null,
+    "t_end": null
+  },
+  {
+    "sample_id": "S035",
+    "graph_id": "G09",
+    "question_id": "Q21",
+    "question": "When did the largest glucose spike occur?",
+    "task_type": "temporal",
+    "answer": "15:00",
+    "t_start": "14:30",
+    "t_end": "15:30"
+  },
+  {
+    "sample_id": "S036",
+    "graph_id": "G09",
+    "question_id": "Q38",
+    "question": "Identify the longest period where glucose stayed within the normal range.",
+    "task_type": "temporal",
+    "answer": "07:00-12:30",
+    "t_start": "07:00",
+    "t_end": "12:30"
+  },
+  {
+    "sample_id": "S037",
+    "graph_id": "G10",
+    "question_id": "Q11",
+    "question": "Did glucose remain within the normal range for most of the morning?",
+    "task_type": "yes_no",
+    "answer": "no",
+    "t_start": null,
+    "t_end": null
+  },
+  {
+    "sample_id": "S038",
+    "graph_id": "G10",
+    "question_id": "Q12",
+    "question": "Was there a prolonged high glucose period during the afternoon?",
+    "task_type": "yes_no",
+    "answer": "yes",
+    "t_start": null,
+    "t_end": null
+  },
+  {
+    "sample_id": "S039",
+    "graph_id": "G10",
+    "question_id": "Q29",
+    "question": "Identify the period where glucose gradually decreased during the evening.",
+    "task_type": "temporal",
+    "answer": "14:00-16:30",
+    "t_start": "14:00",
+    "t_end": "16:30"
+  },
+  {
+    "sample_id": "S040",
+    "graph_id": "G10",
+    "question_id": "Q22",
+    "question": "Identify the time interval where glucose first exceeded 180 mg/dL.",
+    "task_type": "temporal",
+    "answer": "12:30",
+    "t_start": "12:00",
+    "t_end": "13:00"
+  },
+  {
+    "sample_id": "S041",
+    "graph_id": "G11",
+    "question_id": "Q04",
+    "question": "Did glucose exceed 180 mg/dL around noon?",
+    "task_type": "yes_no",
+    "answer": "no",
+    "t_start": null,
+    "t_end": null
+  },
+  {
+    "sample_id": "S042",
+    "graph_id": "G11",
+    "question_id": "Q10",
+    "question": "Was glucose below the hypoglycemia threshold for at least 15 minutes?",
+    "task_type": "yes_no",
+    "answer": "no",
+    "t_start": null,
+    "t_end": null
+  },
+  {
+    "sample_id": "S043",
+    "graph_id": "G11",
+    "question_id": "Q33",
+    "question": "Identify the glucose response period following carbohydrate intake.",
+    "task_type": "temporal",
+    "answer": "19:00-20:30",
+    "t_start": "19:00",
+    "t_end": "20:30"
+  },
+  {
+    "sample_id": "S044",
+    "graph_id": "G11",
+    "question_id": "Q29",
+    "question": "Identify the period where glucose gradually decreased during the evening.",
+    "task_type": "temporal",
+    "answer": "21:00-23:00",
+    "t_start": "21:00",
+    "t_end": "23:00"
+  },
+  {
+    "sample_id": "S045",
+    "graph_id": "G12",
+    "question_id": "Q07",
+    "question": "Was there a rapid glucose increase within one hour during the day?",
+    "task_type": "yes_no",
+    "answer": "yes",
+    "t_start": null,
+    "t_end": null
+  },
+  {
+    "sample_id": "S046",
+    "graph_id": "G12",
+    "question_id": "Q05",
+    "question": "Did glucose rise sharply after a meal event?",
+    "task_type": "yes_no",
+    "answer": "yes",
+    "t_start": null,
+    "t_end": null
+  },
+  {
+    "sample_id": "S047",
+    "graph_id": "G12",
+    "question_id": "Q36",
+    "question": "Identify the time interval where glucose remained above 180 mg/dL.",
+    "task_type": "temporal",
+    "answer": "00:30-02:30",
+    "t_start": "00:30",
+    "t_end": "02:30"
+  },
+  {
+    "sample_id": "S048",
+    "graph_id": "G12",
+    "question_id": "Q31",
+    "question": "Identify the time interval where glucose rose after a meal event.",
+    "task_type": "temporal",
+    "answer": "00:00-01:00",
+    "t_start": "00:00",
+    "t_end": "01:00"
+  },
+  {
+    "sample_id": "S049",
+    "graph_id": "G13",
+    "question_id": "Q09",
+    "question": "Was glucose in the hyperglycemia zone for more than one hour?",
+    "task_type": "yes_no",
+    "answer": "yes",
+    "t_start": null,
+    "t_end": null
+  },
+  {
+    "sample_id": "S050",
+    "graph_id": "G13",
+    "question_id": "Q11",
+    "question": "Did glucose remain within the normal range for most of the morning?",
+    "task_type": "yes_no",
+    "answer": "no",
+    "t_start": null,
+    "t_end": null
+  },
+  {
+    "sample_id": "S051",
+    "graph_id": "G13",
+    "question_id": "Q22",
+    "question": "Identify the time interval where glucose first exceeded 180 mg/dL.",
+    "task_type": "temporal",
+    "answer": "08:30",
+    "t_start": "08:00",
+    "t_end": "09:00"
+  },
+  {
+    "sample_id": "S052",
+    "graph_id": "G13",
+    "question_id": "Q37",
+    "question": "Locate the segment where glucose remained below 70 mg/dL.",
+    "task_type": "temporal",
+    "answer": "02:30-03:00",
+    "t_start": "02:30",
+    "t_end": "03:00"
+  },
+  {
+    "sample_id": "S053",
+    "graph_id": "G14",
+    "question_id": "Q08",
+    "question": "Did glucose gradually decline during the evening?",
+    "task_type": "yes_no",
+    "answer": "yes",
+    "t_start": null,
+    "t_end": null
+  },
+  {
+    "sample_id": "S054",
+    "graph_id": "G14",
+    "question_id": "Q03",
+    "question": "Was glucose within the normal range (70–180) during the early morning?",
+    "task_type": "yes_no",
+    "answer": "yes",
+    "t_start": null,
+    "t_end": null
+  },
+  {
+    "sample_id": "S055",
+    "graph_id": "G14",
+    "question_id": "Q23",
+    "question": "Locate the longest hyperglycemia period in the graph.",
+    "task_type": "temporal",
+    "answer": "19:00-21:30",
+    "t_start": "19:00",
+    "t_end": "21:30"
+  },
+  {
+    "sample_id": "S056",
+    "graph_id": "G14",
+    "question_id": "Q31",
+    "question": "Identify the time interval where glucose rose after a meal event.",
+    "task_type": "temporal",
+    "answer": "08:30-09:30",
+    "t_start": "08:30",
+    "t_end": "09:30"
+  },
+  {
+    "sample_id": "S057",
+    "graph_id": "G15",
+    "question_id": "Q17",
+    "question": "Did the largest meal event lead to a glucose spike?",
+    "task_type": "yes_no",
+    "answer": "yes",
+    "t_start": null,
+    "t_end": null
+  },
+  {
+    "sample_id": "S058",
+    "graph_id": "G15",
+    "question_id": "Q06",
+    "question": "Did glucose decrease after an insulin delivery event?",
+    "task_type": "yes_no",
+    "answer": "yes",
+    "t_start": null,
+    "t_end": null
+  },
+  {
+    "sample_id": "S059",
+    "graph_id": "G15",
+    "question_id": "Q31",
+    "question": "Identify the time interval where glucose rose after a meal event.",
+    "task_type": "temporal",
+    "answer": "09:30-10:30",
+    "t_start": "09:30",
+    "t_end": "10:30"
+  },
+  {
+    "sample_id": "S060",
+    "graph_id": "G15",
+    "question_id": "Q39",
+    "question": "Locate the interval where glucose remained stable for the longest duration.",
+    "task_type": "temporal",
+    "answer": "06:00-09:00",
+    "t_start": "06:00",
+    "t_end": "09:00"
+  },
+  {
+    "sample_id": "S061",
+    "graph_id": "G16",
+    "question_id": "Q05",
+    "question": "Did glucose rise sharply after a meal event?",
+    "task_type": "yes_no",
+    "answer": "yes",
+    "t_start": null,
+    "t_end": null
+  },
+  {
+    "sample_id": "S062",
+    "graph_id": "G16",
+    "question_id": "Q01",
+    "question": "Was glucose above 180 mg/dL at any time during the afternoon?",
+    "task_type": "yes_no",
+    "answer": "no",
+    "t_start": null,
+    "t_end": null
+  },
+  {
+    "sample_id": "S063",
+    "graph_id": "G16",
+    "question_id": "Q28",
+    "question": "Locate the segment showing the largest upward trend.",
+    "task_type": "temporal",
+    "answer": "12:00-13:00",
+    "t_start": "12:00",
+    "t_end": "13:00"
+  },
+  {
+    "sample_id": "S064",
+    "graph_id": "G16",
+    "question_id": "Q32",
+    "question": "Locate the segment where glucose dropped after insulin delivery.",
+    "task_type": "temporal",
+    "answer": "13:30-15:00",
+    "t_start": "13:30",
+    "t_end": "15:00"
+  },
+  {
+    "sample_id": "S065",
+    "graph_id": "G17",
+    "question_id": "Q18",
+    "question": "Did insulin delivery lead to a noticeable glucose drop shortly afterward?",
+    "task_type": "yes_no",
+    "answer": "yes",
+    "t_start": null,
+    "t_end": null
+  },
+  {
+    "sample_id": "S066",
+    "graph_id": "G17",
+    "question_id": "Q09",
+    "question": "Was glucose in the hyperglycemia zone for more than one hour?",
+    "task_type": "yes_no",
+    "answer": "yes",
+    "t_start": null,
+    "t_end": null
+  },
+  {
+    "sample_id": "S067",
+    "graph_id": "G17",
+    "question_id": "Q30",
+    "question": "Locate the segment where glucose remained relatively stable.",
+    "task_type": "temporal",
+    "answer": "07:00-11:00",
+    "t_start": "07:00",
+    "t_end": "11:00"
+  },
+  {
+    "sample_id": "S068",
+    "graph_id": "G17",
+    "question_id": "Q39",
+    "question": "Locate the interval where glucose remained stable for the longest duration.",
+    "task_type": "temporal",
+    "answer": "07:00-11:00",
+    "t_start": "07:00",
+    "t_end": "11:00"
+  },
+  {
+    "sample_id": "S069",
+    "graph_id": "G18",
+    "question_id": "Q09",
+    "question": "Was glucose in the hyperglycemia zone for more than one hour?",
+    "task_type": "yes_no",
+    "answer": "yes",
+    "t_start": null,
+    "t_end": null
+  },
+  {
+    "sample_id": "S070",
+    "graph_id": "G18",
+    "question_id": "Q07",
+    "question": "Was there a rapid glucose increase within one hour during the day?",
+    "task_type": "yes_no",
+    "answer": "yes",
+    "t_start": null,
+    "t_end": null
+  },
+  {
+    "sample_id": "S071",
+    "graph_id": "G18",
+    "question_id": "Q39",
+    "question": "Locate the interval where glucose remained stable for the longest duration.",
+    "task_type": "temporal",
+    "answer": "07:00-14:30",
+    "t_start": "07:00",
+    "t_end": "14:30"
+  },
+  {
+    "sample_id": "S072",
+    "graph_id": "G18",
+    "question_id": "Q22",
+    "question": "Identify the time interval where glucose first exceeded 180 mg/dL.",
+    "task_type": "temporal",
+    "answer": "15:30",
+    "t_start": "15:00",
+    "t_end": "16:00"
+  },
+  {
+    "sample_id": "S073",
+    "graph_id": "G19",
+    "question_id": "Q15",
+    "question": "Was the largest spike after lunch larger than the spike after dinner?",
+    "task_type": "yes_no",
+    "answer": "no",
+    "t_start": null,
+    "t_end": null
+  },
+  {
+    "sample_id": "S074",
+    "graph_id": "G19",
+    "question_id": "Q13",
+    "question": "Was the highest glucose peak higher than the morning peak?",
+    "task_type": "yes_no",
+    "answer": "no",
+    "t_start": null,
+    "t_end": null
+  },
+  {
+    "sample_id": "S075",
+    "graph_id": "G19",
+    "question_id": "Q24",
+    "question": "When did the lowest glucose value occur?",
+    "task_type": "temporal",
+    "answer": "18:30",
+    "t_start": "18:00",
+    "t_end": "19:00"
+  },
+  {
+    "sample_id": "S076",
+    "graph_id": "G19",
+    "question_id": "Q34",
+    "question": "Locate the time interval where glucose changed direction after an insulin event.",
+    "task_type": "temporal",
+    "answer": "04:00",
+    "t_start": "03:30",
+    "t_end": "04:30"
+  },
+  {
+    "sample_id": "S077",
+    "graph_id": "G20",
+    "question_id": "Q16",
+    "question": "Was glucose higher in the afternoon than in the early morning?",
+    "task_type": "yes_no",
+    "answer": "yes",
+    "t_start": null,
+    "t_end": null
+  },
+  {
+    "sample_id": "S078",
+    "graph_id": "G20",
+    "question_id": "Q03",
+    "question": "Was glucose within the normal range (70–180) during the early morning?",
+    "task_type": "yes_no",
+    "answer": "yes",
+    "t_start": null,
+    "t_end": null
+  },
+  {
+    "sample_id": "S079",
+    "graph_id": "G20",
+    "question_id": "Q38",
+    "question": "Identify the longest period where glucose stayed within the normal range.",
+    "task_type": "temporal",
+    "answer": "07:00-08:30",
+    "t_start": "07:00",
+    "t_end": "08:30"
+  },
+  {
+    "sample_id": "S080",
+    "graph_id": "G20",
+    "question_id": "Q27",
+    "question": "Identify the time interval where glucose declined after an insulin event.",
+    "task_type": "temporal",
+    "answer": "10:00-11:30",
+    "t_start": "10:00",
+    "t_end": "11:30"
+  },
+  {
+    "sample_id": "S081",
+    "graph_id": "G21",
+    "question_id": "Q19",
+    "question": "Was there a glucose rise shortly after carbohydrate intake?",
+    "task_type": "yes_no",
+    "answer": "yes",
+    "t_start": null,
+    "t_end": null
+  },
+  {
+    "sample_id": "S082",
+    "graph_id": "G21",
+    "question_id": "Q13",
+    "question": "Was the highest glucose peak higher than the morning peak?",
+    "task_type": "yes_no",
+    "answer": "yes",
+    "t_start": null,
+    "t_end": null
+  },
+  {
+    "sample_id": "S083",
+    "graph_id": "G21",
+    "question_id": "Q33",
+    "question": "Identify the glucose response period following carbohydrate intake.",
+    "task_type": "temporal",
+    "answer": "17:30-18:45",
+    "t_start": "17:30",
+    "t_end": "18:45"
+  },
+  {
+    "sample_id": "S084",
+    "graph_id": "G21",
+    "question_id": "Q32",
+    "question": "Locate the segment where glucose dropped after insulin delivery.",
+    "task_type": "temporal",
+    "answer": "19:00-20:30",
+    "t_start": "19:00",
+    "t_end": "20:30"
+  },
+  {
+    "sample_id": "S085",
+    "graph_id": "G22",
+    "question_id": "Q15",
+    "question": "Was the largest spike after lunch larger than the spike after dinner?",
+    "task_type": "yes_no",
+    "answer": "yes",
+    "t_start": null,
+    "t_end": null
+  },
+  {
+    "sample_id": "S086",
+    "graph_id": "G22",
+    "question_id": "Q14",
+    "question": "Was glucose more stable in the morning than in the evening?",
+    "task_type": "yes_no",
+    "answer": "no",
+    "t_start": null,
+    "t_end": null
+  },
+  {
+    "sample_id": "S087",
+    "graph_id": "G22",
+    "question_id": "Q40",
+    "question": "Identify the period where glucose continuously increased for at least 30 minutes.",
+    "task_type": "temporal",
+    "answer": "20:00-22:00",
+    "t_start": "20:00",
+    "t_end": "22:00"
+  },
+  {
+    "sample_id": "S088",
+    "graph_id": "G22",
+    "question_id": "Q26",
+    "question": "Locate the segment where glucose rose most rapidly.",
+    "task_type": "temporal",
+    "answer": "20:00-22:00",
+    "t_start": "20:00",
+    "t_end": "22:00"
+  },
+  {
+    "sample_id": "S089",
+    "graph_id": "G23",
+    "question_id": "Q18",
+    "question": "Did insulin delivery lead to a noticeable glucose drop shortly afterward?",
+    "task_type": "yes_no",
+    "answer": "yes",
+    "t_start": null,
+    "t_end": null
+  },
+  {
+    "sample_id": "S090",
+    "graph_id": "G23",
+    "question_id": "Q02",
+    "question": "Did glucose fall below 70 mg/dL overnight?",
+    "task_type": "yes_no",
+    "answer": "no",
+    "t_start": null,
+    "t_end": null
+  },
+  {
+    "sample_id": "S091",
+    "graph_id": "G23",
+    "question_id": "Q35",
+    "question": "Identify the period where glucose spike follows a meal marker.",
+    "task_type": "temporal",
+    "answer": "23:30-00:15",
+    "t_start": "23:30",
+    "t_end": "00:30"
+  },
+  {
+    "sample_id": "S092",
+    "graph_id": "G23",
+    "question_id": "Q28",
+    "question": "Locate the segment showing the largest upward trend.",
+    "task_type": "temporal",
+    "answer": "23:30-00:15",
+    "t_start": "23:30",
+    "t_end": "00:30"
+  },
+  {
+    "sample_id": "S093",
+    "graph_id": "G24",
+    "question_id": "Q03",
+    "question": "Was glucose within the normal range (70–180) during the early morning?",
+    "task_type": "yes_no",
+    "answer": "yes",
+    "t_start": null,
+    "t_end": null
+  },
+  {
+    "sample_id": "S094",
+    "graph_id": "G24",
+    "question_id": "Q08",
+    "question": "Did glucose gradually decline during the evening?",
+    "task_type": "yes_no",
+    "answer": "yes",
+    "t_start": null,
+    "t_end": null
+  },
+  {
+    "sample_id": "S095",
+    "graph_id": "G24",
+    "question_id": "Q26",
+    "question": "Locate the segment where glucose rose most rapidly.",
+    "task_type": "temporal",
+    "answer": "11:30-13:00",
+    "t_start": "11:30",
+    "t_end": "13:00"
+  },
+  {
+    "sample_id": "S096",
+    "graph_id": "G24",
+    "question_id": "Q34",
+    "question": "Locate the time interval where glucose changed direction after an insulin event.",
+    "task_type": "temporal",
+    "answer": "13:30",
+    "t_start": "13:00",
+    "t_end": "14:00"
+  },
+  {
+    "sample_id": "S097",
+    "graph_id": "G25",
+    "question_id": "Q18",
+    "question": "Did insulin delivery lead to a noticeable glucose drop shortly afterward?",
+    "task_type": "yes_no",
+    "answer": "yes",
+    "t_start": null,
+    "t_end": null
+  },
+  {
+    "sample_id": "S098",
+    "graph_id": "G25",
+    "question_id": "Q06",
+    "question": "Did glucose decrease after an insulin delivery event?",
+    "task_type": "yes_no",
+    "answer": "yes",
+    "t_start": null,
+    "t_end": null
+  },
+  {
+    "sample_id": "S099",
+    "graph_id": "G25",
+    "question_id": "Q25",
+    "question": "Identify the time period where glucose dropped below 70 mg/dL.",
+    "task_type": "temporal",
+    "answer": "13:30-14:00",
+    "t_start": "13:30",
+    "t_end": "14:00"
+  },
+  {
+    "sample_id": "S100",
+    "graph_id": "G25",
+    "question_id": "Q23",
+    "question": "Locate the longest hyperglycemia period in the graph.",
+    "task_type": "temporal",
+    "answer": "20:00-21:30",
+    "t_start": "20:00",
+    "t_end": "21:30"
+  }
+]
