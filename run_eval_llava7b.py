@@ -88,6 +88,11 @@ def run_evaluation():
         if sid in done_ids:
             continue
 
+        if sample["image_file"] is None:
+            print(f"[WARN] No image file for {sid}")
+            errors += 1
+            continue
+
         image_path = IMAGE_BASE / sample["image_file"]
         if not image_path.exists():
             print(f"[WARN] Image not found: {image_path}")
