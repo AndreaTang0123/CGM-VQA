@@ -1,0 +1,6 @@
+Job started: Tue Apr  7 11:08:18 AM EDT 2026
+Node: g0316.ll.unc.edu
+/nas/longleaf/home/txueying/CGM-VQA/.venv/bin/python3
+Device: cuda
+Loading model: llava-hf/llava-1.5-7b-hf
+Job finished: Tue Apr  7 11:08:37 AM EDT 2026

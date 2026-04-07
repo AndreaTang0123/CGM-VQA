@@ -1,0 +1,72 @@
+Lmod has detected the following error: The following module(s) are unknown:
+"python/3.11.9"
+
+Please check the spelling or version number. Also try "module spider ..."
+It is also possible your cache file is out-of-date; it may help to try:
+  $ module --ignore_cache load "python/3.11.9"
+
+Also make sure that all modulefiles written in TCL start with the string
+#%Module
+
+
+
+Lmod has detected the following error: The following module(s) are unknown:
+"cuda/12.1"
+
+Please check the spelling or version number. Also try "module spider ..."
+It is also possible your cache file is out-of-date; it may help to try:
+  $ module --ignore_cache load "cuda/12.1"
+
+Also make sure that all modulefiles written in TCL start with the string
+#%Module
+
+
+
+/nas/longleaf/home/txueying/CGM-VQA/.venv/lib64/python3.9/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/nas/longleaf/home/txueying/CGM-VQA/.venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 479, in cached_files
+    hf_hub_download(
+  File "/nas/longleaf/home/txueying/CGM-VQA/.venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/nas/longleaf/home/txueying/CGM-VQA/.venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1014, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/nas/longleaf/home/txueying/CGM-VQA/.venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1131, in _hf_hub_download_to_cache_dir
+    os.makedirs(os.path.dirname(blob_path), exist_ok=True)
+  File "/usr/lib64/python3.9/os.py", line 215, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  File "/usr/lib64/python3.9/os.py", line 215, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  File "/usr/lib64/python3.9/os.py", line 215, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  [Previous line repeated 1 more time]
+  File "/usr/lib64/python3.9/os.py", line 225, in makedirs
+    mkdir(name, mode)
+PermissionError: [Errno 13] Permission denied: '/scratch'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/nas/longleaf/home/txueying/CGM-VQA/run_eval_llava7b_hf.py", line 180, in <module>
+    run_evaluation(model_id=args.model, batch_size=args.batch_size)
+  File "/nas/longleaf/home/txueying/CGM-VQA/run_eval_llava7b_hf.py", line 120, in run_evaluation
+    model, processor = load_model(model_id, device)
+  File "/nas/longleaf/home/txueying/CGM-VQA/run_eval_llava7b_hf.py", line 59, in load_model
+    processor = LlavaProcessor.from_pretrained(model_id)
+  File "/nas/longleaf/home/txueying/CGM-VQA/.venv/lib64/python3.9/site-packages/transformers/processing_utils.py", line 1394, in from_pretrained
+    args = cls._get_arguments_from_pretrained(pretrained_model_name_or_path, **kwargs)
+  File "/nas/longleaf/home/txueying/CGM-VQA/.venv/lib64/python3.9/site-packages/transformers/processing_utils.py", line 1453, in _get_arguments_from_pretrained
+    args.append(attribute_class.from_pretrained(pretrained_model_name_or_path, **kwargs))
+  File "/nas/longleaf/home/txueying/CGM-VQA/.venv/lib64/python3.9/site-packages/transformers/models/auto/image_processing_auto.py", line 489, in from_pretrained
+    raise initial_exception
+  File "/nas/longleaf/home/txueying/CGM-VQA/.venv/lib64/python3.9/site-packages/transformers/models/auto/image_processing_auto.py", line 476, in from_pretrained
+    config_dict, _ = ImageProcessingMixin.get_image_processor_dict(
+  File "/nas/longleaf/home/txueying/CGM-VQA/.venv/lib64/python3.9/site-packages/transformers/image_processing_base.py", line 333, in get_image_processor_dict
+    resolved_image_processor_files = [
+  File "/nas/longleaf/home/txueying/CGM-VQA/.venv/lib64/python3.9/site-packages/transformers/image_processing_base.py", line 337, in <listcomp>
+    resolved_file := cached_file(
+  File "/nas/longleaf/home/txueying/CGM-VQA/.venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 322, in cached_file
+    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+  File "/nas/longleaf/home/txueying/CGM-VQA/.venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 524, in cached_files
+    raise OSError(
+OSError: PermissionError at /scratch when downloading llava-hf/llava-1.5-7b-hf. Check cache directory permissions. Common causes: 1) another user is downloading the same model (please wait); 2) a previous download was canceled and the lock file needs manual removal.
