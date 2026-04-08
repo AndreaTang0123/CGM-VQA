@@ -1,14 +1,14 @@
 """
-Batch evaluation of CGM-VQA using LLaVA-1.5-7B via HuggingFace + PyTorch (GPU).
+Batch evaluation of CGM-VQA using Qwen2-VL-7B-Instruct via HuggingFace + PyTorch (GPU).
 
 Requirements:
-    pip install transformers accelerate pillow torch
+    pip install transformers accelerate pillow torch qwen-vl-utils
 
-Results saved to: results/llava7b_hf_results.json
+Results saved to: results/qwen2vl7b_hf_results.json
 
 Usage:
-    python3 run_eval_llava7b_hf.py
-    python3 run_eval_llava7b_hf.py --batch-size 4 --model llava-hf/llava-1.5-7b-hf
+    python3 run_eval_qwen2vl7b_hf.py
+    python3 run_eval_qwen2vl7b_hf.py --batch-size 1 --model Qwen/Qwen2-VL-7B-Instruct
 """
 
 import argparse
@@ -20,21 +20,28 @@ from datetime import datetime
 
 # Reduce CUDA memory fragmentation
 os.environ.setdefault("PYTORCH_CUDA_ALLOC_CONF", "expandable_segments:True")
+# Synchronous CUDA errors (easier to debug on V100)
+os.environ.setdefault("CUDA_LAUNCH_BLOCKING", "1")
 
 import torch
 from PIL import Image
-from transformers import LlavaForConditionalGeneration, LlavaProcessor
+from transformers import Qwen2VLForConditionalGeneration, AutoProcessor
 
 # ── Config ────────────────────────────────────────────────────────────────────
 BASE_DIR     = Path(__file__).parent
 IMAGE_BASE   = BASE_DIR / "graphs_cropped"
 EVAL_FILE    = BASE_DIR / "metadata" / "eval_questions.json"
 RESULTS_DIR  = BASE_DIR / "results"
-RESULTS_FILE = RESULTS_DIR / "llava7b_hf_results.json"
+RESULTS_FILE = RESULTS_DIR / "qwen2vl7b_hf_results.json"
 
-DEFAULT_MODEL      = "llava-hf/llava-1.5-7b-hf"
-DEFAULT_BATCH_SIZE = 1  # V100 has 16GB; batch>1 causes OOM with LLaVA-7B
+DEFAULT_MODEL      = "Qwen/Qwen2-VL-7B-Instruct"
+DEFAULT_BATCH_SIZE = 1   # V100 16GB fills up quickly with a 7B VL model
 MAX_NEW_TOKENS     = 64
+
+# Cap image resolution for V100 (limits token count from dynamic patching)
+# 256x28x28 = 200704 max pixels ≈ 448x448 image
+MIN_PIXELS = 4 * 28 * 28    #  3136
+MAX_PIXELS = 256 * 28 * 28  # 200704  (~448×448)
 
 SYSTEM_PROMPT = (
     "You are analyzing a Continuous Glucose Monitor (CGM) graph for a single day. "
@@ -45,44 +52,74 @@ SYSTEM_PROMPT = (
 )
 
 
-def build_prompt(question: str, expected_format: str) -> str:
-    """LLaVA-1.5 conversation format: USER: <image>\n{text} ASSISTANT:"""
-    text = (
-        f"{SYSTEM_PROMPT}\n\n"
-        f"Question: {question}\n"
-        f"Answer format: {expected_format}\n"
-        f"Answer:"
-    )
-    return f"USER: <image>\n{text} ASSISTANT:"
+def build_messages(question: str, expected_format: str, image_path: Path) -> list:
+    """Qwen2-VL chat format with interleaved image."""
+    return [
+        {
+            "role": "user",
+            "content": [
+                {"type": "image", "image": str(image_path)},
+                {
+                    "type": "text",
+                    "text": (
+                        f"{SYSTEM_PROMPT}\n\n"
+                        f"Question: {question}\n"
+                        f"Answer format: {expected_format}\n"
+                        f"Answer:"
+                    ),
+                },
+            ],
+        }
+    ]
 
 
-def load_model(model_id: str, device: torch.device):
+def load_model(model_id: str):
     print(f"Loading model: {model_id}")
     dtype = torch.bfloat16 if torch.cuda.is_bf16_supported() else torch.float16
 
-    processor = LlavaProcessor.from_pretrained(model_id)
-    model = LlavaForConditionalGeneration.from_pretrained(
+    processor = AutoProcessor.from_pretrained(
+        model_id,
+        min_pixels=MIN_PIXELS,
+        max_pixels=MAX_PIXELS,
+    )
+    model = Qwen2VLForConditionalGeneration.from_pretrained(
         model_id,
         torch_dtype=dtype,
-        device_map="auto",          # auto-shard across available GPUs
+        device_map="auto",
         low_cpu_mem_usage=True,
+        attn_implementation="eager",  # Flash Attention 2 requires CC>=8.0; V100 is CC 7.0
     )
     model.eval()
-    print(f"Model loaded on {device} ({dtype})")
+    device = next(model.parameters()).device
+    print(f"Model loaded ({dtype}), device: {device}")
     return model, processor
 
 
-def run_batch(model, processor, batch: list[dict], device: torch.device) -> list[str]:
+def run_batch(model, processor, batch: list[dict]) -> list[str]:
     """Run inference on a batch; return list of answer strings."""
-    prompts = [build_prompt(s["question"], s["expected_answer_format"]) for s in batch]
-    images  = [Image.open(IMAGE_BASE / s["image_file"]).convert("RGB") for s in batch]
+    from qwen_vl_utils import process_vision_info
+
+    all_messages = [
+        build_messages(s["question"], s["expected_answer_format"],
+                       IMAGE_BASE / s["image_file"])
+        for s in batch
+    ]
+
+    texts = [
+        processor.apply_chat_template(msgs, tokenize=False, add_generation_prompt=True)
+        for msgs in all_messages
+    ]
+    image_inputs, video_inputs = process_vision_info(all_messages)
 
     inputs = processor(
-        text=prompts,
-        images=images,
-        return_tensors="pt",
+        text=texts,
+        images=image_inputs,
+        videos=video_inputs,
         padding=True,
-    ).to(device)
+        return_tensors="pt",
+        min_pixels=MIN_PIXELS,
+        max_pixels=MAX_PIXELS,
+    ).to(model.device)
 
     with torch.no_grad():
         output_ids = model.generate(
@@ -91,7 +128,7 @@ def run_batch(model, processor, batch: list[dict], device: torch.device) -> list
             do_sample=False,
         )
 
-    # Decode only the newly generated tokens (strip the prompt)
+    # Decode only newly generated tokens
     input_len  = inputs["input_ids"].shape[1]
     new_tokens = output_ids[:, input_len:]
     answers    = processor.batch_decode(new_tokens, skip_special_tokens=True)
@@ -114,32 +151,34 @@ def run_evaluation(model_id: str, batch_size: int):
         results  = []
         done_ids = set()
 
-    # Skip samples with missing image_file (data issue)
+    # Skip samples with missing image_file
     skipped = [s for s in samples if not s.get("image_file")]
     if skipped:
-        print(f"Skipping {len(skipped)} samples with no image_file: {[s['sample_id'] for s in skipped]}")
-    remaining = [s for s in samples if s["sample_id"] not in done_ids and s.get("image_file")]
+        print(f"Skipping {len(skipped)} samples with no image_file: "
+              f"{[s['sample_id'] for s in skipped]}")
+
+    remaining = [s for s in samples
+                 if s["sample_id"] not in done_ids and s.get("image_file")]
     if not remaining:
         print("All samples already evaluated.")
         return
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print(f"Device: {device}")
-    model, processor = load_model(model_id, device)
+    model, processor = load_model(model_id)
 
     total  = len(samples)
     errors = 0
 
-    # Process in batches
     for batch_start in range(0, len(remaining), batch_size):
-        batch = remaining[batch_start: batch_start + batch_size]
+        batch     = remaining[batch_start: batch_start + batch_size]
         first_sid = batch[0]["sample_id"]
         last_sid  = batch[-1]["sample_id"]
         print(f"[{len(done_ids)+1:03d}-{len(done_ids)+len(batch):03d}/{total}] "
               f"{first_sid}..{last_sid} ...", end=" ", flush=True)
         t0 = time.time()
         try:
-            answers = run_batch(model, processor, batch, device)
+            answers = run_batch(model, processor, batch)
             elapsed = round(time.time() - t0, 2)
 
             for sample, answer in zip(batch, answers):
@@ -180,9 +219,12 @@ def run_evaluation(model_id: str, batch_size: int):
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="LLaVA-7B CGM-VQA Evaluation (HuggingFace + GPU)")
-    parser.add_argument("--model",      default=DEFAULT_MODEL,      help="HuggingFace model ID")
-    parser.add_argument("--batch-size", default=DEFAULT_BATCH_SIZE, type=int, help="Batch size for inference")
+    parser = argparse.ArgumentParser(
+        description="Qwen2-VL-7B CGM-VQA Evaluation (HuggingFace + GPU)")
+    parser.add_argument("--model",      default=DEFAULT_MODEL,
+                        help="HuggingFace model ID")
+    parser.add_argument("--batch-size", default=DEFAULT_BATCH_SIZE, type=int,
+                        help="Batch size for inference")
     args = parser.parse_args()
 
     run_evaluation(model_id=args.model, batch_size=args.batch_size)

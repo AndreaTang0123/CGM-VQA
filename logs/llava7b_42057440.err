@@ -1,0 +1,55 @@
+
+[notice] A new release of pip is available: 25.1.1 -> 26.0.1
+[notice] To update, run: pip install --upgrade pip
+/nas/longleaf/home/txueying/.local/lib/python3.12/site-packages/torch/cuda/__init__.py:371: UserWarning: Found GPU0 Tesla V100-SXM2-16GB which is of compute capability (CC) 7.0.
+The following list shows the CCs this version of PyTorch was built for and the hardware CCs it supports:
+- 7.5 which supports hardware CC >=7.5,<8.0
+- 8.0 which supports hardware CC >=8.0,<9.0 except {8.7}
+- 8.6 which supports hardware CC >=8.6,<9.0 except {8.7}
+- 9.0 which supports hardware CC >=9.0,<10.0
+- 10.0 which supports hardware CC >=10.0,<11.0 except {10.1}
+- 12.0 which supports hardware CC >=12.0,<13.0
+Please follow the instructions at https://pytorch.org/get-started/locally/ to install a PyTorch release that supports one of these CUDA versions: 12.6, 12.8
+  _warn_unsupported_code(d, device_cc, code_ccs)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Traceback (most recent call last):
+  File "/nas/longleaf/home/txueying/.local/lib/python3.12/site-packages/transformers/utils/hub.py", line 422, in cached_files
+    hf_hub_download(
+  File "/nas/longleaf/home/txueying/.local/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/nas/longleaf/home/txueying/.local/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 995, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nas/longleaf/home/txueying/.local/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1167, in _hf_hub_download_to_cache_dir
+    os.makedirs(os.path.dirname(blob_path), exist_ok=True)
+  File "<frozen os>", line 215, in makedirs
+  File "<frozen os>", line 215, in makedirs
+  File "<frozen os>", line 215, in makedirs
+  [Previous line repeated 2 more times]
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/scratch'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/nas/longleaf/home/txueying/CGM-VQA/run_eval_llava7b_hf.py", line 180, in <module>
+    run_evaluation(model_id=args.model, batch_size=args.batch_size)
+  File "/nas/longleaf/home/txueying/CGM-VQA/run_eval_llava7b_hf.py", line 120, in run_evaluation
+    model, processor = load_model(model_id, device)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nas/longleaf/home/txueying/CGM-VQA/run_eval_llava7b_hf.py", line 59, in load_model
+    processor = LlavaProcessor.from_pretrained(model_id)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nas/longleaf/home/txueying/.local/lib/python3.12/site-packages/transformers/processing_utils.py", line 1420, in from_pretrained
+    processor_dict, instantiation_kwargs = cls.get_processor_dict(pretrained_model_name_or_path, **kwargs)
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nas/longleaf/home/txueying/.local/lib/python3.12/site-packages/transformers/processing_utils.py", line 983, in get_processor_dict
+    resolved_processor_file = cached_file(
+                              ^^^^^^^^^^^^
+  File "/nas/longleaf/home/txueying/.local/lib/python3.12/site-packages/transformers/utils/hub.py", line 278, in cached_file
+    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nas/longleaf/home/txueying/.local/lib/python3.12/site-packages/transformers/utils/hub.py", line 467, in cached_files
+    raise OSError(
+OSError: PermissionError at /scratch when downloading llava-hf/llava-1.5-7b-hf. Check cache directory permissions. Common causes: 1) another user is downloading the same model (please wait); 2) a previous download was canceled and the lock file needs manual removal.

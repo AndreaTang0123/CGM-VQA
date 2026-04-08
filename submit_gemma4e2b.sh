@@ -1,13 +1,13 @@
 #!/bin/bash
-#SBATCH --job-name=cgmvqa_llava7b
+#SBATCH --job-name=cgmvqa_gemma4e2b
 #SBATCH --partition=volta-gpu
 #SBATCH --qos=gpu_access
 #SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=32G
-#SBATCH --time=6:00:00
-#SBATCH --output=logs/llava7b_%j.out
-#SBATCH --error=logs/llava7b_%j.err
+#SBATCH --time=4:00:00
+#SBATCH --output=logs/gemma4e2b_%j.out
+#SBATCH --error=logs/gemma4e2b_%j.err
 
 # ── Environment ───────────────────────────────────────────────────────────────
 module purge
@@ -16,11 +16,11 @@ module load cuda/11.8
 
 # ── Paths ─────────────────────────────────────────────────────────────────────
 WORKDIR=/nas/longleaf/home/$USER/CGM-VQA
-WORKFS=/work/users/t/x/$USER        # Longleaf /work filesystem (high-perf)
+WORKFS=/work/users/t/x/$USER
 cd $WORKDIR
 mkdir -p logs results
 
-# ── Virtual environment on /work (large space, not home quota) ────────────────
+# ── Virtual environment on /work ──────────────────────────────────────────────
 VENV=$WORKFS/hf_venv
 if [ ! -d "$VENV" ]; then
     echo "Creating venv at $VENV ..."
@@ -29,14 +29,14 @@ if [ ! -d "$VENV" ]; then
 fi
 source "$VENV/bin/activate"
 
-# Install packages (fast on rerun if already cached)
+# Install packages
 pip install --upgrade pip setuptools wheel -q
 pip install -q \
     torch==2.4.0+cu118 torchvision==0.19.0+cu118 \
     --index-url https://download.pytorch.org/whl/cu118
 pip install -q transformers accelerate pillow
 
-# ── HuggingFace cache → /work (large space) ───────────────────────────────────
+# ── HuggingFace cache → /work ─────────────────────────────────────────────────
 export HF_HOME=$WORKFS/hf_cache
 export TRANSFORMERS_CACHE=$WORKFS/hf_cache/hub
 mkdir -p "$HF_HOME"
@@ -47,6 +47,6 @@ echo "Node: $(hostname)"
 which python3
 python3 --version
 
-python3 run_eval_llava7b_hf.py
+python3 run_eval_gemma4e2b_hf.py
 
 echo "Job finished: $(date)"

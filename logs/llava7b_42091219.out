@@ -1,0 +1,22 @@
+Job started: Tue Apr  7 02:05:41 PM EDT 2026
+Node: g0309.ll.unc.edu
+/work/users/t/x/txueying/hf_venv/bin/python3
+Python 3.12.4
+Resuming – 96/100 already done.
+Device: cuda
+Loading model: llava-hf/llava-1.5-7b-hf
+Model loaded on cuda (torch.bfloat16)
+[097-097/100] S077..S077 ... done [4.47s, 4.5s/sample]
+    S077 (yes_no): "Yes"
+[098-098/100] S078..S078 ... done [1.56s, 1.6s/sample]
+    S078 (yes_no): "No"
+[099-099/100] S079..S079 ... done [1.87s, 1.9s/sample]
+    S079 (temporal): "00:00-06:00"
+[100-100/100] S080..S080 ... done [1.87s, 1.9s/sample]
+    S080 (temporal): "00:00-02:00"
+
+============================================================
+Done. 100 evaluated, 0 errors.
+Results: /nas/longleaf/home/txueying/CGM-VQA/results/llava7b_hf_results.json
+yes_no=50  temporal=50  avg latency=1.78s/sample
+Job finished: Tue Apr  7 02:06:42 PM EDT 2026
