@@ -111,10 +111,10 @@ def run_batch(model, processor, batch: list[dict]) -> list[str]:
                 do_sample=False,
             )
 
-        raw = processor.decode(output_ids[0][input_len:], skip_special_tokens=False)
-        # parse_response strips <think> blocks and special tokens
-        parsed = processor.parse_response(raw)
-        answers.append(parsed.strip())
+        raw = processor.decode(
+            output_ids[0][input_len:], skip_special_tokens=True
+        )
+        answers.append(raw.strip())
 
     return answers
 

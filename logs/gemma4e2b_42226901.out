@@ -1,0 +1,213 @@
+Job started: Tue Apr  7 10:56:40 PM EDT 2026
+Node: g0304.ll.unc.edu
+/work/users/t/x/txueying/hf_venv/bin/python3
+Python 3.12.4
+Device: cuda
+Loading model: google/gemma-4-E2B-it
+Model loaded (float16), device: cuda:0
+[001-001/100] S001..S001 ... done [1.84s, 1.8s/sample]
+    S001 (yes_no): "no"
+[002-002/100] S002..S002 ... done [0.6s, 0.6s/sample]
+    S002 (yes_no): "no"
+[003-003/100] S003..S003 ... done [1.22s, 1.2s/sample]
+    S003 (temporal): "13:03-14:03"
+[004-004/100] S004..S004 ... done [1.21s, 1.2s/sample]
+    S004 (temporal): "10:03-11:03"
+[005-005/100] S005..S005 ... done [0.59s, 0.6s/sample]
+    S005 (yes_no): "no"
+[006-006/100] S006..S006 ... done [0.59s, 0.6s/sample]
+    S006 (yes_no): "no"
+[007-007/100] S007..S007 ... done [1.22s, 1.2s/sample]
+    S007 (temporal): "10:03-10:33"
+[008-008/100] S008..S008 ... done [1.22s, 1.2s/sample]
+    S008 (temporal): "11:03-11:03"
+[009-009/100] S009..S009 ... done [0.59s, 0.6s/sample]
+    S009 (yes_no): "no"
+[010-010/100] S010..S010 ... done [0.59s, 0.6s/sample]
+    S010 (yes_no): "yes"
+[011-011/100] S011..S011 ... done [1.21s, 1.2s/sample]
+    S011 (temporal): "10:03-10:33"
+[012-012/100] S012..S012 ... done [1.21s, 1.2s/sample]
+    S012 (temporal): "10:03-10:04"
+[013-013/100] S013..S013 ... done [0.59s, 0.6s/sample]
+    S013 (yes_no): "no"
+[014-014/100] S014..S014 ... done [0.59s, 0.6s/sample]
+    S014 (yes_no): "no"
+[015-015/100] S015..S015 ... done [1.22s, 1.2s/sample]
+    S015 (temporal): "10:03-10:05"
+[016-016/100] S016..S016 ... done [1.23s, 1.2s/sample]
+    S016 (temporal): "11:03-11:03"
+[017-017/100] S017..S017 ... done [0.58s, 0.6s/sample]
+    S017 (yes_no): "no"
+[018-018/100] S018..S018 ... done [0.58s, 0.6s/sample]
+    S018 (yes_no): "no"
+[019-019/100] S019..S019 ... done [1.21s, 1.2s/sample]
+    S019 (temporal): "10:03-10:05"
+[020-020/100] S020..S020 ... done [1.21s, 1.2s/sample]
+    S020 (temporal): "11:03-11:03"
+[021-021/100] S021..S021 ... done [0.59s, 0.6s/sample]
+    S021 (yes_no): "no"
+[022-022/100] S022..S022 ... done [0.58s, 0.6s/sample]
+    S022 (yes_no): "no"
+[023-023/100] S023..S023 ... done [1.21s, 1.2s/sample]
+    S023 (temporal): "06:03-07:03"
+[024-024/100] S024..S024 ... done [1.21s, 1.2s/sample]
+    S024 (temporal): "07:03-08:03"
+[025-025/100] S025..S025 ... done [0.59s, 0.6s/sample]
+    S025 (yes_no): "no"
+[026-026/100] S026..S026 ... done [0.59s, 0.6s/sample]
+    S026 (yes_no): "no"
+[027-027/100] S027..S027 ... done [1.21s, 1.2s/sample]
+    S027 (temporal): "10:03-10:05"
+[028-028/100] S028..S028 ... done [1.21s, 1.2s/sample]
+    S028 (temporal): "17:03-17:04"
+[029-029/100] S029..S029 ... done [0.59s, 0.6s/sample]
+    S029 (yes_no): "no"
+[030-030/100] S030..S030 ... done [0.58s, 0.6s/sample]
+    S030 (yes_no): "no"
+[031-031/100] S031..S031 ... done [0.83s, 0.8s/sample]
+    S031 (temporal): "03:03"
+[032-032/100] S032..S032 ... done [1.2s, 1.2s/sample]
+    S032 (temporal): "13:00-13:03"
+[033-033/100] S033..S033 ... done [0.59s, 0.6s/sample]
+    S033 (yes_no): "no"
+[034-034/100] S034..S034 ... done [0.59s, 0.6s/sample]
+    S034 (yes_no): "no"
+[035-035/100] S035..S035 ... done [1.2s, 1.2s/sample]
+    S035 (temporal): "13:03-13:05"
+[036-036/100] S036..S036 ... done [1.21s, 1.2s/sample]
+    S036 (temporal): "00:03-06:03"
+[037-037/100] S037..S037 ... done [0.58s, 0.6s/sample]
+    S037 (yes_no): "no"
+[038-038/100] S038..S038 ... done [0.58s, 0.6s/sample]
+    S038 (yes_no): "no"
+[039-039/100] S039..S039 ... done [1.19s, 1.2s/sample]
+    S039 (temporal): "17:00-23:00"
+[040-040/100] S040..S040 ... done [1.2s, 1.2s/sample]
+    S040 (temporal): "11:03-11:04"
+[041-041/100] S041..S041 ... done [0.59s, 0.6s/sample]
+    S041 (yes_no): "no"
+[042-042/100] S042..S042 ... done [0.59s, 0.6s/sample]
+    S042 (yes_no): "no"
+[043-043/100] S043..S043 ... done [1.2s, 1.2s/sample]
+    S043 (temporal): "08:03-10:03"
+[044-044/100] S044..S044 ... done [1.19s, 1.2s/sample]
+    S044 (temporal): "17:03-18:03"
+[045-045/100] S045..S045 ... done [0.59s, 0.6s/sample]
+    S045 (yes_no): "no"
+[046-046/100] S046..S046 ... done [0.59s, 0.6s/sample]
+    S046 (yes_no): "no"
+[047-047/100] S047..S047 ... done [1.19s, 1.2s/sample]
+    S047 (temporal): "00:00-03:00"
+[048-048/100] S048..S048 ... done [1.17s, 1.2s/sample]
+    S048 (temporal): "10:03-10:05"
+[049-049/100] S049..S049 ... done [0.58s, 0.6s/sample]
+    S049 (yes_no): "no"
+[050-050/100] S050..S050 ... done [0.58s, 0.6s/sample]
+    S050 (yes_no): "no"
+[051-051/100] S051..S051 ... done [1.24s, 1.2s/sample]
+    S051 (temporal): "08:03-08:04"
+[052-052/100] S052..S052 ... done [1.24s, 1.2s/sample]
+    S052 (temporal): "00:00-03:03"
+[053-053/100] S053..S053 ... done [0.6s, 0.6s/sample]
+    S053 (yes_no): "no"
+[054-054/100] S054..S054 ... done [0.6s, 0.6s/sample]
+    S054 (yes_no): "no"
+[055-055/100] S055..S055 ... done [1.24s, 1.2s/sample]
+    S055 (temporal): "13:03-14:03"
+[056-056/100] S056..S056 ... done [1.24s, 1.2s/sample]
+    S056 (temporal): "10:03-10:08"
+[057-057/100] S057..S057 ... done [0.59s, 0.6s/sample]
+    S057 (yes_no): "no"
+[058-058/100] S058..S058 ... done [0.6s, 0.6s/sample]
+    S058 (yes_no): "no"
+[059-059/100] S059..S059 ... done [1.24s, 1.2s/sample]
+    S059 (temporal): "10:03-10:08"
+[060-060/100] S060..S060 ... done [1.24s, 1.2s/sample]
+    S060 (temporal): "10:03-10:30"
+[061-061/100] S061..S061 ... done [0.6s, 0.6s/sample]
+    S061 (yes_no): "no"
+[062-062/100] S062..S062 ... done [0.6s, 0.6s/sample]
+    S062 (yes_no): "no"
+[063-063/100] S063..S063 ... done [1.24s, 1.2s/sample]
+    S063 (temporal): "00:00-03:00"
+[064-064/100] S064..S064 ... done [1.24s, 1.2s/sample]
+    S064 (temporal): "10:03-10:30"
+[065-065/100] S065..S065 ... done [0.59s, 0.6s/sample]
+    S065 (yes_no): "no"
+[066-066/100] S066..S066 ... done [0.59s, 0.6s/sample]
+    S066 (yes_no): "no"
+[067-067/100] S067..S067 ... done [1.23s, 1.2s/sample]
+    S067 (temporal): "00:00-03:00"
+[068-068/100] S068..S068 ... done [1.23s, 1.2s/sample]
+    S068 (temporal): "13:00-14:00"
+[069-069/100] S069..S069 ... done [0.6s, 0.6s/sample]
+    S069 (yes_no): "no"
+[070-070/100] S070..S070 ... done [0.59s, 0.6s/sample]
+    S070 (yes_no): "no"
+[071-071/100] S071..S071 ... done [1.23s, 1.2s/sample]
+    S071 (temporal): "10:03-11:03"
+[072-072/100] S072..S072 ... done [1.24s, 1.2s/sample]
+    S072 (temporal): "13:03-13:04"
+[073-073/100] S073..S073 ... done [0.59s, 0.6s/sample]
+    S073 (yes_no): "no"
+[074-074/100] S074..S074 ... done [0.59s, 0.6s/sample]
+    S074 (yes_no): "no"
+[075-075/100] S075..S075 ... done [1.23s, 1.2s/sample]
+    S075 (temporal): "01:03-01:04"
+[076-076/100] S076..S076 ... done [1.23s, 1.2s/sample]
+    S076 (temporal): "13:03-13:43"
+[077-077/100] S077..S077 ... done [0.59s, 0.6s/sample]
+    S077 (yes_no): "no"
+[078-078/100] S078..S078 ... done [0.59s, 0.6s/sample]
+    S078 (yes_no): "no"
+[079-079/100] S079..S079 ... done [1.23s, 1.2s/sample]
+    S079 (temporal): "01:03-03:00"
+[080-080/100] S080..S080 ... done [1.22s, 1.2s/sample]
+    S080 (temporal): "10:03-10:30"
+[081-081/100] S081..S081 ... done [0.59s, 0.6s/sample]
+    S081 (yes_no): "no"
+[082-082/100] S082..S082 ... done [0.59s, 0.6s/sample]
+    S082 (yes_no): "no"
+[083-083/100] S083..S083 ... done [1.23s, 1.2s/sample]
+    S083 (temporal): "13:03-13:13"
+[084-084/100] S084..S084 ... done [1.23s, 1.2s/sample]
+    S084 (temporal): "14:03-14:30"
+[085-085/100] S085..S085 ... done [0.59s, 0.6s/sample]
+    S085 (yes_no): "no"
+[086-086/100] S086..S086 ... done [0.59s, 0.6s/sample]
+    S086 (yes_no): "no"
+[087-087/100] S087..S087 ... done [1.23s, 1.2s/sample]
+    S087 (temporal): "00:03-01:03"
+[088-088/100] S088..S088 ... done [1.22s, 1.2s/sample]
+    S088 (temporal): "03:03-03:04"
+[089-089/100] S089..S089 ... done [0.58s, 0.6s/sample]
+    S089 (yes_no): "no"
+[090-090/100] S090..S090 ... done [0.59s, 0.6s/sample]
+    S090 (yes_no): "no"
+[091-091/100] S091..S091 ... done [1.23s, 1.2s/sample]
+    S091 (temporal): "10:03-10:04"
+[092-092/100] S092..S092 ... done [1.22s, 1.2s/sample]
+    S092 (temporal): "00:03-01:03"
+[093-093/100] S093..S093 ... done [0.59s, 0.6s/sample]
+    S093 (yes_no): "no"
+[094-094/100] S094..S094 ... done [0.59s, 0.6s/sample]
+    S094 (yes_no): "no"
+[095-095/100] S095..S095 ... done [1.22s, 1.2s/sample]
+    S095 (temporal): "00:03-03:03"
+[096-096/100] S096..S096 ... done [1.22s, 1.2s/sample]
+    S096 (temporal): "12:03-12:07"
+[097-097/100] S097..S097 ... done [0.58s, 0.6s/sample]
+    S097 (yes_no): "no"
+[098-098/100] S098..S098 ... done [0.58s, 0.6s/sample]
+    S098 (yes_no): "no"
+[099-099/100] S099..S099 ... done [1.22s, 1.2s/sample]
+    S099 (temporal): "18:03-18:05"
+[100-100/100] S100..S100 ... done [1.22s, 1.2s/sample]
+    S100 (temporal): "11:03-13:03"
+
+============================================================
+Done. 100 evaluated, 0 errors.
+Results: /nas/longleaf/home/txueying/CGM-VQA/results/gemma4e2b_hf_results.json
+yes_no=50  temporal=50  avg latency=0.91s/sample
+Job finished: Tue Apr  7 10:58:40 PM EDT 2026
