@@ -2,7 +2,7 @@
 Batch evaluation of CGM-VQA using Qwen2-VL-7B-Instruct via HuggingFace + PyTorch (GPU).
 
 Requirements:
-    pip install transformers accelerate pillow torch qwen-vl-utils
+    pip install transformers accelerate pillow torch qwen-vl-utils bitsandbytes protobuf
 
 Results saved to: results/qwen2vl7b_hf_results.json
 
@@ -20,8 +20,11 @@ from datetime import datetime
 
 # Reduce CUDA memory fragmentation
 os.environ.setdefault("PYTORCH_CUDA_ALLOC_CONF", "expandable_segments:True")
-# Synchronous CUDA errors (easier to debug on V100)
+# Synchronous CUDA errors — critical on V100 CC7.0
 os.environ.setdefault("CUDA_LAUNCH_BLOCKING", "1")
+# Limit OpenMP/MKL threads to avoid over-subscription on HPC nodes
+os.environ.setdefault("OMP_NUM_THREADS", "4")
+os.environ.setdefault("MKL_NUM_THREADS", "4")
 
 import torch
 from PIL import Image
@@ -38,10 +41,12 @@ DEFAULT_MODEL      = "Qwen/Qwen2-VL-7B-Instruct"
 DEFAULT_BATCH_SIZE = 1   # V100 16GB fills up quickly with a 7B VL model
 MAX_NEW_TOKENS     = 64
 
-# Cap image resolution for V100 (limits token count from dynamic patching)
-# 256x28x28 = 200704 max pixels ≈ 448x448 image
-MIN_PIXELS = 4 * 28 * 28    #  3136
-MAX_PIXELS = 256 * 28 * 28  # 200704  (~448×448)
+# Cap image resolution for V100 CC7.0 (limits token count from dynamic patching)
+# V100 has a 1024-thread-per-block limit; large RoPE kernels exceed this.
+# Reducing MAX_PIXELS keeps sequence length short → smaller kernel thread blocks.
+# 84x28x28 = 65856 ≈ 256x256 image  (previously 256x28x28 caused kernel errors)
+MIN_PIXELS = 4 * 28 * 28   #   3136
+MAX_PIXELS = 84 * 28 * 28  #  65856  (~256×256) — V100-safe
 
 SYSTEM_PROMPT = (
     "You are analyzing a Continuous Glucose Monitor (CGM) graph for a single day. "
@@ -64,8 +69,7 @@ def build_messages(question: str, expected_format: str, image_path: Path) -> lis
                     "text": (
                         f"{SYSTEM_PROMPT}\n\n"
                         f"Question: {question}\n"
-                        f"Answer format: {expected_format}\n"
-                        f"Answer:"
+                        f"Answer format: {expected_format}"
                     ),
                 },
             ],
@@ -75,23 +79,25 @@ def build_messages(question: str, expected_format: str, image_path: Path) -> lis
 
 def load_model(model_id: str):
     print(f"Loading model: {model_id}")
-    dtype = torch.bfloat16 if torch.cuda.is_bf16_supported() else torch.float16
+
+    # V100 (CC 7.0) does not support bfloat16; use float16
+    dtype = torch.float16
 
     processor = AutoProcessor.from_pretrained(
         model_id,
         min_pixels=MIN_PIXELS,
         max_pixels=MAX_PIXELS,
     )
+    # Using 2 GPUs horizontally sharded by accelerate via device_map="auto"
     model = Qwen2VLForConditionalGeneration.from_pretrained(
         model_id,
         torch_dtype=dtype,
-        device_map="auto",
-        low_cpu_mem_usage=True,
-        attn_implementation="eager",  # Flash Attention 2 requires CC>=8.0; V100 is CC 7.0
+        device_map="auto",             # lets accelerate assign layers across 2 GPUs
+        attn_implementation="sdpa",    # SDPA is natively supported by PyTorch 2.x and much more stable on V100 than eager
     )
     model.eval()
     device = next(model.parameters()).device
-    print(f"Model loaded ({dtype}), device: {device}")
+    print(f"Model loaded (INT8 quantized), device: {device}")
     return model, processor
 
 
@@ -122,11 +128,28 @@ def run_batch(model, processor, batch: list[dict]) -> list[str]:
     ).to(model.device)
 
     with torch.no_grad():
-        output_ids = model.generate(
-            **inputs,
-            max_new_tokens=MAX_NEW_TOKENS,
-            do_sample=False,
-        )
+        try:
+            output_ids = model.generate(
+                **inputs,
+                max_new_tokens=MAX_NEW_TOKENS,
+                do_sample=False,
+                repetition_penalty=1.05,   # prevents ![](![]... loops on V100/float16
+                no_repeat_ngram_size=3,    # blocks trigram repetition
+            )
+        except RuntimeError as e:
+            if "too many resources" in str(e) or "CUDA error" in str(e):
+                # Clear CUDA state and retry with cleared cache
+                torch.cuda.empty_cache()
+                torch.cuda.synchronize()
+                output_ids = model.generate(
+                    **inputs,
+                    max_new_tokens=MAX_NEW_TOKENS,
+                    do_sample=False,
+                    repetition_penalty=1.05,
+                    no_repeat_ngram_size=3,
+                )
+            else:
+                raise
 
     # Decode only newly generated tokens
     input_len  = inputs["input_ids"].shape[1]

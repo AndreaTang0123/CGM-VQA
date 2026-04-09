@@ -1,0 +1,22 @@
+Traceback (most recent call last):
+  File "/nas/longleaf/home/txueying/CGM-VQA/run_eval_qwen2vl7b_hf.py", line 252, in <module>
+    run_evaluation(model_id=args.model, batch_size=args.batch_size)
+  File "/nas/longleaf/home/txueying/CGM-VQA/run_eval_qwen2vl7b_hf.py", line 190, in run_evaluation
+    model, processor = load_model(model_id)
+                       ^^^^^^^^^^^^^^^^^^^^
+  File "/nas/longleaf/home/txueying/CGM-VQA/run_eval_qwen2vl7b_hf.py", line 91, in load_model
+    model = Qwen2VLForConditionalGeneration.from_pretrained(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/users/t/x/txueying/hf_venv/lib/python3.12/site-packages/transformers/modeling_utils.py", line 4093, in from_pretrained
+    hf_quantizer.preprocess_model(
+  File "/work/users/t/x/txueying/hf_venv/lib/python3.12/site-packages/transformers/quantizers/base.py", line 171, in preprocess_model
+    self._process_model_before_weight_loading(model, **kwargs)
+  File "/work/users/t/x/txueying/hf_venv/lib/python3.12/site-packages/transformers/quantizers/quantizer_bnb_8bit.py", line 142, in _process_model_before_weight_loading
+    model = replace_with_bnb_linear(
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/users/t/x/txueying/hf_venv/lib/python3.12/site-packages/transformers/integrations/bitsandbytes.py", line 222, in replace_with_bnb_linear
+    model.set_submodule(module_name, new_module)
+    ^^^^^^^^^^^^^^^^^^^
+  File "/work/users/t/x/txueying/hf_venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1729, in __getattr__
+    raise AttributeError(f"'{type(self).__name__}' object has no attribute '{name}'")
+AttributeError: 'Qwen2VLForConditionalGeneration' object has no attribute 'set_submodule'. Did you mean: 'get_submodule'?

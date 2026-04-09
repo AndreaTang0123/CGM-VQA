@@ -2,7 +2,7 @@
 #SBATCH --job-name=cgmvqa_qwen2vl7b
 #SBATCH --partition=volta-gpu
 #SBATCH --qos=gpu_access
-#SBATCH --gres=gpu:1
+#SBATCH --gres=gpu:2
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=48G
 #SBATCH --time=8:00:00
@@ -34,7 +34,7 @@ pip install --upgrade pip setuptools wheel -q
 pip install -q \
     torch==2.4.0+cu118 torchvision==0.19.0+cu118 \
     --index-url https://download.pytorch.org/whl/cu118
-pip install -q transformers accelerate pillow qwen-vl-utils
+pip install -q transformers accelerate pillow qwen-vl-utils protobuf
 
 # ── HuggingFace cache → /work (large space) ───────────────────────────────────
 export HF_HOME=$WORKFS/hf_cache
@@ -46,6 +46,10 @@ echo "Job started: $(date)"
 echo "Node: $(hostname)"
 which python3
 python3 --version
+
+# Use offline mode — model already cached in HF_HOME, avoids 429 rate-limit on HF API
+export TRANSFORMERS_OFFLINE=1
+export HF_HUB_OFFLINE=1
 
 python3 run_eval_qwen2vl7b_hf.py
 

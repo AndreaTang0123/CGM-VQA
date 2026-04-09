@@ -1,0 +1,7 @@
+Job started: Wed Apr  8 11:51:14 AM EDT 2026
+Node: g0302.ll.unc.edu
+/work/users/t/x/txueying/hf_venv/bin/python3
+Python 3.12.4
+Device: cuda
+Loading model: Qwen/Qwen2-VL-7B-Instruct
+Job finished: Wed Apr  8 11:51:41 AM EDT 2026
