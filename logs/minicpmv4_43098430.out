@@ -1,0 +1,7 @@
+Job started: Sun Apr 12 11:50:41 AM EDT 2026
+Node: g0312.ll.unc.edu
+/work/users/t/x/txueying/hf_venv/bin/python3
+Python 3.12.4
+Device: cuda
+Loading model: openbmb/MiniCPM-V-4
+Job finished: Sun Apr 12 11:51:14 AM EDT 2026
