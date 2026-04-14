@@ -1,0 +1,52 @@
+[
+  {
+    "sample_id": "S001",
+    "question": "Did the largest meal event lead to a glucose spike?",
+    "model_answer": "Readings (CGM / BGM) on 2023-12-"
+  },
+  {
+    "sample_id": "S002",
+    "question": "Did glucose fall below 70 mg/dL overnight?",
+    "model_answer": "Yes"
+  },
+  {
+    "sample_id": "S005",
+    "question": "Was glucose above 180 mg/dL at any time during the afternoon?",
+    "model_answer": "Yes"
+  },
+  {
+    "sample_id": "S006",
+    "question": "Was glucose more stable in the morning than in the evening?",
+    "model_answer": "0.61"
+  },
+  {
+    "sample_id": "S009",
+    "question": "Did any insulin event occur before a glucose decrease?",
+    "model_answer": "Yes"
+  },
+  {
+    "sample_id": "S010",
+    "question": "Did glucose exceed 180 mg/dL around noon?",
+    "model_answer": "Yes"
+  },
+  {
+    "sample_id": "S013",
+    "question": "Was glucose higher in the afternoon than in the early morning?",
+    "model_answer": "0.47"
+  },
+  {
+    "sample_id": "S014",
+    "question": "Did glucose fall below 70 mg/dL overnight?",
+    "model_answer": "Yes"
+  },
+  {
+    "sample_id": "S017",
+    "question": "Did any insulin event occur before a glucose decrease?",
+    "model_answer": "Yes"
+  },
+  {
+    "sample_id": "S018",
+    "question": "Did glucose remain within the normal range for most of the morning?",
+    "model_answer": "Yes"
+  }
+]

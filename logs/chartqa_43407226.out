@@ -1,0 +1,43 @@
+Job started: Tue Apr 14 11:24:24 AM EDT 2026
+Node: g0315.ll.unc.edu
+/work/users/t/x/txueying/hf_venv/bin/python3
+Python 3.12.4
+Device: cuda
+Loading model: google/pix2struct-chartqa-base
+Model loaded (torch.float16), device: cuda:0
+[001-004/100] S001..S004 ... done [11.03s, 2.8s/sample]
+    S001 (yes_no): "Readings (CGM / BGM) on 2023-12-09"
+    S002 (yes_no): "Yes"
+    S003 (temporal): "1.25"
+    S004 (temporal): "0.42"
+[005-008/100] S005..S008 ... done [7.41s, 1.9s/sample]
+    S005 (yes_no): "Yes"
+    S006 (yes_no): "0.61"
+    S007 (temporal): "2.5"
+    S008 (temporal): "2023"
+[009-012/100] S009..S012 ... done [7.2s, 1.8s/sample]
+    S009 (yes_no): "Yes"
+    S010 (yes_no): "Yes"
+    S011 (temporal): "2"
+    S012 (temporal): "2023"
+[013-016/100] S013..S016 ... done [7.44s, 1.9s/sample]
+    S013 (yes_no): "0.47"
+    S014 (yes_no): "Yes"
+    S015 (temporal): "4.8"
+    S016 (temporal): "23-12-15"
+[017-020/100] S017..S020 ... done [7.4s, 1.9s/sample]
+    S017 (yes_no): "Yes"
+    S018 (yes_no): "Yes"
+    S019 (temporal): "2023-12-16"
+    S020 (temporal): "2023"
+[021-024/100] S021..S024 ... done [7.24s, 1.8s/sample]
+    S021 (yes_no): "Yes"
+    S022 (yes_no): "Yes"
+    S023 (temporal): "0.24"
+    S024 (temporal): "2"
+[025-028/100] S025..S028 ... done [7.53s, 1.9s/sample]
+    S025 (yes_no): "Yes"
+    S026 (yes_no): "Yes"
+    S027 (temporal): "1.67"
+    S028 (temporal): "2023-20"
+[029-032/100] S029..S032 ... 

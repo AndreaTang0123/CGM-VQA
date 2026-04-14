@@ -1,0 +1,22 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Traceback (most recent call last):
+  File "/nas/longleaf/home/txueying/CGM-VQA/run_test_yesno.py", line 93, in <module>
+    run_test()
+  File "/nas/longleaf/home/txueying/CGM-VQA/run_test_yesno.py", line 50, in run_test
+    model, processor = load_model(DEFAULT_MODEL)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nas/longleaf/home/txueying/CGM-VQA/run_test_yesno.py", line 26, in load_model
+    model = Pix2StructForConditionalGeneration.from_pretrained(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/users/t/x/txueying/hf_venv/lib/python3.12/site-packages/transformers/modeling_utils.py", line 4135, in from_pretrained
+    loading_info, disk_offload_index = cls._load_pretrained_model(model, state_dict, checkpoint_files, load_config)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/users/t/x/txueying/hf_venv/lib/python3.12/site-packages/transformers/modeling_utils.py", line 4251, in _load_pretrained_model
+    merged_state_dict.update(load_state_dict(ckpt_file))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/users/t/x/txueying/hf_venv/lib/python3.12/site-packages/transformers/modeling_utils.py", line 316, in load_state_dict
+    check_torch_load_is_safe()
+  File "/work/users/t/x/txueying/hf_venv/lib/python3.12/site-packages/transformers/utils/import_utils.py", line 1357, in check_torch_load_is_safe
+    raise ValueError(
+ValueError: Due to a serious vulnerability issue in `torch.load`, even with `weights_only=True`, we now require users to upgrade torch to at least v2.6 in order to use the function. This version restriction does not apply when loading files with safetensors.
+See the vulnerability report here https://nvd.nist.gov/vuln/detail/CVE-2025-32434

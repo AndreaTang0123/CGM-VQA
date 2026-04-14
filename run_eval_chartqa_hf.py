@@ -47,11 +47,7 @@ SYSTEM_PROMPT = (
 
 def build_prompt(question: str, expected_format: str) -> str:
     """MatCha format: Just passing context and question as the text query."""
-    return (
-        f"{SYSTEM_PROMPT}\n\n"
-        f"Question: {question}\n"
-        f"Answer format: {expected_format}"
-    )
+    return question
 
 
 def load_model(model_id: str):

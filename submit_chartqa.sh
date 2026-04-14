@@ -31,10 +31,8 @@ source "$VENV/bin/activate"
 
 # Install packages (fast on rerun if already cached)
 pip install --upgrade pip setuptools wheel -q
-pip install -q \
-    torch==2.6.0+cu118 torchvision==0.21.0+cu118 \
-    --index-url https://download.pytorch.org/whl/cu118
-pip install -q transformers accelerate pillow protobuf sentencepiece
+# Preserve existing torch version to not break flash-attn for Qwen2/LLaVA
+pip install -q transformers==4.40.0 accelerate pillow protobuf sentencepiece
 
 # ── HuggingFace cache → /work (large space) ───────────────────────────────────
 export HF_HOME=$WORKFS/hf_cache
