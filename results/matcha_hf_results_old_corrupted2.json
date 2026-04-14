@@ -5,10 +5,10 @@
     "question_id": "Q17",
     "task_type": "yes_no",
     "question": "Did the largest meal event lead to a glucose spike?",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "Readings (CGM / BGM) on 2023-12-09",
-    "latency_s": 2.76,
-    "timestamp": "2026-04-14T11:24:55"
+    "model": "google/matcha-chartqa",
+    "model_answer": "Yes",
+    "latency_s": 2.15,
+    "timestamp": "2026-04-14T11:31:40"
   },
   {
     "sample_id": "S002",
@@ -16,10 +16,10 @@
     "question_id": "Q02",
     "task_type": "yes_no",
     "question": "Did glucose fall below 70 mg/dL overnight?",
-    "model": "google/pix2struct-chartqa-base",
+    "model": "google/matcha-chartqa",
     "model_answer": "Yes",
-    "latency_s": 2.76,
-    "timestamp": "2026-04-14T11:24:55"
+    "latency_s": 2.15,
+    "timestamp": "2026-04-14T11:31:40"
   },
   {
     "sample_id": "S003",
@@ -27,10 +27,10 @@
     "question_id": "Q39",
     "task_type": "temporal",
     "question": "Locate the interval where glucose remained stable for the longest duration.",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "1.25",
-    "latency_s": 2.76,
-    "timestamp": "2026-04-14T11:24:55"
+    "model": "google/matcha-chartqa",
+    "model_answer": "23.2",
+    "latency_s": 2.15,
+    "timestamp": "2026-04-14T11:31:40"
   },
   {
     "sample_id": "S004",
@@ -38,10 +38,10 @@
     "question_id": "Q27",
     "task_type": "temporal",
     "question": "Identify the time interval where glucose declined after an insulin event.",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "0.42",
-    "latency_s": 2.76,
-    "timestamp": "2026-04-14T11:24:55"
+    "model": "google/matcha-chartqa",
+    "model_answer": "1",
+    "latency_s": 2.15,
+    "timestamp": "2026-04-14T11:31:40"
   },
   {
     "sample_id": "S005",
@@ -49,10 +49,10 @@
     "question_id": "Q01",
     "task_type": "yes_no",
     "question": "Was glucose above 180 mg/dL at any time during the afternoon?",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "Yes",
-    "latency_s": 1.85,
-    "timestamp": "2026-04-14T11:25:02"
+    "model": "google/matcha-chartqa",
+    "model_answer": "232.1",
+    "latency_s": 1.88,
+    "timestamp": "2026-04-14T11:31:48"
   },
   {
     "sample_id": "S006",
@@ -60,10 +60,10 @@
     "question_id": "Q14",
     "task_type": "yes_no",
     "question": "Was glucose more stable in the morning than in the evening?",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "0.61",
-    "latency_s": 1.85,
-    "timestamp": "2026-04-14T11:25:02"
+    "model": "google/matcha-chartqa",
+    "model_answer": "161.2",
+    "latency_s": 1.88,
+    "timestamp": "2026-04-14T11:31:48"
   },
   {
     "sample_id": "S007",
@@ -71,10 +71,10 @@
     "question_id": "Q27",
     "task_type": "temporal",
     "question": "Identify the time interval where glucose declined after an insulin event.",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "2.5",
-    "latency_s": 1.85,
-    "timestamp": "2026-04-14T11:25:02"
+    "model": "google/matcha-chartqa",
+    "model_answer": "1",
+    "latency_s": 1.88,
+    "timestamp": "2026-04-14T11:31:48"
   },
   {
     "sample_id": "S008",
@@ -82,10 +82,10 @@
     "question_id": "Q21",
     "task_type": "temporal",
     "question": "When did the largest glucose spike occur?",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "2023",
-    "latency_s": 1.85,
-    "timestamp": "2026-04-14T11:25:02"
+    "model": "google/matcha-chartqa",
+    "model_answer": "2014",
+    "latency_s": 1.88,
+    "timestamp": "2026-04-14T11:31:48"
   },
   {
     "sample_id": "S009",
@@ -93,10 +93,10 @@
     "question_id": "Q20",
     "task_type": "yes_no",
     "question": "Did any insulin event occur before a glucose decrease?",
-    "model": "google/pix2struct-chartqa-base",
+    "model": "google/matcha-chartqa",
     "model_answer": "Yes",
-    "latency_s": 1.8,
-    "timestamp": "2026-04-14T11:25:09"
+    "latency_s": 1.87,
+    "timestamp": "2026-04-14T11:31:55"
   },
   {
     "sample_id": "S010",
@@ -104,10 +104,10 @@
     "question_id": "Q04",
     "task_type": "yes_no",
     "question": "Did glucose exceed 180 mg/dL around noon?",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "Yes",
-    "latency_s": 1.8,
-    "timestamp": "2026-04-14T11:25:09"
+    "model": "google/matcha-chartqa",
+    "model_answer": "No",
+    "latency_s": 1.87,
+    "timestamp": "2026-04-14T11:31:55"
   },
   {
     "sample_id": "S011",
@@ -115,10 +115,10 @@
     "question_id": "Q40",
     "task_type": "temporal",
     "question": "Identify the period where glucose continuously increased for at least 30 minutes.",
-    "model": "google/pix2struct-chartqa-base",
+    "model": "google/matcha-chartqa",
     "model_answer": "2",
-    "latency_s": 1.8,
-    "timestamp": "2026-04-14T11:25:09"
+    "latency_s": 1.87,
+    "timestamp": "2026-04-14T11:31:55"
   },
   {
     "sample_id": "S012",
@@ -126,10 +126,10 @@
     "question_id": "Q21",
     "task_type": "temporal",
     "question": "When did the largest glucose spike occur?",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "2023",
-    "latency_s": 1.8,
-    "timestamp": "2026-04-14T11:25:09"
+    "model": "google/matcha-chartqa",
+    "model_answer": "2014",
+    "latency_s": 1.87,
+    "timestamp": "2026-04-14T11:31:55"
   },
   {
     "sample_id": "S013",
@@ -137,10 +137,10 @@
     "question_id": "Q16",
     "task_type": "yes_no",
     "question": "Was glucose higher in the afternoon than in the early morning?",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "0.47",
-    "latency_s": 1.86,
-    "timestamp": "2026-04-14T11:25:17"
+    "model": "google/matcha-chartqa",
+    "model_answer": "0.57",
+    "latency_s": 1.87,
+    "timestamp": "2026-04-14T11:32:03"
   },
   {
     "sample_id": "S014",
@@ -148,10 +148,10 @@
     "question_id": "Q02",
     "task_type": "yes_no",
     "question": "Did glucose fall below 70 mg/dL overnight?",
-    "model": "google/pix2struct-chartqa-base",
+    "model": "google/matcha-chartqa",
     "model_answer": "Yes",
-    "latency_s": 1.86,
-    "timestamp": "2026-04-14T11:25:17"
+    "latency_s": 1.87,
+    "timestamp": "2026-04-14T11:32:03"
   },
   {
     "sample_id": "S015",
@@ -159,10 +159,10 @@
     "question_id": "Q26",
     "task_type": "temporal",
     "question": "Locate the segment where glucose rose most rapidly.",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "4.8",
-    "latency_s": 1.86,
-    "timestamp": "2026-04-14T11:25:17"
+    "model": "google/matcha-chartqa",
+    "model_answer": "Insulin Delivered",
+    "latency_s": 1.87,
+    "timestamp": "2026-04-14T11:32:03"
   },
   {
     "sample_id": "S016",
@@ -170,10 +170,10 @@
     "question_id": "Q36",
     "task_type": "temporal",
     "question": "Identify the time interval where glucose remained above 180 mg/dL.",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "23-12-15",
-    "latency_s": 1.86,
-    "timestamp": "2026-04-14T11:25:17"
+    "model": "google/matcha-chartqa",
+    "model_answer": "20.3",
+    "latency_s": 1.87,
+    "timestamp": "2026-04-14T11:32:03"
   },
   {
     "sample_id": "S017",
@@ -181,10 +181,10 @@
     "question_id": "Q20",
     "task_type": "yes_no",
     "question": "Did any insulin event occur before a glucose decrease?",
-    "model": "google/pix2struct-chartqa-base",
+    "model": "google/matcha-chartqa",
     "model_answer": "Yes",
-    "latency_s": 1.85,
-    "timestamp": "2026-04-14T11:25:24"
+    "latency_s": 1.76,
+    "timestamp": "2026-04-14T11:32:10"
   },
   {
     "sample_id": "S018",
@@ -192,10 +192,10 @@
     "question_id": "Q11",
     "task_type": "yes_no",
     "question": "Did glucose remain within the normal range for most of the morning?",
-    "model": "google/pix2struct-chartqa-base",
+    "model": "google/matcha-chartqa",
     "model_answer": "Yes",
-    "latency_s": 1.85,
-    "timestamp": "2026-04-14T11:25:24"
+    "latency_s": 1.76,
+    "timestamp": "2026-04-14T11:32:10"
   },
   {
     "sample_id": "S019",
@@ -203,10 +203,10 @@
     "question_id": "Q35",
     "task_type": "temporal",
     "question": "Identify the period where glucose spike follows a meal marker.",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "2023-12-16",
-    "latency_s": 1.85,
-    "timestamp": "2026-04-14T11:25:24"
+    "model": "google/matcha-chartqa",
+    "model_answer": "250",
+    "latency_s": 1.76,
+    "timestamp": "2026-04-14T11:32:10"
   },
   {
     "sample_id": "S020",
@@ -214,10 +214,10 @@
     "question_id": "Q21",
     "task_type": "temporal",
     "question": "When did the largest glucose spike occur?",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "2023",
-    "latency_s": 1.85,
-    "timestamp": "2026-04-14T11:25:24"
+    "model": "google/matcha-chartqa",
+    "model_answer": "2003",
+    "latency_s": 1.76,
+    "timestamp": "2026-04-14T11:32:10"
   },
   {
     "sample_id": "S021",
@@ -225,10 +225,10 @@
     "question_id": "Q08",
     "task_type": "yes_no",
     "question": "Did glucose gradually decline during the evening?",
-    "model": "google/pix2struct-chartqa-base",
+    "model": "google/matcha-chartqa",
     "model_answer": "Yes",
-    "latency_s": 1.81,
-    "timestamp": "2026-04-14T11:25:31"
+    "latency_s": 1.87,
+    "timestamp": "2026-04-14T11:32:17"
   },
   {
     "sample_id": "S022",
@@ -236,10 +236,10 @@
     "question_id": "Q12",
     "task_type": "yes_no",
     "question": "Was there a prolonged high glucose period during the afternoon?",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "Yes",
-    "latency_s": 1.81,
-    "timestamp": "2026-04-14T11:25:31"
+    "model": "google/matcha-chartqa",
+    "model_answer": "68",
+    "latency_s": 1.87,
+    "timestamp": "2026-04-14T11:32:17"
   },
   {
     "sample_id": "S023",
@@ -247,10 +247,10 @@
     "question_id": "Q28",
     "task_type": "temporal",
     "question": "Locate the segment showing the largest upward trend.",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "0.24",
-    "latency_s": 1.81,
-    "timestamp": "2026-04-14T11:25:31"
+    "model": "google/matcha-chartqa",
+    "model_answer": "256",
+    "latency_s": 1.87,
+    "timestamp": "2026-04-14T11:32:17"
   },
   {
     "sample_id": "S024",
@@ -258,10 +258,10 @@
     "question_id": "Q40",
     "task_type": "temporal",
     "question": "Identify the period where glucose continuously increased for at least 30 minutes.",
-    "model": "google/pix2struct-chartqa-base",
+    "model": "google/matcha-chartqa",
     "model_answer": "2",
-    "latency_s": 1.81,
-    "timestamp": "2026-04-14T11:25:31"
+    "latency_s": 1.87,
+    "timestamp": "2026-04-14T11:32:17"
   },
   {
     "sample_id": "S025",
@@ -269,10 +269,10 @@
     "question_id": "Q19",
     "task_type": "yes_no",
     "question": "Was there a glucose rise shortly after carbohydrate intake?",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "Yes",
-    "latency_s": 1.88,
-    "timestamp": "2026-04-14T11:25:39"
+    "model": "google/matcha-chartqa",
+    "model_answer": "1.69",
+    "latency_s": 1.83,
+    "timestamp": "2026-04-14T11:32:25"
   },
   {
     "sample_id": "S026",
@@ -280,10 +280,10 @@
     "question_id": "Q04",
     "task_type": "yes_no",
     "question": "Did glucose exceed 180 mg/dL around noon?",
-    "model": "google/pix2struct-chartqa-base",
+    "model": "google/matcha-chartqa",
     "model_answer": "Yes",
-    "latency_s": 1.88,
-    "timestamp": "2026-04-14T11:25:39"
+    "latency_s": 1.83,
+    "timestamp": "2026-04-14T11:32:25"
   },
   {
     "sample_id": "S027",
@@ -291,10 +291,10 @@
     "question_id": "Q33",
     "task_type": "temporal",
     "question": "Identify the glucose response period following carbohydrate intake.",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "1.67",
-    "latency_s": 1.88,
-    "timestamp": "2026-04-14T11:25:39"
+    "model": "google/matcha-chartqa",
+    "model_answer": "2023-12-21",
+    "latency_s": 1.83,
+    "timestamp": "2026-04-14T11:32:25"
   },
   {
     "sample_id": "S028",
@@ -302,10 +302,10 @@
     "question_id": "Q21",
     "task_type": "temporal",
     "question": "When did the largest glucose spike occur?",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "2023-20",
-    "latency_s": 1.88,
-    "timestamp": "2026-04-14T11:25:39"
+    "model": "google/matcha-chartqa",
+    "model_answer": "2016",
+    "latency_s": 1.83,
+    "timestamp": "2026-04-14T11:32:25"
   },
   {
     "sample_id": "S029",
@@ -313,10 +313,10 @@
     "question_id": "Q10",
     "task_type": "yes_no",
     "question": "Was glucose below the hypoglycemia threshold for at least 15 minutes?",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "Yes",
-    "latency_s": 1.86,
-    "timestamp": "2026-04-14T11:25:46"
+    "model": "google/matcha-chartqa",
+    "model_answer": "1",
+    "latency_s": 1.81,
+    "timestamp": "2026-04-14T11:32:32"
   },
   {
     "sample_id": "S030",
@@ -324,10 +324,10 @@
     "question_id": "Q17",
     "task_type": "yes_no",
     "question": "Did the largest meal event lead to a glucose spike?",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "Readings (CGM / BGM) on 2023-12-23",
-    "latency_s": 1.86,
-    "timestamp": "2026-04-14T11:25:46"
+    "model": "google/matcha-chartqa",
+    "model_answer": "Yes",
+    "latency_s": 1.81,
+    "timestamp": "2026-04-14T11:32:32"
   },
   {
     "sample_id": "S031",
@@ -335,10 +335,10 @@
     "question_id": "Q24",
     "task_type": "temporal",
     "question": "When did the lowest glucose value occur?",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "2023-20",
-    "latency_s": 1.86,
-    "timestamp": "2026-04-14T11:25:46"
+    "model": "google/matcha-chartqa",
+    "model_answer": "2005",
+    "latency_s": 1.81,
+    "timestamp": "2026-04-14T11:32:32"
   },
   {
     "sample_id": "S032",
@@ -346,10 +346,10 @@
     "question_id": "Q21",
     "task_type": "temporal",
     "question": "When did the largest glucose spike occur?",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "2023-20",
-    "latency_s": 1.86,
-    "timestamp": "2026-04-14T11:25:46"
+    "model": "google/matcha-chartqa",
+    "model_answer": "2016",
+    "latency_s": 1.81,
+    "timestamp": "2026-04-14T11:32:32"
   },
   {
     "sample_id": "S033",
@@ -357,10 +357,10 @@
     "question_id": "Q12",
     "task_type": "yes_no",
     "question": "Was there a prolonged high glucose period during the afternoon?",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "Yes",
-    "latency_s": 1.9,
-    "timestamp": "2026-04-14T11:25:54"
+    "model": "google/matcha-chartqa",
+    "model_answer": "0.55",
+    "latency_s": 1.89,
+    "timestamp": "2026-04-14T11:32:40"
   },
   {
     "sample_id": "S034",
@@ -368,10 +368,10 @@
     "question_id": "Q01",
     "task_type": "yes_no",
     "question": "Was glucose above 180 mg/dL at any time during the afternoon?",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "Yes",
-    "latency_s": 1.9,
-    "timestamp": "2026-04-14T11:25:54"
+    "model": "google/matcha-chartqa",
+    "model_answer": "0.55",
+    "latency_s": 1.89,
+    "timestamp": "2026-04-14T11:32:40"
   },
   {
     "sample_id": "S035",
@@ -379,10 +379,10 @@
     "question_id": "Q21",
     "task_type": "temporal",
     "question": "When did the largest glucose spike occur?",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "2023-12-24",
-    "latency_s": 1.9,
-    "timestamp": "2026-04-14T11:25:54"
+    "model": "google/matcha-chartqa",
+    "model_answer": "2005",
+    "latency_s": 1.89,
+    "timestamp": "2026-04-14T11:32:40"
   },
   {
     "sample_id": "S036",
@@ -390,10 +390,10 @@
     "question_id": "Q38",
     "task_type": "temporal",
     "question": "Identify the longest period where glucose stayed within the normal range.",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "2.49",
-    "latency_s": 1.9,
-    "timestamp": "2026-04-14T11:25:54"
+    "model": "google/matcha-chartqa",
+    "model_answer": "76.6",
+    "latency_s": 1.89,
+    "timestamp": "2026-04-14T11:32:40"
   },
   {
     "sample_id": "S037",
@@ -401,10 +401,10 @@
     "question_id": "Q11",
     "task_type": "yes_no",
     "question": "Did glucose remain within the normal range for most of the morning?",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "Yes",
-    "latency_s": 1.72,
-    "timestamp": "2026-04-14T11:26:01"
+    "model": "google/matcha-chartqa",
+    "model_answer": "0.1",
+    "latency_s": 1.77,
+    "timestamp": "2026-04-14T11:32:47"
   },
   {
     "sample_id": "S038",
@@ -412,10 +412,10 @@
     "question_id": "Q12",
     "task_type": "yes_no",
     "question": "Was there a prolonged high glucose period during the afternoon?",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "Yes",
-    "latency_s": 1.72,
-    "timestamp": "2026-04-14T11:26:01"
+    "model": "google/matcha-chartqa",
+    "model_answer": "1.0",
+    "latency_s": 1.77,
+    "timestamp": "2026-04-14T11:32:47"
   },
   {
     "sample_id": "S039",
@@ -423,10 +423,10 @@
     "question_id": "Q29",
     "task_type": "temporal",
     "question": "Identify the period where glucose gradually decreased during the evening.",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "[22, 6]",
-    "latency_s": 1.72,
-    "timestamp": "2026-04-14T11:26:01"
+    "model": "google/matcha-chartqa",
+    "model_answer": "1",
+    "latency_s": 1.77,
+    "timestamp": "2026-04-14T11:32:47"
   },
   {
     "sample_id": "S040",
@@ -434,10 +434,10 @@
     "question_id": "Q22",
     "task_type": "temporal",
     "question": "Identify the time interval where glucose first exceeded 180 mg/dL.",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "2.5",
-    "latency_s": 1.72,
-    "timestamp": "2026-04-14T11:26:01"
+    "model": "google/matcha-chartqa",
+    "model_answer": "2023-12-30",
+    "latency_s": 1.77,
+    "timestamp": "2026-04-14T11:32:47"
   },
   {
     "sample_id": "S041",
@@ -445,10 +445,10 @@
     "question_id": "Q04",
     "task_type": "yes_no",
     "question": "Did glucose exceed 180 mg/dL around noon?",
-    "model": "google/pix2struct-chartqa-base",
+    "model": "google/matcha-chartqa",
     "model_answer": "Yes",
-    "latency_s": 1.79,
-    "timestamp": "2026-04-14T11:26:08"
+    "latency_s": 1.66,
+    "timestamp": "2026-04-14T11:32:53"
   },
   {
     "sample_id": "S042",
@@ -456,10 +456,10 @@
     "question_id": "Q10",
     "task_type": "yes_no",
     "question": "Was glucose below the hypoglycemia threshold for at least 15 minutes?",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "Yes",
-    "latency_s": 1.79,
-    "timestamp": "2026-04-14T11:26:08"
+    "model": "google/matcha-chartqa",
+    "model_answer": "1",
+    "latency_s": 1.66,
+    "timestamp": "2026-04-14T11:32:53"
   },
   {
     "sample_id": "S043",
@@ -467,10 +467,10 @@
     "question_id": "Q33",
     "task_type": "temporal",
     "question": "Identify the glucose response period following carbohydrate intake.",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "1.57",
-    "latency_s": 1.79,
-    "timestamp": "2026-04-14T11:26:08"
+    "model": "google/matcha-chartqa",
+    "model_answer": "250",
+    "latency_s": 1.66,
+    "timestamp": "2026-04-14T11:32:53"
   },
   {
     "sample_id": "S044",
@@ -478,10 +478,10 @@
     "question_id": "Q29",
     "task_type": "temporal",
     "question": "Identify the period where glucose gradually decreased during the evening.",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "0.17",
-    "latency_s": 1.79,
-    "timestamp": "2026-04-14T11:26:08"
+    "model": "google/matcha-chartqa",
+    "model_answer": "25",
+    "latency_s": 1.66,
+    "timestamp": "2026-04-14T11:32:53"
   },
   {
     "sample_id": "S045",
@@ -489,10 +489,10 @@
     "question_id": "Q07",
     "task_type": "yes_no",
     "question": "Was there a rapid glucose increase within one hour during the day?",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "Yes",
-    "latency_s": 1.84,
-    "timestamp": "2026-04-14T11:26:15"
+    "model": "google/matcha-chartqa",
+    "model_answer": "0.8",
+    "latency_s": 1.64,
+    "timestamp": "2026-04-14T11:33:00"
   },
   {
     "sample_id": "S046",
@@ -500,10 +500,10 @@
     "question_id": "Q05",
     "task_type": "yes_no",
     "question": "Did glucose rise sharply after a meal event?",
-    "model": "google/pix2struct-chartqa-base",
+    "model": "google/matcha-chartqa",
     "model_answer": "Yes",
-    "latency_s": 1.84,
-    "timestamp": "2026-04-14T11:26:15"
+    "latency_s": 1.64,
+    "timestamp": "2026-04-14T11:33:00"
   },
   {
     "sample_id": "S047",
@@ -511,10 +511,10 @@
     "question_id": "Q36",
     "task_type": "temporal",
     "question": "Identify the time interval where glucose remained above 180 mg/dL.",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "240",
-    "latency_s": 1.84,
-    "timestamp": "2026-04-14T11:26:15"
+    "model": "google/matcha-chartqa",
+    "model_answer": "20.6",
+    "latency_s": 1.64,
+    "timestamp": "2026-04-14T11:33:00"
   },
   {
     "sample_id": "S048",
@@ -522,10 +522,10 @@
     "question_id": "Q31",
     "task_type": "temporal",
     "question": "Identify the time interval where glucose rose after a meal event.",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "2.5",
-    "latency_s": 1.84,
-    "timestamp": "2026-04-14T11:26:15"
+    "model": "google/matcha-chartqa",
+    "model_answer": "0.2",
+    "latency_s": 1.64,
+    "timestamp": "2026-04-14T11:33:00"
   },
   {
     "sample_id": "S049",
@@ -533,10 +533,10 @@
     "question_id": "Q09",
     "task_type": "yes_no",
     "question": "Was glucose in the hyperglycemia zone for more than one hour?",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "Yes",
+    "model": "google/matcha-chartqa",
+    "model_answer": "200",
     "latency_s": 1.72,
-    "timestamp": "2026-04-14T11:26:22"
+    "timestamp": "2026-04-14T11:33:07"
   },
   {
     "sample_id": "S050",
@@ -544,10 +544,10 @@
     "question_id": "Q11",
     "task_type": "yes_no",
     "question": "Did glucose remain within the normal range for most of the morning?",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "Yes",
+    "model": "google/matcha-chartqa",
+    "model_answer": "17.99",
     "latency_s": 1.72,
-    "timestamp": "2026-04-14T11:26:22"
+    "timestamp": "2026-04-14T11:33:07"
   },
   {
     "sample_id": "S051",
@@ -555,10 +555,10 @@
     "question_id": "Q22",
     "task_type": "temporal",
     "question": "Identify the time interval where glucose first exceeded 180 mg/dL.",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "24.5",
+    "model": "google/matcha-chartqa",
+    "model_answer": "2024-01-07",
     "latency_s": 1.72,
-    "timestamp": "2026-04-14T11:26:22"
+    "timestamp": "2026-04-14T11:33:07"
   },
   {
     "sample_id": "S052",
@@ -566,10 +566,10 @@
     "question_id": "Q37",
     "task_type": "temporal",
     "question": "Locate the segment where glucose remained below 70 mg/dL.",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "70",
+    "model": "google/matcha-chartqa",
+    "model_answer": "2003",
     "latency_s": 1.72,
-    "timestamp": "2026-04-14T11:26:22"
+    "timestamp": "2026-04-14T11:33:07"
   },
   {
     "sample_id": "S053",
@@ -577,10 +577,10 @@
     "question_id": "Q08",
     "task_type": "yes_no",
     "question": "Did glucose gradually decline during the evening?",
-    "model": "google/pix2struct-chartqa-base",
+    "model": "google/matcha-chartqa",
     "model_answer": "Yes",
-    "latency_s": 1.78,
-    "timestamp": "2026-04-14T11:26:29"
+    "latency_s": 1.83,
+    "timestamp": "2026-04-14T11:33:14"
   },
   {
     "sample_id": "S054",
@@ -588,10 +588,10 @@
     "question_id": "Q03",
     "task_type": "yes_no",
     "question": "Was glucose within the normal range (70–180) during the early morning?",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "Yes",
-    "latency_s": 1.78,
-    "timestamp": "2026-04-14T11:26:29"
+    "model": "google/matcha-chartqa",
+    "model_answer": "0.78",
+    "latency_s": 1.83,
+    "timestamp": "2026-04-14T11:33:14"
   },
   {
     "sample_id": "S055",
@@ -599,10 +599,10 @@
     "question_id": "Q23",
     "task_type": "temporal",
     "question": "Locate the longest hyperglycemia period in the graph.",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "47",
-    "latency_s": 1.78,
-    "timestamp": "2026-04-14T11:26:29"
+    "model": "google/matcha-chartqa",
+    "model_answer": "45.0",
+    "latency_s": 1.83,
+    "timestamp": "2026-04-14T11:33:14"
   },
   {
     "sample_id": "S056",
@@ -610,10 +610,10 @@
     "question_id": "Q31",
     "task_type": "temporal",
     "question": "Identify the time interval where glucose rose after a meal event.",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "Yes",
-    "latency_s": 1.78,
-    "timestamp": "2026-04-14T11:26:29"
+    "model": "google/matcha-chartqa",
+    "model_answer": "0.78",
+    "latency_s": 1.83,
+    "timestamp": "2026-04-14T11:33:14"
   },
   {
     "sample_id": "S057",
@@ -621,10 +621,10 @@
     "question_id": "Q17",
     "task_type": "yes_no",
     "question": "Did the largest meal event lead to a glucose spike?",
-    "model": "google/pix2struct-chartqa-base",
+    "model": "google/matcha-chartqa",
     "model_answer": "Yes",
-    "latency_s": 1.77,
-    "timestamp": "2026-04-14T11:26:36"
+    "latency_s": 1.73,
+    "timestamp": "2026-04-14T11:33:21"
   },
   {
     "sample_id": "S058",
@@ -632,10 +632,10 @@
     "question_id": "Q06",
     "task_type": "yes_no",
     "question": "Did glucose decrease after an insulin delivery event?",
-    "model": "google/pix2struct-chartqa-base",
+    "model": "google/matcha-chartqa",
     "model_answer": "Yes",
-    "latency_s": 1.77,
-    "timestamp": "2026-04-14T11:26:36"
+    "latency_s": 1.73,
+    "timestamp": "2026-04-14T11:33:21"
   },
   {
     "sample_id": "S059",
@@ -643,10 +643,10 @@
     "question_id": "Q31",
     "task_type": "temporal",
     "question": "Identify the time interval where glucose rose after a meal event.",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "Yes",
-    "latency_s": 1.77,
-    "timestamp": "2026-04-14T11:26:36"
+    "model": "google/matcha-chartqa",
+    "model_answer": "202.4",
+    "latency_s": 1.73,
+    "timestamp": "2026-04-14T11:33:21"
   },
   {
     "sample_id": "S060",
@@ -654,10 +654,10 @@
     "question_id": "Q39",
     "task_type": "temporal",
     "question": "Locate the interval where glucose remained stable for the longest duration.",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "240",
-    "latency_s": 1.77,
-    "timestamp": "2026-04-14T11:26:36"
+    "model": "google/matcha-chartqa",
+    "model_answer": "0.237",
+    "latency_s": 1.73,
+    "timestamp": "2026-04-14T11:33:21"
   },
   {
     "sample_id": "S061",
@@ -665,10 +665,10 @@
     "question_id": "Q05",
     "task_type": "yes_no",
     "question": "Did glucose rise sharply after a meal event?",
-    "model": "google/pix2struct-chartqa-base",
+    "model": "google/matcha-chartqa",
     "model_answer": "Yes",
-    "latency_s": 1.8,
-    "timestamp": "2026-04-14T11:26:44"
+    "latency_s": 1.63,
+    "timestamp": "2026-04-14T11:33:27"
   },
   {
     "sample_id": "S062",
@@ -676,10 +676,10 @@
     "question_id": "Q01",
     "task_type": "yes_no",
     "question": "Was glucose above 180 mg/dL at any time during the afternoon?",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "Yes",
-    "latency_s": 1.8,
-    "timestamp": "2026-04-14T11:26:44"
+    "model": "google/matcha-chartqa",
+    "model_answer": "175",
+    "latency_s": 1.63,
+    "timestamp": "2026-04-14T11:33:27"
   },
   {
     "sample_id": "S063",
@@ -687,10 +687,10 @@
     "question_id": "Q28",
     "task_type": "temporal",
     "question": "Locate the segment showing the largest upward trend.",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "3.4",
-    "latency_s": 1.8,
-    "timestamp": "2026-04-14T11:26:44"
+    "model": "google/matcha-chartqa",
+    "model_answer": "4",
+    "latency_s": 1.63,
+    "timestamp": "2026-04-14T11:33:27"
   },
   {
     "sample_id": "S064",
@@ -698,10 +698,10 @@
     "question_id": "Q32",
     "task_type": "temporal",
     "question": "Locate the segment where glucose dropped after insulin delivery.",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "10.3",
-    "latency_s": 1.8,
-    "timestamp": "2026-04-14T11:26:44"
+    "model": "google/matcha-chartqa",
+    "model_answer": "2.2",
+    "latency_s": 1.63,
+    "timestamp": "2026-04-14T11:33:27"
   },
   {
     "sample_id": "S065",
@@ -709,10 +709,10 @@
     "question_id": "Q18",
     "task_type": "yes_no",
     "question": "Did insulin delivery lead to a noticeable glucose drop shortly afterward?",
-    "model": "google/pix2struct-chartqa-base",
+    "model": "google/matcha-chartqa",
     "model_answer": "Yes",
-    "latency_s": 1.8,
-    "timestamp": "2026-04-14T11:26:51"
+    "latency_s": 1.74,
+    "timestamp": "2026-04-14T11:33:34"
   },
   {
     "sample_id": "S066",
@@ -720,10 +720,10 @@
     "question_id": "Q09",
     "task_type": "yes_no",
     "question": "Was glucose in the hyperglycemia zone for more than one hour?",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "Yes",
-    "latency_s": 1.8,
-    "timestamp": "2026-04-14T11:26:51"
+    "model": "google/matcha-chartqa",
+    "model_answer": "50.1",
+    "latency_s": 1.74,
+    "timestamp": "2026-04-14T11:33:34"
   },
   {
     "sample_id": "S067",
@@ -731,10 +731,10 @@
     "question_id": "Q30",
     "task_type": "temporal",
     "question": "Locate the segment where glucose remained relatively stable.",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "2024-07",
-    "latency_s": 1.8,
-    "timestamp": "2026-04-14T11:26:51"
+    "model": "google/matcha-chartqa",
+    "model_answer": "167.4",
+    "latency_s": 1.74,
+    "timestamp": "2026-04-14T11:33:34"
   },
   {
     "sample_id": "S068",
@@ -742,10 +742,10 @@
     "question_id": "Q39",
     "task_type": "temporal",
     "question": "Locate the interval where glucose remained stable for the longest duration.",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "1.67",
-    "latency_s": 1.8,
-    "timestamp": "2026-04-14T11:26:51"
+    "model": "google/matcha-chartqa",
+    "model_answer": "17.2",
+    "latency_s": 1.74,
+    "timestamp": "2026-04-14T11:33:34"
   },
   {
     "sample_id": "S069",
@@ -753,10 +753,10 @@
     "question_id": "Q09",
     "task_type": "yes_no",
     "question": "Was glucose in the hyperglycemia zone for more than one hour?",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "Yes",
-    "latency_s": 1.84,
-    "timestamp": "2026-04-14T11:26:58"
+    "model": "google/matcha-chartqa",
+    "model_answer": "6.0",
+    "latency_s": 1.74,
+    "timestamp": "2026-04-14T11:33:41"
   },
   {
     "sample_id": "S070",
@@ -764,10 +764,10 @@
     "question_id": "Q07",
     "task_type": "yes_no",
     "question": "Was there a rapid glucose increase within one hour during the day?",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "Yes",
-    "latency_s": 1.84,
-    "timestamp": "2026-04-14T11:26:58"
+    "model": "google/matcha-chartqa",
+    "model_answer": "160",
+    "latency_s": 1.74,
+    "timestamp": "2026-04-14T11:33:41"
   },
   {
     "sample_id": "S071",
@@ -775,10 +775,10 @@
     "question_id": "Q39",
     "task_type": "temporal",
     "question": "Locate the interval where glucose remained stable for the longest duration.",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "240",
-    "latency_s": 1.84,
-    "timestamp": "2026-04-14T11:26:58"
+    "model": "google/matcha-chartqa",
+    "model_answer": "199",
+    "latency_s": 1.74,
+    "timestamp": "2026-04-14T11:33:41"
   },
   {
     "sample_id": "S072",
@@ -786,10 +786,10 @@
     "question_id": "Q22",
     "task_type": "temporal",
     "question": "Identify the time interval where glucose first exceeded 180 mg/dL.",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "2.5",
-    "latency_s": 1.84,
-    "timestamp": "2026-04-14T11:26:58"
+    "model": "google/matcha-chartqa",
+    "model_answer": "2024-02-08",
+    "latency_s": 1.74,
+    "timestamp": "2026-04-14T11:33:41"
   },
   {
     "sample_id": "S073",
@@ -797,10 +797,10 @@
     "question_id": "Q15",
     "task_type": "yes_no",
     "question": "Was the largest spike after lunch larger than the spike after dinner?",
-    "model": "google/pix2struct-chartqa-base",
+    "model": "google/matcha-chartqa",
     "model_answer": "Yes",
-    "latency_s": 1.75,
-    "timestamp": "2026-04-14T11:27:05"
+    "latency_s": 1.65,
+    "timestamp": "2026-04-14T11:33:48"
   },
   {
     "sample_id": "S074",
@@ -808,10 +808,10 @@
     "question_id": "Q13",
     "task_type": "yes_no",
     "question": "Was the highest glucose peak higher than the morning peak?",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "6.78",
-    "latency_s": 1.75,
-    "timestamp": "2026-04-14T11:27:05"
+    "model": "google/matcha-chartqa",
+    "model_answer": "20.3",
+    "latency_s": 1.65,
+    "timestamp": "2026-04-14T11:33:48"
   },
   {
     "sample_id": "S075",
@@ -819,10 +819,10 @@
     "question_id": "Q24",
     "task_type": "temporal",
     "question": "When did the lowest glucose value occur?",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "2003",
-    "latency_s": 1.75,
-    "timestamp": "2026-04-14T11:27:05"
+    "model": "google/matcha-chartqa",
+    "model_answer": "2005",
+    "latency_s": 1.65,
+    "timestamp": "2026-04-14T11:33:48"
   },
   {
     "sample_id": "S076",
@@ -830,10 +830,10 @@
     "question_id": "Q34",
     "task_type": "temporal",
     "question": "Locate the time interval where glucose changed direction after an insulin event.",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "240",
-    "latency_s": 1.75,
-    "timestamp": "2026-04-14T11:27:05"
+    "model": "google/matcha-chartqa",
+    "model_answer": "2.19",
+    "latency_s": 1.65,
+    "timestamp": "2026-04-14T11:33:48"
   },
   {
     "sample_id": "S077",
@@ -841,10 +841,10 @@
     "question_id": "Q16",
     "task_type": "yes_no",
     "question": "Was glucose higher in the afternoon than in the early morning?",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "Yes",
-    "latency_s": 1.85,
-    "timestamp": "2026-04-14T11:27:13"
+    "model": "google/matcha-chartqa",
+    "model_answer": "161.6",
+    "latency_s": 1.7,
+    "timestamp": "2026-04-14T11:33:55"
   },
   {
     "sample_id": "S078",
@@ -852,10 +852,10 @@
     "question_id": "Q03",
     "task_type": "yes_no",
     "question": "Was glucose within the normal range (70–180) during the early morning?",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "Yes",
-    "latency_s": 1.85,
-    "timestamp": "2026-04-14T11:27:13"
+    "model": "google/matcha-chartqa",
+    "model_answer": "20.9",
+    "latency_s": 1.7,
+    "timestamp": "2026-04-14T11:33:55"
   },
   {
     "sample_id": "S079",
@@ -863,10 +863,10 @@
     "question_id": "Q38",
     "task_type": "temporal",
     "question": "Identify the longest period where glucose stayed within the normal range.",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "24.05",
-    "latency_s": 1.85,
-    "timestamp": "2026-04-14T11:27:13"
+    "model": "google/matcha-chartqa",
+    "model_answer": "20.9",
+    "latency_s": 1.7,
+    "timestamp": "2026-04-14T11:33:55"
   },
   {
     "sample_id": "S080",
@@ -874,10 +874,10 @@
     "question_id": "Q27",
     "task_type": "temporal",
     "question": "Identify the time interval where glucose declined after an insulin event.",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "2.28",
-    "latency_s": 1.85,
-    "timestamp": "2026-04-14T11:27:13"
+    "model": "google/matcha-chartqa",
+    "model_answer": "20.9",
+    "latency_s": 1.7,
+    "timestamp": "2026-04-14T11:33:55"
   },
   {
     "sample_id": "S081",
@@ -885,10 +885,10 @@
     "question_id": "Q19",
     "task_type": "yes_no",
     "question": "Was there a glucose rise shortly after carbohydrate intake?",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "Yes",
-    "latency_s": 1.77,
-    "timestamp": "2026-04-14T11:27:20"
+    "model": "google/matcha-chartqa",
+    "model_answer": "167",
+    "latency_s": 1.83,
+    "timestamp": "2026-04-14T11:34:02"
   },
   {
     "sample_id": "S082",
@@ -896,10 +896,10 @@
     "question_id": "Q13",
     "task_type": "yes_no",
     "question": "Was the highest glucose peak higher than the morning peak?",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "5.1",
-    "latency_s": 1.77,
-    "timestamp": "2026-04-14T11:27:20"
+    "model": "google/matcha-chartqa",
+    "model_answer": "50.2",
+    "latency_s": 1.83,
+    "timestamp": "2026-04-14T11:34:02"
   },
   {
     "sample_id": "S083",
@@ -907,10 +907,10 @@
     "question_id": "Q33",
     "task_type": "temporal",
     "question": "Identify the glucose response period following carbohydrate intake.",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "1.27",
-    "latency_s": 1.77,
-    "timestamp": "2026-04-14T11:27:20"
+    "model": "google/matcha-chartqa",
+    "model_answer": "2024-03-05",
+    "latency_s": 1.83,
+    "timestamp": "2026-04-14T11:34:02"
   },
   {
     "sample_id": "S084",
@@ -918,10 +918,10 @@
     "question_id": "Q32",
     "task_type": "temporal",
     "question": "Locate the segment where glucose dropped after insulin delivery.",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "2.5",
-    "latency_s": 1.77,
-    "timestamp": "2026-04-14T11:27:20"
+    "model": "google/matcha-chartqa",
+    "model_answer": "23.3",
+    "latency_s": 1.83,
+    "timestamp": "2026-04-14T11:34:02"
   },
   {
     "sample_id": "S085",
@@ -929,10 +929,10 @@
     "question_id": "Q15",
     "task_type": "yes_no",
     "question": "Was the largest spike after lunch larger than the spike after dinner?",
-    "model": "google/pix2struct-chartqa-base",
+    "model": "google/matcha-chartqa",
     "model_answer": "Yes",
-    "latency_s": 1.95,
-    "timestamp": "2026-04-14T11:27:27"
+    "latency_s": 1.75,
+    "timestamp": "2026-04-14T11:34:09"
   },
   {
     "sample_id": "S086",
@@ -940,10 +940,10 @@
     "question_id": "Q14",
     "task_type": "yes_no",
     "question": "Was glucose more stable in the morning than in the evening?",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "0.17",
-    "latency_s": 1.95,
-    "timestamp": "2026-04-14T11:27:27"
+    "model": "google/matcha-chartqa",
+    "model_answer": "199",
+    "latency_s": 1.75,
+    "timestamp": "2026-04-14T11:34:09"
   },
   {
     "sample_id": "S087",
@@ -951,10 +951,10 @@
     "question_id": "Q40",
     "task_type": "temporal",
     "question": "Identify the period where glucose continuously increased for at least 30 minutes.",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "[15.586,  17.06]",
-    "latency_s": 1.95,
-    "timestamp": "2026-04-14T11:27:27"
+    "model": "google/matcha-chartqa",
+    "model_answer": "4.0",
+    "latency_s": 1.75,
+    "timestamp": "2026-04-14T11:34:09"
   },
   {
     "sample_id": "S088",
@@ -962,10 +962,10 @@
     "question_id": "Q26",
     "task_type": "temporal",
     "question": "Locate the segment where glucose rose most rapidly.",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "Yes",
-    "latency_s": 1.95,
-    "timestamp": "2026-04-14T11:27:27"
+    "model": "google/matcha-chartqa",
+    "model_answer": "Insulin Delivered",
+    "latency_s": 1.75,
+    "timestamp": "2026-04-14T11:34:09"
   },
   {
     "sample_id": "S089",
@@ -973,10 +973,10 @@
     "question_id": "Q18",
     "task_type": "yes_no",
     "question": "Did insulin delivery lead to a noticeable glucose drop shortly afterward?",
-    "model": "google/pix2struct-chartqa-base",
+    "model": "google/matcha-chartqa",
     "model_answer": "Yes",
-    "latency_s": 1.79,
-    "timestamp": "2026-04-14T11:27:35"
+    "latency_s": 1.64,
+    "timestamp": "2026-04-14T11:34:16"
   },
   {
     "sample_id": "S090",
@@ -984,10 +984,10 @@
     "question_id": "Q02",
     "task_type": "yes_no",
     "question": "Did glucose fall below 70 mg/dL overnight?",
-    "model": "google/pix2struct-chartqa-base",
+    "model": "google/matcha-chartqa",
     "model_answer": "Yes",
-    "latency_s": 1.79,
-    "timestamp": "2026-04-14T11:27:35"
+    "latency_s": 1.64,
+    "timestamp": "2026-04-14T11:34:16"
   },
   {
     "sample_id": "S091",
@@ -995,10 +995,10 @@
     "question_id": "Q35",
     "task_type": "temporal",
     "question": "Identify the period where glucose spike follows a meal marker.",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "2024-07",
-    "latency_s": 1.79,
-    "timestamp": "2026-04-14T11:27:35"
+    "model": "google/matcha-chartqa",
+    "model_answer": "2.45",
+    "latency_s": 1.64,
+    "timestamp": "2026-04-14T11:34:16"
   },
   {
     "sample_id": "S092",
@@ -1006,10 +1006,10 @@
     "question_id": "Q28",
     "task_type": "temporal",
     "question": "Locate the segment showing the largest upward trend.",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "5.4",
-    "latency_s": 1.79,
-    "timestamp": "2026-04-14T11:27:35"
+    "model": "google/matcha-chartqa",
+    "model_answer": "2.53",
+    "latency_s": 1.64,
+    "timestamp": "2026-04-14T11:34:16"
   },
   {
     "sample_id": "S093",
@@ -1017,10 +1017,10 @@
     "question_id": "Q03",
     "task_type": "yes_no",
     "question": "Was glucose within the normal range (70–180) during the early morning?",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "Yes",
-    "latency_s": 1.82,
-    "timestamp": "2026-04-14T11:27:42"
+    "model": "google/matcha-chartqa",
+    "model_answer": "52.1",
+    "latency_s": 1.72,
+    "timestamp": "2026-04-14T11:34:23"
   },
   {
     "sample_id": "S094",
@@ -1028,10 +1028,10 @@
     "question_id": "Q08",
     "task_type": "yes_no",
     "question": "Did glucose gradually decline during the evening?",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "Yes",
-    "latency_s": 1.82,
-    "timestamp": "2026-04-14T11:27:42"
+    "model": "google/matcha-chartqa",
+    "model_answer": "210",
+    "latency_s": 1.72,
+    "timestamp": "2026-04-14T11:34:23"
   },
   {
     "sample_id": "S095",
@@ -1039,10 +1039,10 @@
     "question_id": "Q26",
     "task_type": "temporal",
     "question": "Locate the segment where glucose rose most rapidly.",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "4.3",
-    "latency_s": 1.82,
-    "timestamp": "2026-04-14T11:27:42"
+    "model": "google/matcha-chartqa",
+    "model_answer": "Insulin Delivered",
+    "latency_s": 1.72,
+    "timestamp": "2026-04-14T11:34:23"
   },
   {
     "sample_id": "S096",
@@ -1050,10 +1050,10 @@
     "question_id": "Q34",
     "task_type": "temporal",
     "question": "Locate the time interval where glucose changed direction after an insulin event.",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "20.5",
-    "latency_s": 1.82,
-    "timestamp": "2026-04-14T11:27:42"
+    "model": "google/matcha-chartqa",
+    "model_answer": "53.8",
+    "latency_s": 1.72,
+    "timestamp": "2026-04-14T11:34:23"
   },
   {
     "sample_id": "S097",
@@ -1061,10 +1061,10 @@
     "question_id": "Q18",
     "task_type": "yes_no",
     "question": "Did insulin delivery lead to a noticeable glucose drop shortly afterward?",
-    "model": "google/pix2struct-chartqa-base",
+    "model": "google/matcha-chartqa",
     "model_answer": "Yes",
-    "latency_s": 1.85,
-    "timestamp": "2026-04-14T11:27:49"
+    "latency_s": 1.66,
+    "timestamp": "2026-04-14T11:34:29"
   },
   {
     "sample_id": "S098",
@@ -1072,10 +1072,10 @@
     "question_id": "Q06",
     "task_type": "yes_no",
     "question": "Did glucose decrease after an insulin delivery event?",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "Yes",
-    "latency_s": 1.85,
-    "timestamp": "2026-04-14T11:27:49"
+    "model": "google/matcha-chartqa",
+    "model_answer": "1.9",
+    "latency_s": 1.66,
+    "timestamp": "2026-04-14T11:34:29"
   },
   {
     "sample_id": "S099",
@@ -1083,10 +1083,10 @@
     "question_id": "Q25",
     "task_type": "temporal",
     "question": "Identify the time period where glucose dropped below 70 mg/dL.",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "2.7",
-    "latency_s": 1.85,
-    "timestamp": "2026-04-14T11:27:49"
+    "model": "google/matcha-chartqa",
+    "model_answer": "2024-03-09",
+    "latency_s": 1.66,
+    "timestamp": "2026-04-14T11:34:29"
   },
   {
     "sample_id": "S100",
@@ -1094,9 +1094,9 @@
     "question_id": "Q23",
     "task_type": "temporal",
     "question": "Locate the longest hyperglycemia period in the graph.",
-    "model": "google/pix2struct-chartqa-base",
-    "model_answer": "3.5",
-    "latency_s": 1.85,
-    "timestamp": "2026-04-14T11:27:49"
+    "model": "google/matcha-chartqa",
+    "model_answer": "179",
+    "latency_s": 1.66,
+    "timestamp": "2026-04-14T11:34:29"
   }
 ]

@@ -60,4 +60,79 @@ Model loaded (torch.float16), device: cuda:0
     S042 (yes_no): "Yes"
     S043 (temporal): "1.57"
     S044 (temporal): "0.17"
-[045-048/100] S045..S048 ... 
+[045-048/100] S045..S048 ... done [7.36s, 1.8s/sample]
+    S045 (yes_no): "Yes"
+    S046 (yes_no): "Yes"
+    S047 (temporal): "240"
+    S048 (temporal): "2.5"
+[049-052/100] S049..S052 ... done [6.87s, 1.7s/sample]
+    S049 (yes_no): "Yes"
+    S050 (yes_no): "Yes"
+    S051 (temporal): "24.5"
+    S052 (temporal): "70"
+[053-056/100] S053..S056 ... done [7.13s, 1.8s/sample]
+    S053 (yes_no): "Yes"
+    S054 (yes_no): "Yes"
+    S055 (temporal): "47"
+    S056 (temporal): "Yes"
+[057-060/100] S057..S060 ... done [7.1s, 1.8s/sample]
+    S057 (yes_no): "Yes"
+    S058 (yes_no): "Yes"
+    S059 (temporal): "Yes"
+    S060 (temporal): "240"
+[061-064/100] S061..S064 ... done [7.22s, 1.8s/sample]
+    S061 (yes_no): "Yes"
+    S062 (yes_no): "Yes"
+    S063 (temporal): "3.4"
+    S064 (temporal): "10.3"
+[065-068/100] S065..S068 ... done [7.21s, 1.8s/sample]
+    S065 (yes_no): "Yes"
+    S066 (yes_no): "Yes"
+    S067 (temporal): "2024-07"
+    S068 (temporal): "1.67"
+[069-072/100] S069..S072 ... done [7.37s, 1.8s/sample]
+    S069 (yes_no): "Yes"
+    S070 (yes_no): "Yes"
+    S071 (temporal): "240"
+    S072 (temporal): "2.5"
+[073-076/100] S073..S076 ... done [7.02s, 1.8s/sample]
+    S073 (yes_no): "Yes"
+    S074 (yes_no): "6.78"
+    S075 (temporal): "2003"
+    S076 (temporal): "240"
+[077-080/100] S077..S080 ... done [7.4s, 1.9s/sample]
+    S077 (yes_no): "Yes"
+    S078 (yes_no): "Yes"
+    S079 (temporal): "24.05"
+    S080 (temporal): "2.28"
+[081-084/100] S081..S084 ... done [7.08s, 1.8s/sample]
+    S081 (yes_no): "Yes"
+    S082 (yes_no): "5.1"
+    S083 (temporal): "1.27"
+    S084 (temporal): "2.5"
+[085-088/100] S085..S088 ... done [7.81s, 2.0s/sample]
+    S085 (yes_no): "Yes"
+    S086 (yes_no): "0.17"
+    S087 (temporal): "[15.586,  17.06]"
+    S088 (temporal): "Yes"
+[089-092/100] S089..S092 ... done [7.16s, 1.8s/sample]
+    S089 (yes_no): "Yes"
+    S090 (yes_no): "Yes"
+    S091 (temporal): "2024-07"
+    S092 (temporal): "5.4"
+[093-096/100] S093..S096 ... done [7.27s, 1.8s/sample]
+    S093 (yes_no): "Yes"
+    S094 (yes_no): "Yes"
+    S095 (temporal): "4.3"
+    S096 (temporal): "20.5"
+[097-100/100] S097..S100 ... done [7.4s, 1.9s/sample]
+    S097 (yes_no): "Yes"
+    S098 (yes_no): "Yes"
+    S099 (temporal): "2.7"
+    S100 (temporal): "3.5"
+
+============================================================
+Done. 100 evaluated, 0 errors.
+Results: /nas/longleaf/home/txueying/CGM-VQA/results/chartqa_hf_results.json
+yes_no=50  temporal=50  avg latency=1.86s/sample
+Job finished: Tue Apr 14 11:27:51 AM EDT 2026

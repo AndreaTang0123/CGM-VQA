@@ -47,18 +47,14 @@ SYSTEM_PROMPT = (
 
 def build_prompt(question: str, expected_format: str) -> str:
     """MatCha format: Just passing context and question as the text query."""
-    return (
-        f"{SYSTEM_PROMPT}\n\n"
-        f"Question: {question}\n"
-        f"Answer format: {expected_format}"
-    )
+    return question
 
 
 def load_model(model_id: str):
     print(f"Loading model: {model_id}")
 
-    # Use float16 for acceleration on V100 GPU
-    dtype = torch.float16
+    # Use float32 because Pix2Struct/T5 inherently suffers from extreme float16 overflow/hallucinations on V100
+    dtype = torch.float32
 
     processor = Pix2StructProcessor.from_pretrained(model_id)
     # MatCha is small enough to fit easily in a single 16GB GPU memory
