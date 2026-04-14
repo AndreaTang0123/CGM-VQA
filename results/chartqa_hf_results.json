@@ -306,5 +306,48 @@
     "model_answer": "2023-20",
     "latency_s": 1.88,
     "timestamp": "2026-04-14T11:25:39"
-  }
-]
+  },
+  {
+    "sample_id": "S029",
+    "graph_id": "G08",
+    "question_id": "Q10",
+    "task_type": "yes_no",
+    "question": "Was glucose below the hypoglycemia threshold for at least 15 minutes?",
+    "model": "google/pix2struct-chartqa-base",
+    "model_answer": "Yes",
+    "latency_s": 1.86,
+    "timestamp": "2026-04-14T11:25:46"
+  },
+  {
+    "sample_id": "S030",
+    "graph_id": "G08",
+    "question_id": "Q17",
+    "task_type": "yes_no",
+    "question": "Did the largest meal event lead to a glucose spike?",
+    "model": "google/pix2struct-chartqa-base",
+    "model_answer": "Readings (CGM / BGM) on 2023-12-23",
+    "latency_s": 1.86,
+    "timestamp": "2026-04-14T11:25:46"
+  },
+  {
+    "sample_id": "S031",
+    "graph_id": "G08",
+    "question_id": "Q24",
+    "task_type": "temporal",
+    "question": "When did the lowest glucose value occur?",
+    "model": "google/pix2struct-chartqa-base",
+    "model_answer": "2023-20",
+    "latency_s": 1.86,
+    "timestamp": "2026-04-14T11:25:46"
+  },
+  {
+    "sample_id": "S032",
+    "graph_id": "G08",
+    "question_id": "Q21",
+    "task_type": "temporal",
+    "question": "When did the largest glucose spike occur?",
+    "model": "google/pix2struct-chartqa-base",
+    "model_answer": "2023-20",
+    "latency_s": 1.86,
+    "timestamp": "2026-04-14T11:25:46"
+  },

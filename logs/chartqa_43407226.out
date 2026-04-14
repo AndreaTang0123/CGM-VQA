@@ -40,4 +40,9 @@ Model loaded (torch.float16), device: cuda:0
     S026 (yes_no): "Yes"
     S027 (temporal): "1.67"
     S028 (temporal): "2023-20"
-[029-032/100] S029..S032 ... 
+[029-032/100] S029..S032 ... done [7.46s, 1.9s/sample]
+    S029 (yes_no): "Yes"
+    S030 (yes_no): "Readings (CGM / BGM) on 2023-12-23"
+    S031 (temporal): "2023-20"
+    S032 (temporal): "2023-20"
+[033-036/100] S033..S036 ... 
