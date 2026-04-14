@@ -351,3 +351,136 @@
     "latency_s": 1.86,
     "timestamp": "2026-04-14T11:25:46"
   },
+  {
+    "sample_id": "S033",
+    "graph_id": "G09",
+    "question_id": "Q12",
+    "task_type": "yes_no",
+    "question": "Was there a prolonged high glucose period during the afternoon?",
+    "model": "google/pix2struct-chartqa-base",
+    "model_answer": "Yes",
+    "latency_s": 1.9,
+    "timestamp": "2026-04-14T11:25:54"
+  },
+  {
+    "sample_id": "S034",
+    "graph_id": "G09",
+    "question_id": "Q01",
+    "task_type": "yes_no",
+    "question": "Was glucose above 180 mg/dL at any time during the afternoon?",
+    "model": "google/pix2struct-chartqa-base",
+    "model_answer": "Yes",
+    "latency_s": 1.9,
+    "timestamp": "2026-04-14T11:25:54"
+  },
+  {
+    "sample_id": "S035",
+    "graph_id": "G09",
+    "question_id": "Q21",
+    "task_type": "temporal",
+    "question": "When did the largest glucose spike occur?",
+    "model": "google/pix2struct-chartqa-base",
+    "model_answer": "2023-12-24",
+    "latency_s": 1.9,
+    "timestamp": "2026-04-14T11:25:54"
+  },
+  {
+    "sample_id": "S036",
+    "graph_id": "G09",
+    "question_id": "Q38",
+    "task_type": "temporal",
+    "question": "Identify the longest period where glucose stayed within the normal range.",
+    "model": "google/pix2struct-chartqa-base",
+    "model_answer": "2.49",
+    "latency_s": 1.9,
+    "timestamp": "2026-04-14T11:25:54"
+  },
+  {
+    "sample_id": "S037",
+    "graph_id": "G10",
+    "question_id": "Q11",
+    "task_type": "yes_no",
+    "question": "Did glucose remain within the normal range for most of the morning?",
+    "model": "google/pix2struct-chartqa-base",
+    "model_answer": "Yes",
+    "latency_s": 1.72,
+    "timestamp": "2026-04-14T11:26:01"
+  },
+  {
+    "sample_id": "S038",
+    "graph_id": "G10",
+    "question_id": "Q12",
+    "task_type": "yes_no",
+    "question": "Was there a prolonged high glucose period during the afternoon?",
+    "model": "google/pix2struct-chartqa-base",
+    "model_answer": "Yes",
+    "latency_s": 1.72,
+    "timestamp": "2026-04-14T11:26:01"
+  },
+  {
+    "sample_id": "S039",
+    "graph_id": "G10",
+    "question_id": "Q29",
+    "task_type": "temporal",
+    "question": "Identify the period where glucose gradually decreased during the evening.",
+    "model": "google/pix2struct-chartqa-base",
+    "model_answer": "[22, 6]",
+    "latency_s": 1.72,
+    "timestamp": "2026-04-14T11:26:01"
+  },
+  {
+    "sample_id": "S040",
+    "graph_id": "G10",
+    "question_id": "Q22",
+    "task_type": "temporal",
+    "question": "Identify the time interval where glucose first exceeded 180 mg/dL.",
+    "model": "google/pix2struct-chartqa-base",
+    "model_answer": "2.5",
+    "latency_s": 1.72,
+    "timestamp": "2026-04-14T11:26:01"
+  },
+  {
+    "sample_id": "S041",
+    "graph_id": "G11",
+    "question_id": "Q04",
+    "task_type": "yes_no",
+    "question": "Did glucose exceed 180 mg/dL around noon?",
+    "model": "google/pix2struct-chartqa-base",
+    "model_answer": "Yes",
+    "latency_s": 1.79,
+    "timestamp": "2026-04-14T11:26:08"
+  },
+  {
+    "sample_id": "S042",
+    "graph_id": "G11",
+    "question_id": "Q10",
+    "task_type": "yes_no",
+    "question": "Was glucose below the hypoglycemia threshold for at least 15 minutes?",
+    "model": "google/pix2struct-chartqa-base",
+    "model_answer": "Yes",
+    "latency_s": 1.79,
+    "timestamp": "2026-04-14T11:26:08"
+  },
+  {
+    "sample_id": "S043",
+    "graph_id": "G11",
+    "question_id": "Q33",
+    "task_type": "temporal",
+    "question": "Identify the glucose response period following carbohydrate intake.",
+    "model": "google/pix2struct-chartqa-base",
+    "model_answer": "1.57",
+    "latency_s": 1.79,
+    "timestamp": "2026-04-14T11:26:08"
+  },
+  {
+    "sample_id": "S044",
+    "graph_id": "G11",
+    "question_id": "Q29",
+    "task_type": "temporal",
+    "question": "Identify the period where glucose gradually decreased during the evening.",
+    "model": "google/pix2struct-chartqa-base",
+    "model_answer": "0.17",
+    "latency_s": 1.79,
+    "timestamp": "2026-04-14T11:26:08"
+  }
+]
