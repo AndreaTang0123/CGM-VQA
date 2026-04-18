@@ -1,14 +1,14 @@
 """
-Batch evaluation of CGM-VQA using Qwen2-VL-7B-Instruct via HuggingFace + PyTorch (GPU).
+Batch evaluation of CGM-VQA using MatCha (google/pix2struct-chartqa-base) via HuggingFace + PyTorch (GPU).
 
 Requirements:
-    pip install transformers accelerate pillow torch qwen-vl-utils bitsandbytes protobuf
+    pip install transformers accelerate pillow torch protobuf sentencepiece
 
-Results saved to: results/qwen2vl7b_hf_results.json
+Results saved to: results/chartqa_hf_results.json
 
 Usage:
-    python3 run_eval_qwen2vl7b_hf.py
-    python3 run_eval_qwen2vl7b_hf.py --batch-size 1 --model Qwen/Qwen2-VL-7B-Instruct
+    python3 run_eval_chartqa_hf.py
+    python3 run_eval_chartqa_hf.py --batch-size 4 --model google/pix2struct-chartqa-base
 """
 
 import argparse
@@ -20,33 +20,21 @@ from datetime import datetime
 
 # Reduce CUDA memory fragmentation
 os.environ.setdefault("PYTORCH_CUDA_ALLOC_CONF", "expandable_segments:True")
-# Synchronous CUDA errors — critical on V100 CC7.0
-os.environ.setdefault("CUDA_LAUNCH_BLOCKING", "1")
-# Limit OpenMP/MKL threads to avoid over-subscription on HPC nodes
-os.environ.setdefault("OMP_NUM_THREADS", "4")
-os.environ.setdefault("MKL_NUM_THREADS", "4")
 
 import torch
 from PIL import Image
-from transformers import Qwen2VLForConditionalGeneration, AutoProcessor
+from transformers import Pix2StructProcessor, Pix2StructForConditionalGeneration
 
 # ── Config ────────────────────────────────────────────────────────────────────
-BASE_DIR     = Path(__file__).parent
+BASE_DIR     = Path(__file__).parent.parent
 IMAGE_BASE   = BASE_DIR / "graphs_cropped"
 EVAL_FILE    = BASE_DIR / "metadata" / "eval_questions.json"
 RESULTS_DIR  = BASE_DIR / "results"
-RESULTS_FILE = RESULTS_DIR / "qwen2vl7b_hf_results.json"
+RESULTS_FILE = RESULTS_DIR / "chartqa_hf_results.json"
 
-DEFAULT_MODEL      = "Qwen/Qwen2-VL-7B-Instruct"
-DEFAULT_BATCH_SIZE = 1   # V100 16GB fills up quickly with a 7B VL model
+DEFAULT_MODEL      = "google/pix2struct-chartqa-base"
+DEFAULT_BATCH_SIZE = 4   # MatCha is ~282M parameters, batching works well
 MAX_NEW_TOKENS     = 64
-
-# Cap image resolution for V100 CC7.0 (limits token count from dynamic patching)
-# V100 has a 1024-thread-per-block limit; large RoPE kernels exceed this.
-# Reducing MAX_PIXELS keeps sequence length short → smaller kernel thread blocks.
-# 84x28x28 = 65856 ≈ 256x256 image  (previously 256x28x28 caused kernel errors)
-MIN_PIXELS = 4 * 28 * 28   #   3136
-MAX_PIXELS = 84 * 28 * 28  #  65856  (~256×256) — V100-safe
 
 SYSTEM_PROMPT = (
     "You are analyzing a Continuous Glucose Monitor (CGM) graph for a single day. "
@@ -57,104 +45,59 @@ SYSTEM_PROMPT = (
 )
 
 
-def build_messages(question: str, expected_format: str, image_path: Path) -> list:
-    """Qwen2-VL chat format with interleaved image."""
-    return [
-        {
-            "role": "user",
-            "content": [
-                {"type": "image", "image": str(image_path)},
-                {
-                    "type": "text",
-                    "text": (
-                        f"{SYSTEM_PROMPT}\n\n"
-                        f"Question: {question}\n"
-                        f"Answer format: {expected_format}"
-                    ),
-                },
-            ],
-        }
-    ]
+def build_prompt(question: str, expected_format: str) -> str:
+    """MatCha format: Just passing context and question as the text query."""
+    return question
 
 
 def load_model(model_id: str):
     print(f"Loading model: {model_id}")
 
-    # V100 (CC 7.0) does not support bfloat16; use float16
+    # Use float16 for acceleration on V100 GPU
     dtype = torch.float16
 
-    processor = AutoProcessor.from_pretrained(
-        model_id,
-        min_pixels=MIN_PIXELS,
-        max_pixels=MAX_PIXELS,
-    )
-    # Using 2 GPUs horizontally sharded by accelerate via device_map="auto"
-    model = Qwen2VLForConditionalGeneration.from_pretrained(
+    processor = Pix2StructProcessor.from_pretrained(model_id)
+    # MatCha is small enough to fit easily in a single 16GB GPU memory
+    model = Pix2StructForConditionalGeneration.from_pretrained(
         model_id,
         torch_dtype=dtype,
-        device_map="auto",             # lets accelerate assign layers across 2 GPUs
-        attn_implementation="sdpa",    # SDPA is natively supported by PyTorch 2.x and much more stable on V100 than eager
+        device_map="cuda:0"
     )
     model.eval()
     device = next(model.parameters()).device
-    print(f"Model loaded (INT8 quantized), device: {device}")
+    print(f"Model loaded ({dtype}), device: {device}")
     return model, processor
 
 
 def run_batch(model, processor, batch: list[dict]) -> list[str]:
     """Run inference on a batch; return list of answer strings."""
-    from qwen_vl_utils import process_vision_info
-
-    all_messages = [
-        build_messages(s["question"], s["expected_answer_format"],
-                       IMAGE_BASE / s["image_file"])
-        for s in batch
-    ]
-
-    texts = [
-        processor.apply_chat_template(msgs, tokenize=False, add_generation_prompt=True)
-        for msgs in all_messages
-    ]
-    image_inputs, video_inputs = process_vision_info(all_messages)
+    
+    texts = [build_prompt(s["question"], s["expected_answer_format"]) for s in batch]
+    images = [Image.open(IMAGE_BASE / s["image_file"]).convert("RGB") for s in batch]
 
     inputs = processor(
         text=texts,
-        images=image_inputs,
-        videos=video_inputs,
+        images=images,
         padding=True,
-        return_tensors="pt",
-        min_pixels=MIN_PIXELS,
-        max_pixels=MAX_PIXELS,
-    ).to(model.device)
+        return_tensors="pt"
+    )
+    
+    # Cast float32 inputs (e.g. image patches) to the model's dtype
+    inputs = {
+        k: v.to(dtype=model.dtype, device=model.device) if v.dtype in [torch.float32, torch.float64] else v.to(model.device)
+        for k, v in inputs.items()
+    }
 
     with torch.no_grad():
-        try:
-            output_ids = model.generate(
-                **inputs,
-                max_new_tokens=MAX_NEW_TOKENS,
-                do_sample=False,
-                repetition_penalty=1.05,   # prevents ![](![]... loops on V100/float16
-                no_repeat_ngram_size=3,    # blocks trigram repetition
-            )
-        except RuntimeError as e:
-            if "too many resources" in str(e) or "CUDA error" in str(e):
-                # Clear CUDA state and retry with cleared cache
-                torch.cuda.empty_cache()
-                torch.cuda.synchronize()
-                output_ids = model.generate(
-                    **inputs,
-                    max_new_tokens=MAX_NEW_TOKENS,
-                    do_sample=False,
-                    repetition_penalty=1.05,
-                    no_repeat_ngram_size=3,
-                )
-            else:
-                raise
+        output_ids = model.generate(
+            **inputs,
+            max_new_tokens=MAX_NEW_TOKENS,
+            do_sample=False,
+            # No repetition penalty initially needed for MatCha encoder-decoder architecture usually
+        )
 
-    # Decode only newly generated tokens
-    input_len  = inputs["input_ids"].shape[1]
-    new_tokens = output_ids[:, input_len:]
-    answers    = processor.batch_decode(new_tokens, skip_special_tokens=True)
+    # Encode-Decoder outputs: Decode directly (no input stripping needed)
+    answers = processor.batch_decode(output_ids, skip_special_tokens=True)
     return [a.strip() for a in answers]
 
 
@@ -243,7 +186,7 @@ def run_evaluation(model_id: str, batch_size: int):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
-        description="Qwen2-VL-7B CGM-VQA Evaluation (HuggingFace + GPU)")
+        description="MatCha CGM-VQA Evaluation (HuggingFace + GPU)")
     parser.add_argument("--model",      default=DEFAULT_MODEL,
                         help="HuggingFace model ID")
     parser.add_argument("--batch-size", default=DEFAULT_BATCH_SIZE, type=int,

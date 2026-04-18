@@ -1,13 +1,13 @@
 #!/bin/bash
-#SBATCH --job-name=cgmvqa_chartqa
+#SBATCH --job-name=cgmvqa_matcha
 #SBATCH --partition=volta-gpu
 #SBATCH --qos=gpu_access
 #SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=32G
 #SBATCH --time=4:00:00
-#SBATCH --output=logs/chartqa_%j.out
-#SBATCH --error=logs/chartqa_%j.err
+#SBATCH --output=logs/matcha_%j.out
+#SBATCH --error=logs/matcha_%j.err
 
 # ── Environment ───────────────────────────────────────────────────────────────
 module purge
@@ -46,6 +46,6 @@ which python3
 python3 --version
 
 # Run the python evaluation script
-python3 run_eval_chartqa_hf.py
+python3 scripts/eval/run_eval_matcha_hf.py
 
 echo "Job finished: $(date)"

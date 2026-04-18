@@ -1,14 +1,14 @@
 """
-Batch evaluation of CGM-VQA using LLaVA-1.5-7B via HuggingFace + PyTorch (GPU).
+Batch evaluation of CGM-VQA using MatCha (google/matcha-chartqa) via HuggingFace + PyTorch (GPU).
 
 Requirements:
-    pip install transformers accelerate pillow torch
+    pip install transformers accelerate pillow torch protobuf sentencepiece
 
-Results saved to: results/llava7b_hf_results.json
+Results saved to: results/matcha_hf_results.json
 
 Usage:
-    python3 run_eval_llava7b_hf.py
-    python3 run_eval_llava7b_hf.py --batch-size 4 --model llava-hf/llava-1.5-7b-hf
+    python3 run_eval_matcha_hf.py
+    python3 run_eval_matcha_hf.py --batch-size 4 --model google/matcha-chartqa
 """
 
 import argparse
@@ -23,17 +23,17 @@ os.environ.setdefault("PYTORCH_CUDA_ALLOC_CONF", "expandable_segments:True")
 
 import torch
 from PIL import Image
-from transformers import LlavaForConditionalGeneration, LlavaProcessor
+from transformers import Pix2StructProcessor, Pix2StructForConditionalGeneration
 
 # ── Config ────────────────────────────────────────────────────────────────────
-BASE_DIR     = Path(__file__).parent
+BASE_DIR     = Path(__file__).parent.parent
 IMAGE_BASE   = BASE_DIR / "graphs_cropped"
 EVAL_FILE    = BASE_DIR / "metadata" / "eval_questions.json"
 RESULTS_DIR  = BASE_DIR / "results"
-RESULTS_FILE = RESULTS_DIR / "llava7b_hf_results.json"
+RESULTS_FILE = RESULTS_DIR / "matcha_hf_results.json"
 
-DEFAULT_MODEL      = "llava-hf/llava-1.5-7b-hf"
-DEFAULT_BATCH_SIZE = 1  # V100 has 16GB; batch>1 causes OOM with LLaVA-7B
+DEFAULT_MODEL      = "google/matcha-chartqa"
+DEFAULT_BATCH_SIZE = 4   # MatCha is ~282M parameters, batching works well
 MAX_NEW_TOKENS     = 64
 
 SYSTEM_PROMPT = (
@@ -46,55 +46,58 @@ SYSTEM_PROMPT = (
 
 
 def build_prompt(question: str, expected_format: str) -> str:
-    """LLaVA-1.5 conversation format: USER: <image>\n{text} ASSISTANT:"""
-    text = (
-        f"{SYSTEM_PROMPT}\n\n"
-        f"Question: {question}\n"
-        f"Answer format: {expected_format}\n"
-        f"Answer:"
-    )
-    return f"USER: <image>\n{text} ASSISTANT:"
+    """MatCha format: Just passing context and question as the text query."""
+    return question
 
 
-def load_model(model_id: str, device: torch.device):
+def load_model(model_id: str):
     print(f"Loading model: {model_id}")
-    dtype = torch.bfloat16 if torch.cuda.is_bf16_supported() else torch.float16
 
-    processor = LlavaProcessor.from_pretrained(model_id)
-    model = LlavaForConditionalGeneration.from_pretrained(
+    # Use float32 because Pix2Struct/T5 inherently suffers from extreme float16 overflow/hallucinations on V100
+    dtype = torch.float32
+
+    processor = Pix2StructProcessor.from_pretrained(model_id)
+    # MatCha is small enough to fit easily in a single 16GB GPU memory
+    model = Pix2StructForConditionalGeneration.from_pretrained(
         model_id,
         torch_dtype=dtype,
-        device_map="auto",          # auto-shard across available GPUs
-        low_cpu_mem_usage=True,
+        device_map="cuda:0"
     )
     model.eval()
-    print(f"Model loaded on {device} ({dtype})")
+    device = next(model.parameters()).device
+    print(f"Model loaded ({dtype}), device: {device}")
     return model, processor
 
 
-def run_batch(model, processor, batch: list[dict], device: torch.device) -> list[str]:
+def run_batch(model, processor, batch: list[dict]) -> list[str]:
     """Run inference on a batch; return list of answer strings."""
-    prompts = [build_prompt(s["question"], s["expected_answer_format"]) for s in batch]
-    images  = [Image.open(IMAGE_BASE / s["image_file"]).convert("RGB") for s in batch]
+    
+    texts = [build_prompt(s["question"], s["expected_answer_format"]) for s in batch]
+    images = [Image.open(IMAGE_BASE / s["image_file"]).convert("RGB") for s in batch]
 
     inputs = processor(
-        text=prompts,
+        text=texts,
         images=images,
-        return_tensors="pt",
         padding=True,
-    ).to(device)
+        return_tensors="pt"
+    )
+    
+    # Cast float32 inputs (e.g. image patches) to the model's dtype
+    inputs = {
+        k: v.to(dtype=model.dtype, device=model.device) if v.dtype in [torch.float32, torch.float64] else v.to(model.device)
+        for k, v in inputs.items()
+    }
 
     with torch.no_grad():
         output_ids = model.generate(
             **inputs,
             max_new_tokens=MAX_NEW_TOKENS,
             do_sample=False,
+            # No repetition penalty initially needed for MatCha encoder-decoder architecture usually
         )
 
-    # Decode only the newly generated tokens (strip the prompt)
-    input_len  = inputs["input_ids"].shape[1]
-    new_tokens = output_ids[:, input_len:]
-    answers    = processor.batch_decode(new_tokens, skip_special_tokens=True)
+    # Encode-Decoder outputs: Decode directly (no input stripping needed)
+    answers = processor.batch_decode(output_ids, skip_special_tokens=True)
     return [a.strip() for a in answers]
 
 
@@ -114,32 +117,34 @@ def run_evaluation(model_id: str, batch_size: int):
         results  = []
         done_ids = set()
 
-    # Skip samples with missing image_file (data issue)
+    # Skip samples with missing image_file
     skipped = [s for s in samples if not s.get("image_file")]
     if skipped:
-        print(f"Skipping {len(skipped)} samples with no image_file: {[s['sample_id'] for s in skipped]}")
-    remaining = [s for s in samples if s["sample_id"] not in done_ids and s.get("image_file")]
+        print(f"Skipping {len(skipped)} samples with no image_file: "
+              f"{[s['sample_id'] for s in skipped]}")
+
+    remaining = [s for s in samples
+                 if s["sample_id"] not in done_ids and s.get("image_file")]
     if not remaining:
         print("All samples already evaluated.")
         return
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print(f"Device: {device}")
-    model, processor = load_model(model_id, device)
+    model, processor = load_model(model_id)
 
     total  = len(samples)
     errors = 0
 
-    # Process in batches
     for batch_start in range(0, len(remaining), batch_size):
-        batch = remaining[batch_start: batch_start + batch_size]
+        batch     = remaining[batch_start: batch_start + batch_size]
         first_sid = batch[0]["sample_id"]
         last_sid  = batch[-1]["sample_id"]
         print(f"[{len(done_ids)+1:03d}-{len(done_ids)+len(batch):03d}/{total}] "
               f"{first_sid}..{last_sid} ...", end=" ", flush=True)
         t0 = time.time()
         try:
-            answers = run_batch(model, processor, batch, device)
+            answers = run_batch(model, processor, batch)
             elapsed = round(time.time() - t0, 2)
 
             for sample, answer in zip(batch, answers):
@@ -180,9 +185,12 @@ def run_evaluation(model_id: str, batch_size: int):
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="LLaVA-7B CGM-VQA Evaluation (HuggingFace + GPU)")
-    parser.add_argument("--model",      default=DEFAULT_MODEL,      help="HuggingFace model ID")
-    parser.add_argument("--batch-size", default=DEFAULT_BATCH_SIZE, type=int, help="Batch size for inference")
+    parser = argparse.ArgumentParser(
+        description="MatCha CGM-VQA Evaluation (HuggingFace + GPU)")
+    parser.add_argument("--model",      default=DEFAULT_MODEL,
+                        help="HuggingFace model ID")
+    parser.add_argument("--batch-size", default=DEFAULT_BATCH_SIZE, type=int,
+                        help="Batch size for inference")
     args = parser.parse_args()
 
     run_evaluation(model_id=args.model, batch_size=args.batch_size)

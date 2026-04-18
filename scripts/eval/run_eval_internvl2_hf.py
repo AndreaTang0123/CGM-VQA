@@ -23,7 +23,7 @@ from torchvision.transforms.functional import InterpolationMode
 from transformers import AutoModel, AutoTokenizer
 
 # ── Config ────────────────────────────────────────────────────────────────────
-BASE_DIR     = Path(__file__).parent
+BASE_DIR     = Path(__file__).parent.parent
 IMAGE_BASE   = BASE_DIR / "graphs_cropped"
 EVAL_FILE    = BASE_DIR / "metadata" / "eval_questions.json"
 RESULTS_DIR  = BASE_DIR / "results"

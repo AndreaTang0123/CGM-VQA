@@ -18,4 +18,4 @@ source .venv/bin/activate
 python -m pip install --upgrade pip setuptools wheel
 python -m pip install -q torch torchvision transformers accelerate pillow
 
-python run_eval_qwen2vl7b.py
+python scripts/eval/run_eval_qwen2vl7b.py

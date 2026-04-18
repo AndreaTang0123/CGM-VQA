@@ -1,13 +1,13 @@
 #!/bin/bash
-#SBATCH --job-name=cgmvqa_internvl2_8b
+#SBATCH --job-name=cgmvqa_llava7b
 #SBATCH --partition=volta-gpu
 #SBATCH --qos=gpu_access
 #SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=32G
-#SBATCH --time=12:00:00
-#SBATCH --output=logs/internvl2_8b_%j.out
-#SBATCH --error=logs/internvl2_8b_%j.err
+#SBATCH --time=6:00:00
+#SBATCH --output=logs/llava7b_%j.out
+#SBATCH --error=logs/llava7b_%j.err
 
 # ── Environment ───────────────────────────────────────────────────────────────
 module purge
@@ -34,7 +34,7 @@ pip install --upgrade pip setuptools wheel -q
 pip install -q \
     torch==2.4.0+cu118 torchvision==0.19.0+cu118 \
     --index-url https://download.pytorch.org/whl/cu118
-pip install -q transformers accelerate pillow einops timm
+pip install -q transformers accelerate pillow
 
 # ── HuggingFace cache → /work (large space) ───────────────────────────────────
 export HF_HOME=$WORKFS/hf_cache
@@ -47,7 +47,6 @@ echo "Node: $(hostname)"
 which python3
 python3 --version
 
-# Pass the 8B model via argument
-python3 run_eval_internvl2_hf.py --model OpenGVLab/InternVL2-8B
+python3 scripts/eval/run_eval_llava7b_hf.py
 
 echo "Job finished: $(date)"

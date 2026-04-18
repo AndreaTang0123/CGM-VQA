@@ -1,13 +1,13 @@
 #!/bin/bash
-#SBATCH --job-name=cgmvqa_gemma4e2b
+#SBATCH --job-name=cgmvqa_chartqa
 #SBATCH --partition=volta-gpu
 #SBATCH --qos=gpu_access
 #SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=32G
 #SBATCH --time=4:00:00
-#SBATCH --output=logs/gemma4e2b_%j.out
-#SBATCH --error=logs/gemma4e2b_%j.err
+#SBATCH --output=logs/chartqa_%j.out
+#SBATCH --error=logs/chartqa_%j.err
 
 # ── Environment ───────────────────────────────────────────────────────────────
 module purge
@@ -16,11 +16,11 @@ module load cuda/11.8
 
 # ── Paths ─────────────────────────────────────────────────────────────────────
 WORKDIR=/nas/longleaf/home/$USER/CGM-VQA
-WORKFS=/work/users/t/x/$USER
+WORKFS=/work/users/t/x/$USER        # Longleaf /work filesystem (high-perf)
 cd $WORKDIR
 mkdir -p logs results
 
-# ── Virtual environment on /work ──────────────────────────────────────────────
+# ── Virtual environment on /work (large space, not home quota) ────────────────
 VENV=$WORKFS/hf_venv
 if [ ! -d "$VENV" ]; then
     echo "Creating venv at $VENV ..."
@@ -29,14 +29,12 @@ if [ ! -d "$VENV" ]; then
 fi
 source "$VENV/bin/activate"
 
-# Install packages
+# Install packages (fast on rerun if already cached)
 pip install --upgrade pip setuptools wheel -q
-pip install -q \
-    torch==2.4.0+cu118 torchvision==0.19.0+cu118 \
-    --index-url https://download.pytorch.org/whl/cu118
-pip install -q transformers accelerate pillow
+# Preserve existing torch version to not break flash-attn for Qwen2/LLaVA
+pip install -q transformers==4.40.0 accelerate pillow protobuf sentencepiece
 
-# ── HuggingFace cache → /work ─────────────────────────────────────────────────
+# ── HuggingFace cache → /work (large space) ───────────────────────────────────
 export HF_HOME=$WORKFS/hf_cache
 export TRANSFORMERS_CACHE=$WORKFS/hf_cache/hub
 mkdir -p "$HF_HOME"
@@ -47,6 +45,7 @@ echo "Node: $(hostname)"
 which python3
 python3 --version
 
-python3 run_eval_gemma4e2b_hf.py
+# Run the python evaluation script
+python3 scripts/eval/run_eval_chartqa_hf.py
 
 echo "Job finished: $(date)"

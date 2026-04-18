@@ -1,13 +1,13 @@
 #!/bin/bash
-#SBATCH --job-name=cgmvqa_matcha
+#SBATCH --job-name=cgmvqa_qwen2vl7b
 #SBATCH --partition=volta-gpu
 #SBATCH --qos=gpu_access
-#SBATCH --gres=gpu:1
+#SBATCH --gres=gpu:2
 #SBATCH --cpus-per-task=8
-#SBATCH --mem=32G
-#SBATCH --time=4:00:00
-#SBATCH --output=logs/matcha_%j.out
-#SBATCH --error=logs/matcha_%j.err
+#SBATCH --mem=48G
+#SBATCH --time=8:00:00
+#SBATCH --output=logs/qwen2vl7b_%j.out
+#SBATCH --error=logs/qwen2vl7b_%j.err
 
 # ── Environment ───────────────────────────────────────────────────────────────
 module purge
@@ -31,8 +31,10 @@ source "$VENV/bin/activate"
 
 # Install packages (fast on rerun if already cached)
 pip install --upgrade pip setuptools wheel -q
-# Preserve existing torch version to not break flash-attn for Qwen2/LLaVA
-pip install -q transformers==4.40.0 accelerate pillow protobuf sentencepiece
+pip install -q \
+    torch==2.4.0+cu118 torchvision==0.19.0+cu118 \
+    --index-url https://download.pytorch.org/whl/cu118
+pip install -q transformers accelerate pillow qwen-vl-utils protobuf
 
 # ── HuggingFace cache → /work (large space) ───────────────────────────────────
 export HF_HOME=$WORKFS/hf_cache
@@ -45,7 +47,10 @@ echo "Node: $(hostname)"
 which python3
 python3 --version
 
-# Run the python evaluation script
-python3 run_eval_matcha_hf.py
+# Use offline mode — model already cached in HF_HOME, avoids 429 rate-limit on HF API
+export TRANSFORMERS_OFFLINE=1
+export HF_HUB_OFFLINE=1
+
+python3 scripts/eval/run_eval_qwen2vl7b_hf.py
 
 echo "Job finished: $(date)"

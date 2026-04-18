@@ -1,14 +1,14 @@
 """
-Batch evaluation of CGM-VQA using MatCha (google/matcha-chartqa) via HuggingFace + PyTorch (GPU).
+Batch evaluation of CGM-VQA using Gemma 4 E2B (google/gemma-4-E2B-it) via HuggingFace.
 
 Requirements:
-    pip install transformers accelerate pillow torch protobuf sentencepiece
+    pip install transformers accelerate pillow torch
 
-Results saved to: results/matcha_hf_results.json
+Results saved to: results/gemma4e2b_hf_results.json
 
 Usage:
-    python3 run_eval_matcha_hf.py
-    python3 run_eval_matcha_hf.py --batch-size 4 --model google/matcha-chartqa
+    python3 run_eval_gemma4e2b_hf.py
+    python3 run_eval_gemma4e2b_hf.py --batch-size 1 --model google/gemma-4-E2B-it
 """
 
 import argparse
@@ -23,17 +23,17 @@ os.environ.setdefault("PYTORCH_CUDA_ALLOC_CONF", "expandable_segments:True")
 
 import torch
 from PIL import Image
-from transformers import Pix2StructProcessor, Pix2StructForConditionalGeneration
+from transformers import AutoProcessor, AutoModelForCausalLM
 
 # ── Config ────────────────────────────────────────────────────────────────────
-BASE_DIR     = Path(__file__).parent
+BASE_DIR     = Path(__file__).parent.parent
 IMAGE_BASE   = BASE_DIR / "graphs_cropped"
 EVAL_FILE    = BASE_DIR / "metadata" / "eval_questions.json"
 RESULTS_DIR  = BASE_DIR / "results"
-RESULTS_FILE = RESULTS_DIR / "matcha_hf_results.json"
+RESULTS_FILE = RESULTS_DIR / "gemma4e2b_hf_results.json"
 
-DEFAULT_MODEL      = "google/matcha-chartqa"
-DEFAULT_BATCH_SIZE = 4   # MatCha is ~282M parameters, batching works well
+DEFAULT_MODEL      = "google/gemma-4-E2B-it"
+DEFAULT_BATCH_SIZE = 1   # ~4GB model; keep batch=1 for safety on V100 16GB
 MAX_NEW_TOKENS     = 64
 
 SYSTEM_PROMPT = (
@@ -45,60 +45,78 @@ SYSTEM_PROMPT = (
 )
 
 
-def build_prompt(question: str, expected_format: str) -> str:
-    """MatCha format: Just passing context and question as the text query."""
-    return question
+def build_messages(question: str, expected_format: str, image_path: Path) -> list:
+    """Gemma 4 chat format with image before text."""
+    return [
+        {
+            "role": "system",
+            "content": [{"type": "text", "text": SYSTEM_PROMPT}],
+        },
+        {
+            "role": "user",
+            "content": [
+                {"type": "image", "url": str(image_path.resolve())},
+                {
+                    "type": "text",
+                    "text": (
+                        f"Question: {question}\n"
+                        f"Answer format: {expected_format}\n"
+                        f"Answer:"
+                    ),
+                },
+            ],
+        },
+    ]
 
 
 def load_model(model_id: str):
     print(f"Loading model: {model_id}")
-
-    # Use float32 because Pix2Struct/T5 inherently suffers from extreme float16 overflow/hallucinations on V100
-    dtype = torch.float32
-
-    processor = Pix2StructProcessor.from_pretrained(model_id)
-    # MatCha is small enough to fit easily in a single 16GB GPU memory
-    model = Pix2StructForConditionalGeneration.from_pretrained(
+    processor = AutoProcessor.from_pretrained(model_id)
+    model = AutoModelForCausalLM.from_pretrained(
         model_id,
-        torch_dtype=dtype,
-        device_map="cuda:0"
+        torch_dtype=torch.float16,   # float16 for V100 (bfloat16 has kernel issues)
+        device_map="auto",
+        low_cpu_mem_usage=True,
     )
     model.eval()
     device = next(model.parameters()).device
-    print(f"Model loaded ({dtype}), device: {device}")
+    print(f"Model loaded (float16), device: {device}")
     return model, processor
 
 
 def run_batch(model, processor, batch: list[dict]) -> list[str]:
     """Run inference on a batch; return list of answer strings."""
-    
-    texts = [build_prompt(s["question"], s["expected_answer_format"]) for s in batch]
-    images = [Image.open(IMAGE_BASE / s["image_file"]).convert("RGB") for s in batch]
-
-    inputs = processor(
-        text=texts,
-        images=images,
-        padding=True,
-        return_tensors="pt"
-    )
-    
-    # Cast float32 inputs (e.g. image patches) to the model's dtype
-    inputs = {
-        k: v.to(dtype=model.dtype, device=model.device) if v.dtype in [torch.float32, torch.float64] else v.to(model.device)
-        for k, v in inputs.items()
-    }
-
-    with torch.no_grad():
-        output_ids = model.generate(
-            **inputs,
-            max_new_tokens=MAX_NEW_TOKENS,
-            do_sample=False,
-            # No repetition penalty initially needed for MatCha encoder-decoder architecture usually
+    answers = []
+    for sample in batch:
+        image_path = IMAGE_BASE / sample["image_file"]
+        messages   = build_messages(
+            sample["question"], sample["expected_answer_format"], image_path
         )
 
-    # Encode-Decoder outputs: Decode directly (no input stripping needed)
-    answers = processor.batch_decode(output_ids, skip_special_tokens=True)
-    return [a.strip() for a in answers]
+        inputs = processor.apply_chat_template(
+            messages,
+            tokenize=True,
+            return_dict=True,
+            return_tensors="pt",
+            add_generation_prompt=True,
+            enable_thinking=False,   # disable chain-of-thought for concise answers
+        ).to(model.device)
+
+        input_len = inputs["input_ids"].shape[-1]
+
+        with torch.no_grad():
+            output_ids = model.generate(
+                **inputs,
+                max_new_tokens=MAX_NEW_TOKENS,
+                do_sample=False,
+            )
+
+        raw = processor.decode(
+            output_ids[0][input_len:], skip_special_tokens=True
+        )
+        answers.append(raw.strip())
+
+    return answers
 
 
 def run_evaluation(model_id: str, batch_size: int):
@@ -186,7 +204,7 @@ def run_evaluation(model_id: str, batch_size: int):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
-        description="MatCha CGM-VQA Evaluation (HuggingFace + GPU)")
+        description="Gemma 4 E2B CGM-VQA Evaluation (HuggingFace + GPU)")
     parser.add_argument("--model",      default=DEFAULT_MODEL,
                         help="HuggingFace model ID")
     parser.add_argument("--batch-size", default=DEFAULT_BATCH_SIZE, type=int,
