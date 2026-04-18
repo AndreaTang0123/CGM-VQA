@@ -1,0 +1,37 @@
+{
+    "chartqa_hf": {
+        "correct": 32,
+        "total": 50,
+        "accuracy": 0.64
+    },
+    "gemma4e2b_hf": {
+        "correct": 15,
+        "total": 50,
+        "accuracy": 0.3
+    },
+    "internvl2_4b_hf": {
+        "correct": 44,
+        "total": 50,
+        "accuracy": 0.88
+    },
+    "internvl2_8b_hf": {
+        "correct": 40,
+        "total": 50,
+        "accuracy": 0.8
+    },
+    "llava7b_hf": {
+        "correct": 28,
+        "total": 50,
+        "accuracy": 0.56
+    },
+    "matcha_hf": {
+        "correct": 16,
+        "total": 50,
+        "accuracy": 0.32
+    },
+    "qwen2vl7b_hf": {
+        "correct": 43,
+        "total": 50,
+        "accuracy": 0.86
+    }
+}
