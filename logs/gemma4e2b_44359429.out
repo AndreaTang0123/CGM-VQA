@@ -1,0 +1,7 @@
+Job started: Sun Apr 19 11:18:53 AM EDT 2026
+Node: g0310.ll.unc.edu
+/work/users/t/x/txueying/hf_venv/bin/python3
+Python 3.12.4
+Device: cuda
+Loading model: google/gemma-4-E2B-it
+Job finished: Sun Apr 19 11:19:04 AM EDT 2026

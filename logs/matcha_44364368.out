@@ -1,0 +1,138 @@
+Job started: Sun Apr 19 12:25:13 PM EDT 2026
+Node: g0303.ll.unc.edu
+/work/users/t/x/txueying/hf_venv/bin/python3
+Python 3.12.4
+Device: cuda
+Loading model: google/matcha-chartqa
+Model loaded (torch.float32), device: cuda:0
+[001-004/100] S001..S004 ... done [7.8s, 1.9s/sample]
+    S001 (yes_no): "Yes"
+    S002 (yes_no): "Yes"
+    S003 (temporal): "0.07"
+    S004 (temporal): "0.11"
+[005-008/100] S005..S008 ... done [5.74s, 1.4s/sample]
+    S005 (yes_no): "232.1"
+    S006 (yes_no): "161.2"
+    S007 (temporal): "0.61"
+    S008 (temporal): "2023-12-10"
+[009-012/100] S009..S012 ... done [5.71s, 1.4s/sample]
+    S009 (yes_no): "Yes"
+    S010 (yes_no): "No"
+    S011 (temporal): "2023-12-11"
+    S012 (temporal): "2014"
+[013-016/100] S013..S016 ... done [5.61s, 1.4s/sample]
+    S013 (yes_no): "0.57"
+    S014 (yes_no): "Yes"
+    S015 (temporal): "2023-12-15"
+    S016 (temporal): "72.6"
+[017-020/100] S017..S020 ... done [5.64s, 1.4s/sample]
+    S017 (yes_no): "Yes"
+    S018 (yes_no): "Yes"
+    S019 (temporal): "2023-12-16"
+    S020 (temporal): "2005"
+[021-024/100] S021..S024 ... done [5.67s, 1.4s/sample]
+    S021 (yes_no): "Yes"
+    S022 (yes_no): "68"
+    S023 (temporal): "2023-12-17"
+    S024 (temporal): "2023-12-17"
+[025-028/100] S025..S028 ... done [5.64s, 1.4s/sample]
+    S025 (yes_no): "1.69"
+    S026 (yes_no): "Yes"
+    S027 (temporal): "199"
+    S028 (temporal): "2014"
+[029-032/100] S029..S032 ... done [5.65s, 1.4s/sample]
+    S029 (yes_no): "1"
+    S030 (yes_no): "Yes"
+    S031 (temporal): "2023-12-23"
+    S032 (temporal): "2023-12-23"
+[033-036/100] S033..S036 ... done [5.65s, 1.4s/sample]
+    S033 (yes_no): "0.55"
+    S034 (yes_no): "0.55"
+    S035 (temporal): "2023-12-24"
+    S036 (temporal): "72.6"
+[037-040/100] S037..S040 ... done [5.52s, 1.4s/sample]
+    S037 (yes_no): "0.1"
+    S038 (yes_no): "1.0"
+    S039 (temporal): "7.4"
+    S040 (temporal): "4"
+[041-044/100] S041..S044 ... done [5.52s, 1.4s/sample]
+    S041 (yes_no): "Yes"
+    S042 (yes_no): "1"
+    S043 (temporal): "0.2"
+    S044 (temporal): "7.4"
+[045-048/100] S045..S048 ... done [5.56s, 1.4s/sample]
+    S045 (yes_no): "0.8"
+    S046 (yes_no): "Yes"
+    S047 (temporal): "0.08"
+    S048 (temporal): "7"
+[049-052/100] S049..S052 ... done [5.65s, 1.4s/sample]
+    S049 (yes_no): "200"
+    S050 (yes_no): "17.99"
+    S051 (temporal): "2024-01-07"
+    S052 (temporal): "0.07"
+[053-056/100] S053..S056 ... done [5.52s, 1.4s/sample]
+    S053 (yes_no): "Yes"
+    S054 (yes_no): "0.78"
+    S055 (temporal): "48.4"
+    S056 (temporal): "202.4"
+[057-060/100] S057..S060 ... done [5.56s, 1.4s/sample]
+    S057 (yes_no): "Yes"
+    S058 (yes_no): "Yes"
+    S059 (temporal): "202.4"
+    S060 (temporal): "0.08"
+[061-064/100] S061..S064 ... done [5.73s, 1.4s/sample]
+    S061 (yes_no): "Yes"
+    S062 (yes_no): "175"
+    S063 (temporal): "2024-02-03"
+    S064 (temporal): "174"
+[065-068/100] S065..S068 ... done [5.44s, 1.4s/sample]
+    S065 (yes_no): "Yes"
+    S066 (yes_no): "50.1"
+    S067 (temporal): "48"
+    S068 (temporal): "0.07"
+[069-072/100] S069..S072 ... done [5.48s, 1.4s/sample]
+    S069 (yes_no): "6.0"
+    S070 (yes_no): "160"
+    S071 (temporal): "0.08"
+    S072 (temporal): "4"
+[073-076/100] S073..S076 ... done [5.48s, 1.4s/sample]
+    S073 (yes_no): "Yes"
+    S074 (yes_no): "20.3"
+    S075 (temporal): "2005"
+    S076 (temporal): "4"
+[077-080/100] S077..S080 ... done [5.5s, 1.4s/sample]
+    S077 (yes_no): "161.6"
+    S078 (yes_no): "20.9"
+    S079 (temporal): "48.4"
+    S080 (temporal): "20.5"
+[081-084/100] S081..S084 ... done [5.5s, 1.4s/sample]
+    S081 (yes_no): "167"
+    S082 (yes_no): "50.2"
+    S083 (temporal): "4"
+    S084 (temporal): "48.4"
+[085-088/100] S085..S088 ... done [5.63s, 1.4s/sample]
+    S085 (yes_no): "Yes"
+    S086 (yes_no): "199"
+    S087 (temporal): "2024-03-06"
+    S088 (temporal): "202.4"
+[089-092/100] S089..S092 ... done [5.69s, 1.4s/sample]
+    S089 (yes_no): "Yes"
+    S090 (yes_no): "Yes"
+    S091 (temporal): "4"
+    S092 (temporal): "2024-03-07"
+[093-096/100] S093..S096 ... done [5.5s, 1.4s/sample]
+    S093 (yes_no): "52.1"
+    S094 (yes_no): "Yes"
+    S095 (temporal): "20.8"
+    S096 (temporal): "4"
+[097-100/100] S097..S100 ... done [5.63s, 1.4s/sample]
+    S097 (yes_no): "Yes"
+    S098 (yes_no): "1.9"
+    S099 (temporal): "0.08"
+    S100 (temporal): "2024-03-09"
+
+============================================================
+Done. 100 evaluated, 0 errors.
+Results: /nas/longleaf/home/txueying/CGM-VQA/results/matcha_hf_results.json
+yes_no=50  temporal=50  avg latency=1.42s/sample
+Job finished: Sun Apr 19 12:27:50 PM EDT 2026

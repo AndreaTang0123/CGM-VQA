@@ -13,7 +13,7 @@ import torch
 from transformers import Blip2Processor, Blip2ForConditionalGeneration
 
 # ── Config ────────────────────────────────────────────────────────────────────
-BASE_DIR     = Path(__file__).parent.parent
+BASE_DIR     = Path(__file__).parent.parent.parent
 IMAGE_BASE    = BASE_DIR / "graphs_cropped"
 EVAL_FILE     = BASE_DIR / "metadata" / "eval_questions.json"
 RESULTS_DIR   = BASE_DIR / "results"

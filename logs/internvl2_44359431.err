@@ -1,0 +1,22 @@
+WARNING: Ignoring invalid distribution ~ransformers (/work/users/t/x/txueying/hf_venv/lib/python3.12/site-packages)
+WARNING: Ignoring invalid distribution ~ransformers (/work/users/t/x/txueying/hf_venv/lib/python3.12/site-packages)
+WARNING: Ignoring invalid distribution ~ransformers (/work/users/t/x/txueying/hf_venv/lib/python3.12/site-packages)
+WARNING: Ignoring invalid distribution ~ransformers (/work/users/t/x/txueying/hf_venv/lib/python3.12/site-packages)
+WARNING: Ignoring invalid distribution ~ransformers (/work/users/t/x/txueying/hf_venv/lib/python3.12/site-packages)
+WARNING: Ignoring invalid distribution ~ransformers (/work/users/t/x/txueying/hf_venv/lib/python3.12/site-packages)
+WARNING: Ignoring invalid distribution ~ransformers (/work/users/t/x/txueying/hf_venv/lib/python3.12/site-packages)
+WARNING: Ignoring invalid distribution ~ransformers (/work/users/t/x/txueying/hf_venv/lib/python3.12/site-packages)
+WARNING: Ignoring invalid distribution ~ransformers (/work/users/t/x/txueying/hf_venv/lib/python3.12/site-packages)
+/work/users/t/x/txueying/hf_venv/lib/python3.12/site-packages/transformers/utils/hub.py:124: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+/work/users/t/x/txueying/hf_venv/lib/python3.12/site-packages/huggingface_hub/file_download.py:949: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/work/users/t/x/txueying/hf_venv/lib/python3.12/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+`flash-attention` package not found, consider installing for better performance: No module named 'flash_attn'.
+Current `flash-attenton` does not support `window_size`. Either upgrade or use `attn_implementation='eager'`.
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:09<00:09,  9.14s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:15<00:00,  7.26s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:15<00:00,  7.54s/it]
+/work/users/t/x/txueying/hf_venv/lib/python3.12/site-packages/huggingface_hub/file_download.py:949: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+You are not running the flash-attention implementation, expect numerical differences.

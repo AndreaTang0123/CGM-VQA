@@ -26,7 +26,7 @@ from PIL import Image
 from transformers import Pix2StructProcessor, Pix2StructForConditionalGeneration
 
 # ── Config ────────────────────────────────────────────────────────────────────
-BASE_DIR     = Path(__file__).parent.parent
+BASE_DIR     = Path(__file__).parent.parent.parent
 IMAGE_BASE   = BASE_DIR / "graphs_cropped"
 EVAL_FILE    = BASE_DIR / "metadata" / "eval_questions.json"
 RESULTS_DIR  = BASE_DIR / "results"
@@ -46,7 +46,9 @@ SYSTEM_PROMPT = (
 
 
 def build_prompt(question: str, expected_format: str) -> str:
-    """MatCha format: Just passing context and question as the text query."""
+    """Conditionally append expected format for temporal questions."""
+    if "HH:MM" in expected_format:
+        return f"{question}. (Answer strictly in format: {expected_format})"
     return question
 
 

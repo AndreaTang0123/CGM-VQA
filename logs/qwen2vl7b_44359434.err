@@ -1,0 +1,15 @@
+WARNING: Ignoring invalid distribution ~ransformers (/work/users/t/x/txueying/hf_venv/lib/python3.12/site-packages)
+WARNING: Ignoring invalid distribution ~ransformers (/work/users/t/x/txueying/hf_venv/lib/python3.12/site-packages)
+WARNING: Ignoring invalid distribution ~ransformers (/work/users/t/x/txueying/hf_venv/lib/python3.12/site-packages)
+WARNING: Ignoring invalid distribution ~ransformers (/work/users/t/x/txueying/hf_venv/lib/python3.12/site-packages)
+WARNING: Ignoring invalid distribution ~ransformers (/work/users/t/x/txueying/hf_venv/lib/python3.12/site-packages)
+WARNING: Ignoring invalid distribution ~ransformers (/work/users/t/x/txueying/hf_venv/lib/python3.12/site-packages)
+WARNING: Ignoring invalid distribution ~ransformers (/work/users/t/x/txueying/hf_venv/lib/python3.12/site-packages)
+WARNING: Ignoring invalid distribution ~ransformers (/work/users/t/x/txueying/hf_venv/lib/python3.12/site-packages)
+WARNING: Ignoring invalid distribution ~ransformers (/work/users/t/x/txueying/hf_venv/lib/python3.12/site-packages)
+/work/users/t/x/txueying/hf_venv/lib/python3.12/site-packages/transformers/utils/hub.py:124: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/nas/longleaf/home/txueying/CGM-VQA/scripts/eval/run_eval_qwen2vl7b_hf.py", line 31, in <module>
+    from transformers import Qwen2VLForConditionalGeneration, AutoProcessor
+ImportError: cannot import name 'Qwen2VLForConditionalGeneration' from 'transformers' (/work/users/t/x/txueying/hf_venv/lib/python3.12/site-packages/transformers/__init__.py)

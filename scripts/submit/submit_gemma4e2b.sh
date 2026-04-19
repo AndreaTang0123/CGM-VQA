@@ -21,7 +21,7 @@ cd $WORKDIR
 mkdir -p logs results
 
 # ── Virtual environment on /work ──────────────────────────────────────────────
-VENV=$WORKFS/hf_venv
+VENV=$WORKFS/hf_venv_latest
 if [ ! -d "$VENV" ]; then
     echo "Creating venv at $VENV ..."
     mkdir -p $WORKFS
@@ -34,7 +34,7 @@ pip install --upgrade pip setuptools wheel -q
 pip install -q \
     torch==2.4.0+cu118 torchvision==0.19.0+cu118 \
     --index-url https://download.pytorch.org/whl/cu118
-pip install -q transformers accelerate pillow
+pip install -U -q transformers accelerate pillow qwen-vl-utils protobuf tokenizers
 
 # ── HuggingFace cache → /work ─────────────────────────────────────────────────
 export HF_HOME=$WORKFS/hf_cache

@@ -10,7 +10,7 @@ import torch
 from PIL import Image
 from transformers import Pix2StructProcessor, Pix2StructForConditionalGeneration
 
-BASE_DIR     = Path(__file__).parent.parent
+BASE_DIR     = Path(__file__).parent.parent.parent
 IMAGE_BASE   = BASE_DIR / "graphs_cropped"
 EVAL_FILE    = BASE_DIR / "metadata" / "eval_questions.json"
 RESULTS_DIR  = BASE_DIR / "results"
