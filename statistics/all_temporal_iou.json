@@ -1,6 +1,7 @@
 {
     "chartqa_hf": {
         "mean_iou": 0.0,
+        "iou_acc": 0.0,
         "total_samples": 50,
         "per_sample_results": {
             "S003": {
@@ -307,6 +308,7 @@
     },
     "gemma4e2b_hf": {
         "mean_iou": 0.028,
+        "iou_acc": 0.02,
         "total_samples": 50,
         "per_sample_results": {
             "S003": {
@@ -613,6 +615,7 @@
     },
     "internvl2_4b_hf": {
         "mean_iou": 0.0573,
+        "iou_acc": 0.06,
         "total_samples": 50,
         "per_sample_results": {
             "S003": {
@@ -919,6 +922,7 @@
     },
     "internvl2_8b_hf": {
         "mean_iou": 0.0571,
+        "iou_acc": 0.04,
         "total_samples": 50,
         "per_sample_results": {
             "S003": {
@@ -1225,6 +1229,7 @@
     },
     "llava7b_hf": {
         "mean_iou": 0.0237,
+        "iou_acc": 0.04,
         "total_samples": 50,
         "per_sample_results": {
             "S003": {
@@ -1531,6 +1536,7 @@
     },
     "matcha_hf": {
         "mean_iou": 0.0,
+        "iou_acc": 0.0,
         "total_samples": 50,
         "per_sample_results": {
             "S003": {
@@ -1837,6 +1843,7 @@
     },
     "qwen2vl7b_hf": {
         "mean_iou": 0.0495,
+        "iou_acc": 0.0,
         "total_samples": 50,
         "per_sample_results": {
             "S003": {

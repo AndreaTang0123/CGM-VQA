@@ -33,11 +33,11 @@
     "sample_id": "S004",
     "graph_id": "G01",
     "question_id": "Q27",
-    "question": "Identify the time interval where glucose declined after an insulin event.",
+    "question": "Identify the time interval where glucose declined after the largest insulin event.",
     "task_type": "temporal",
-    "answer": "12:30-14:00",
-    "t_start": "12:30",
-    "t_end": "14:00"
+    "answer": "11:20-14:30",
+    "t_start": "11:20",
+    "t_end": "14:30"
   },
   {
     "sample_id": "S005",
@@ -63,17 +63,17 @@
     "sample_id": "S007",
     "graph_id": "G02",
     "question_id": "Q27",
-    "question": "Identify the time interval where glucose declined after an insulin event.",
+    "question": "Identify the time interval where glucose declined after the largest insulin event",
     "task_type": "temporal",
-    "answer": "12:00-13:00",
-    "t_start": "12:00",
-    "t_end": "13:00"
+    "answer": "17:03-18:30",
+    "t_start": "17:03",
+    "t_end": "18:30"
   },
   {
     "sample_id": "S008",
     "graph_id": "G02",
     "question_id": "Q21",
-    "question": "When did the largest glucose spike occur?",
+    "question": "When did the highest glucose value occur?",
     "task_type": "temporal",
     "answer": "11:30",
     "t_start": "11:00",
@@ -103,21 +103,21 @@
     "sample_id": "S011",
     "graph_id": "G03",
     "question_id": "Q40",
-    "question": "Identify the period where glucose continuously increased for at least 30 minutes.",
+    "question": "Identify the longest time interval where glucose continuously increased.",
     "task_type": "temporal",
-    "answer": "10:30-11:30",
-    "t_start": "10:30",
-    "t_end": "11:30"
+    "answer": "13:50-15:10",
+    "t_start": "13:50",
+    "t_end": "15:10"
   },
   {
     "sample_id": "S012",
     "graph_id": "G03",
     "question_id": "Q21",
-    "question": "When did the largest glucose spike occur?",
+    "question": "When did the largest glucose value occur?",
     "task_type": "temporal",
-    "answer": "11:30",
-    "t_start": "11:00",
-    "t_end": "12:00"
+    "answer": "11:03",
+    "t_start": "10:50",
+    "t_end": "11:10"
   },
   {
     "sample_id": "S013",
@@ -145,19 +145,19 @@
     "question_id": "Q26",
     "question": "Locate the segment where glucose rose most rapidly.",
     "task_type": "temporal",
-    "answer": "11:00-12:30",
-    "t_start": "11:00",
-    "t_end": "12:30"
+    "answer": "11:30-12:00",
+    "t_start": "11:30",
+    "t_end": "12:00"
   },
   {
     "sample_id": "S016",
     "graph_id": "G04",
     "question_id": "Q36",
-    "question": "Identify the time interval where glucose remained above 180 mg/dL.",
+    "question": "Identify the longest time interval where glucose remained above 180 mg/dL.",
     "task_type": "temporal",
-    "answer": "11:30-17:00",
-    "t_start": "11:30",
-    "t_end": "17:00"
+    "answer": "18:30-23:50",
+    "t_start": "18:30",
+    "t_end": "23:50"
   },
   {
     "sample_id": "S017",
@@ -193,7 +193,7 @@
     "sample_id": "S020",
     "graph_id": "G05",
     "question_id": "Q21",
-    "question": "When did the largest glucose spike occur?",
+    "question": "When did the largest glucose value occur?",
     "task_type": "temporal",
     "answer": "12:30",
     "t_start": "12:00",
@@ -225,19 +225,19 @@
     "question_id": "Q28",
     "question": "Locate the segment showing the largest upward trend.",
     "task_type": "temporal",
-    "answer": "15:00-16:45",
-    "t_start": "15:00",
-    "t_end": "16:45"
+    "answer": "16:20-16:50",
+    "t_start": "16:20",
+    "t_end": "16:50"
   },
   {
     "sample_id": "S024",
     "graph_id": "G06",
     "question_id": "Q40",
-    "question": "Identify the period where glucose continuously increased for at least 30 minutes.",
+    "question": "Identify the longest time interval where glucose continuously increased.",
     "task_type": "temporal",
-    "answer": "15:00-16:45",
-    "t_start": "15:00",
-    "t_end": "16:45"
+    "answer": "5:03-8:03",
+    "t_start": "5:03",
+    "t_end": "8:03"
   },
   {
     "sample_id": "S025",
@@ -263,17 +263,17 @@
     "sample_id": "S027",
     "graph_id": "G07",
     "question_id": "Q33",
-    "question": "Identify the glucose response period following carbohydrate intake.",
+    "question": "Identify the glucose response period 30 minutes after the largest carbohydrate intake.",
     "task_type": "temporal",
-    "answer": "15:30-18:15",
-    "t_start": "15:30",
-    "t_end": "18:15"
+    "answer": "13:50-14:20",
+    "t_start": "13:50",
+    "t_end": "14:20"
   },
   {
     "sample_id": "S028",
     "graph_id": "G07",
     "question_id": "Q21",
-    "question": "When did the largest glucose spike occur?",
+    "question": "When did the largest glucose value occur?",
     "task_type": "temporal",
     "answer": "18:15",
     "t_start": "18:00",
@@ -305,15 +305,15 @@
     "question_id": "Q24",
     "question": "When did the lowest glucose value occur?",
     "task_type": "temporal",
-    "answer": "08:30",
-    "t_start": "08:00",
-    "t_end": "09:00"
+    "answer": "12:30",
+    "t_start": "12:00",
+    "t_end": "13:00"
   },
   {
     "sample_id": "S032",
     "graph_id": "G08",
     "question_id": "Q21",
-    "question": "When did the largest glucose spike occur?",
+    "question": "When did the largest glucose value occur?",
     "task_type": "temporal",
     "answer": "17:00",
     "t_start": "16:30",
@@ -343,11 +343,11 @@
     "sample_id": "S035",
     "graph_id": "G09",
     "question_id": "Q21",
-    "question": "When did the largest glucose spike occur?",
+    "question": "When did the highest glucose value occur?",
     "task_type": "temporal",
-    "answer": "15:00",
-    "t_start": "14:30",
-    "t_end": "15:30"
+    "answer": "15:30",
+    "t_start": "15:00",
+    "t_end": "16:00"
   },
   {
     "sample_id": "S036",
@@ -355,8 +355,8 @@
     "question_id": "Q38",
     "question": "Identify the longest period where glucose stayed within the normal range.",
     "task_type": "temporal",
-    "answer": "07:00-12:30",
-    "t_start": "07:00",
+    "answer": "00:00-12:30",
+    "t_start": "00:00",
     "t_end": "12:30"
   },
   {
@@ -383,21 +383,21 @@
     "sample_id": "S039",
     "graph_id": "G10",
     "question_id": "Q29",
-    "question": "Identify the period where glucose gradually decreased during the evening.",
+    "question": "Identify the longest time interval during 18:00–22:00 where glucose gradually decreased.",
     "task_type": "temporal",
-    "answer": "14:00-16:30",
-    "t_start": "14:00",
-    "t_end": "16:30"
+    "answer": "20:30-21:30",
+    "t_start": "20:30",
+    "t_end": "21:30"
   },
   {
     "sample_id": "S040",
     "graph_id": "G10",
     "question_id": "Q22",
-    "question": "Identify the time interval where glucose first exceeded 180 mg/dL.",
+    "question": "Identify the time when glucose first exceeded 180 mg/dL.",
     "task_type": "temporal",
-    "answer": "12:30",
-    "t_start": "12:00",
-    "t_end": "13:00"
+    "answer": "11:50",
+    "t_start": "11:30",
+    "t_end": "12:00"
   },
   {
     "sample_id": "S041",
@@ -423,21 +423,21 @@
     "sample_id": "S043",
     "graph_id": "G11",
     "question_id": "Q33",
-    "question": "Identify the glucose response period following carbohydrate intake.",
+    "question": "Identify the glucose response period 30 minutes after the largest carbohydrate intake.",
     "task_type": "temporal",
-    "answer": "19:00-20:30",
-    "t_start": "19:00",
-    "t_end": "20:30"
+    "answer": "8:10-8:40",
+    "t_start": "8:10",
+    "t_end": "8:40"
   },
   {
     "sample_id": "S044",
     "graph_id": "G11",
     "question_id": "Q29",
-    "question": "Identify the period where glucose gradually decreased during the evening.",
+    "question": "Identify the longest time interval during 18:00–22:00 where glucose gradually decreased.",
     "task_type": "temporal",
-    "answer": "21:00-23:00",
-    "t_start": "21:00",
-    "t_end": "23:00"
+    "answer": "20:50-21:20",
+    "t_start": "20:50",
+    "t_end": "21:20"
   },
   {
     "sample_id": "S045",
@@ -463,21 +463,21 @@
     "sample_id": "S047",
     "graph_id": "G12",
     "question_id": "Q36",
-    "question": "Identify the time interval where glucose remained above 180 mg/dL.",
+    "question": "Identify the longest time interval where glucose remained above 180 mg/dL.",
     "task_type": "temporal",
-    "answer": "00:30-02:30",
-    "t_start": "00:30",
-    "t_end": "02:30"
+    "answer": "17:30-20:30",
+    "t_start": "17:30",
+    "t_end": "20:30"
   },
   {
     "sample_id": "S048",
     "graph_id": "G12",
     "question_id": "Q31",
-    "question": "Identify the time interval where glucose rose after a meal event.",
+    "question": "Identify the time interval corresponding to the larger glucose increase between breakfast and dinner.",
     "task_type": "temporal",
-    "answer": "00:00-01:00",
-    "t_start": "00:00",
-    "t_end": "01:00"
+    "answer": "17:10-19:00",
+    "t_start": "17:10",
+    "t_end": "19:00"
   },
   {
     "sample_id": "S049",
@@ -503,11 +503,11 @@
     "sample_id": "S051",
     "graph_id": "G13",
     "question_id": "Q22",
-    "question": "Identify the time interval where glucose first exceeded 180 mg/dL.",
+    "question": "Identify the time when glucose first exceeded 180 mg/dL.",
     "task_type": "temporal",
-    "answer": "08:30",
-    "t_start": "08:00",
-    "t_end": "09:00"
+    "answer": "09:10",
+    "t_start": "09:00",
+    "t_end": "09:30"
   },
   {
     "sample_id": "S052",
@@ -515,9 +515,9 @@
     "question_id": "Q37",
     "question": "Locate the segment where glucose remained below 70 mg/dL.",
     "task_type": "temporal",
-    "answer": "02:30-03:00",
-    "t_start": "02:30",
-    "t_end": "03:00"
+    "answer": "02:00-03:30",
+    "t_start": "02:00",
+    "t_end": "03:30"
   },
   {
     "sample_id": "S053",
@@ -553,11 +553,11 @@
     "sample_id": "S056",
     "graph_id": "G14",
     "question_id": "Q31",
-    "question": "Identify the time interval where glucose rose after a meal event.",
+    "question": "Identify the time interval corresponding to the larger glucose increase between breakfast and dinner.",
     "task_type": "temporal",
-    "answer": "08:30-09:30",
-    "t_start": "08:30",
-    "t_end": "09:30"
+    "answer": "18:50-19:30",
+    "t_start": "18:50",
+    "t_end": "19:30"
   },
   {
     "sample_id": "S057",
@@ -583,11 +583,11 @@
     "sample_id": "S059",
     "graph_id": "G15",
     "question_id": "Q31",
-    "question": "Identify the time interval where glucose rose after a meal event.",
+    "question": "Identify the time interval corresponding to the larger glucose increase between breakfast and dinner.",
     "task_type": "temporal",
-    "answer": "09:30-10:30",
-    "t_start": "09:30",
-    "t_end": "10:30"
+    "answer": "09:00-10:00",
+    "t_start": "09:00",
+    "t_end": "10:00"
   },
   {
     "sample_id": "S060",
@@ -595,8 +595,8 @@
     "question_id": "Q39",
     "question": "Locate the interval where glucose remained stable for the longest duration.",
     "task_type": "temporal",
-    "answer": "06:00-09:00",
-    "t_start": "06:00",
+    "answer": "00:00-09:00",
+    "t_start": "00:00",
     "t_end": "09:00"
   },
   {
@@ -625,19 +625,19 @@
     "question_id": "Q28",
     "question": "Locate the segment showing the largest upward trend.",
     "task_type": "temporal",
-    "answer": "12:00-13:00",
-    "t_start": "12:00",
-    "t_end": "13:00"
+    "answer": "10:00-11:00",
+    "t_start": "10:00",
+    "t_end": "11:00"
   },
   {
     "sample_id": "S064",
     "graph_id": "G16",
     "question_id": "Q32",
-    "question": "Locate the segment where glucose dropped after insulin delivery.",
+    "question": "Locate the segment where glucose dropped after the largest insulin delivery.",
     "task_type": "temporal",
-    "answer": "13:30-15:00",
-    "t_start": "13:30",
-    "t_end": "15:00"
+    "answer": "17:00-18:00",
+    "t_start": "17:00",
+    "t_end": "18:00"
   },
   {
     "sample_id": "S065",
@@ -662,12 +662,12 @@
   {
     "sample_id": "S067",
     "graph_id": "G17",
-    "question_id": "Q30",
-    "question": "Locate the segment where glucose remained relatively stable.",
+    "question_id": "Q25",
+    "question": "Identify the time period where glucose dropped below 70 mg/dL.",
     "task_type": "temporal",
-    "answer": "07:00-11:00",
-    "t_start": "07:00",
-    "t_end": "11:00"
+    "answer": "15:20-15:50",
+    "t_start": "15:20",
+    "t_end": "15:50"
   },
   {
     "sample_id": "S068",
@@ -705,19 +705,19 @@
     "question_id": "Q39",
     "question": "Locate the interval where glucose remained stable for the longest duration.",
     "task_type": "temporal",
-    "answer": "07:00-14:30",
-    "t_start": "07:00",
-    "t_end": "14:30"
+    "answer": "5:30-9:30",
+    "t_start": "5:30",
+    "t_end": "9:30"
   },
   {
     "sample_id": "S072",
     "graph_id": "G18",
     "question_id": "Q22",
-    "question": "Identify the time interval where glucose first exceeded 180 mg/dL.",
+    "question": "Identify the time when glucose first exceeded 180 mg/dL.",
     "task_type": "temporal",
-    "answer": "15:30",
-    "t_start": "15:00",
-    "t_end": "16:00"
+    "answer": "16:20",
+    "t_start": "16:00",
+    "t_end": "16:30"
   },
   {
     "sample_id": "S073",
@@ -753,11 +753,11 @@
     "sample_id": "S076",
     "graph_id": "G19",
     "question_id": "Q34",
-    "question": "Locate the time interval where glucose changed direction after an insulin event.",
+    "question": "Locate the time interval where glucose decreased the most within 30 minutes after an insulin event.",
     "task_type": "temporal",
-    "answer": "04:00",
-    "t_start": "03:30",
-    "t_end": "04:30"
+    "answer": "17:30-18:00",
+    "t_start": "17:00",
+    "t_end": "18:00"
   },
   {
     "sample_id": "S077",
@@ -785,19 +785,19 @@
     "question_id": "Q38",
     "question": "Identify the longest period where glucose stayed within the normal range.",
     "task_type": "temporal",
-    "answer": "07:00-08:30",
-    "t_start": "07:00",
-    "t_end": "08:30"
+    "answer": "00:00-10:00",
+    "t_start": "00:00",
+    "t_end": "10:00"
   },
   {
     "sample_id": "S080",
     "graph_id": "G20",
     "question_id": "Q27",
-    "question": "Identify the time interval where glucose declined after an insulin event.",
+    "question": "Identify the time interval where glucose declined after the largest insulin event",
     "task_type": "temporal",
-    "answer": "10:00-11:30",
-    "t_start": "10:00",
-    "t_end": "11:30"
+    "answer": "18:00-19:20",
+    "t_start": "18:00",
+    "t_end": "19:20"
   },
   {
     "sample_id": "S081",
@@ -823,21 +823,21 @@
     "sample_id": "S083",
     "graph_id": "G21",
     "question_id": "Q33",
-    "question": "Identify the glucose response period following carbohydrate intake.",
+    "question": "Identify the glucose response period 30 minutes after the largest carbohydrate intake.",
     "task_type": "temporal",
-    "answer": "17:30-18:45",
-    "t_start": "17:30",
-    "t_end": "18:45"
+    "answer": "18:00-18:30",
+    "t_start": "18:00",
+    "t_end": "18:30"
   },
   {
     "sample_id": "S084",
     "graph_id": "G21",
     "question_id": "Q32",
-    "question": "Locate the segment where glucose dropped after insulin delivery.",
+    "question": "Locate the segment where glucose dropped after the largest insulin delivery.",
     "task_type": "temporal",
-    "answer": "19:00-20:30",
-    "t_start": "19:00",
-    "t_end": "20:30"
+    "answer": "19:10-19:40",
+    "t_start": "19:10",
+    "t_end": "19:40"
   },
   {
     "sample_id": "S085",
@@ -863,11 +863,11 @@
     "sample_id": "S087",
     "graph_id": "G22",
     "question_id": "Q40",
-    "question": "Identify the period where glucose continuously increased for at least 30 minutes.",
+    "question": "Identify the longest time interval where glucose continuously increased.",
     "task_type": "temporal",
-    "answer": "20:00-22:00",
-    "t_start": "20:00",
-    "t_end": "22:00"
+    "answer": "21:30-22:30",
+    "t_start": "21:30",
+    "t_end": "23:30"
   },
   {
     "sample_id": "S088",
@@ -875,8 +875,8 @@
     "question_id": "Q26",
     "question": "Locate the segment where glucose rose most rapidly.",
     "task_type": "temporal",
-    "answer": "20:00-22:00",
-    "t_start": "20:00",
+    "answer": "21:30-22:00",
+    "t_start": "21:30",
     "t_end": "22:00"
   },
   {
@@ -905,9 +905,9 @@
     "question_id": "Q35",
     "question": "Identify the period where glucose spike follows a meal marker.",
     "task_type": "temporal",
-    "answer": "23:30-00:15",
-    "t_start": "23:30",
-    "t_end": "00:30"
+    "answer": "18:00-18:30",
+    "t_start": "18:00",
+    "t_end": "18:30"
   },
   {
     "sample_id": "S092",
@@ -915,9 +915,9 @@
     "question_id": "Q28",
     "question": "Locate the segment showing the largest upward trend.",
     "task_type": "temporal",
-    "answer": "23:30-00:15",
-    "t_start": "23:30",
-    "t_end": "00:30"
+    "answer": "20:50-21:10",
+    "t_start": "20:50",
+    "t_end": "21:10"
   },
   {
     "sample_id": "S093",
@@ -945,18 +945,18 @@
     "question_id": "Q26",
     "question": "Locate the segment where glucose rose most rapidly.",
     "task_type": "temporal",
-    "answer": "11:30-13:00",
-    "t_start": "11:30",
-    "t_end": "13:00"
+    "answer": "11:00-11:10",
+    "t_start": "11:00",
+    "t_end": "11:10"
   },
   {
     "sample_id": "S096",
     "graph_id": "G24",
     "question_id": "Q34",
-    "question": "Locate the time interval where glucose changed direction after an insulin event.",
+    "question": "Locate the time interval where glucose decreased the most within 30 minutes after an insulin event.",
     "task_type": "temporal",
-    "answer": "13:30",
-    "t_start": "13:00",
+    "answer": "13:30-14:00",
+    "t_start": "13:30",
     "t_end": "14:00"
   },
   {
@@ -983,20 +983,20 @@
     "sample_id": "S099",
     "graph_id": "G25",
     "question_id": "Q25",
-    "question": "Identify the time period where glucose dropped below 70 mg/dL.",
+    "question": "Identify the time when the lowest glucose value occurred.",
     "task_type": "temporal",
-    "answer": "13:30-14:00",
-    "t_start": "13:30",
+    "answer": "14:00",
+    "t_start": "14:00",
     "t_end": "14:00"
   },
   {
     "sample_id": "S100",
     "graph_id": "G25",
-    "question_id": "Q23",
-    "question": "Locate the longest hyperglycemia period in the graph.",
+    "question_id": "Q26",
+    "question": "Locate the segment where glucose rose most rapidly.",
     "task_type": "temporal",
-    "answer": "20:00-21:30",
-    "t_start": "20:00",
-    "t_end": "21:30"
+    "answer": "11:50-12:10",
+    "t_start": "11:50",
+    "t_end": "12:10"
   }
 ]

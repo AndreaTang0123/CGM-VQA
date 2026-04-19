@@ -85,8 +85,11 @@ def main():
                 }
                 
         mean_iou = sum(ious) / len(ious) if ious else 0.0
+        iou_acc = sum(1 for i in ious if i >= 0.5) / len(ious) if ious else 0.0
+        
         all_stats[model_name] = {
             "mean_iou": round(mean_iou, 4),
+            "iou_acc": round(iou_acc, 4),
             "total_samples": total,
             "per_sample_results": per_sample_iou
         }
@@ -98,10 +101,10 @@ def main():
         
     with open("statistics/temporal_iou.md", "w") as f:
         f.write("# Temporal Questions IoU Accuracy\n\n")
-        f.write("| Model | Temporal Samples | Mean IoU |\n")
-        f.write("| --- | --- | --- |\n")
+        f.write("| Model | Temporal Samples | Mean IoU | Accuracy (IoU ≥ 0.5) |\n")
+        f.write("| --- | --- | --- | --- |\n")
         for model_name, data in sorted(all_stats.items(), key=lambda item: item[1]['mean_iou'], reverse=True):
-            f.write(f"| {model_name} | {data['total_samples']} | {data['mean_iou']:.4f} |\n")
+            f.write(f"| {model_name} | {data['total_samples']} | {data['mean_iou']:.4f} | {data['iou_acc']:.2%} |\n")
             
     print("Saved aggregate statistics to statistics/all_temporal_iou.json and statistics/temporal_iou.md")
 
