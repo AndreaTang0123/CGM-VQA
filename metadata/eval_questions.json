@@ -36,7 +36,7 @@
     "image_path": "graphs_cropped/Readings_2023-12-09.png",
     "question_id": "Q27",
     "task_type": "temporal",
-    "question": "Identify the time interval where glucose declined after an insulin event.",
+    "question": "Identify the time interval where glucose declined after the largest insulin event.",
     "expected_answer_format": "time interval, e.g. HH:MM or HH:MM-HH:MM"
   },
   {
@@ -66,7 +66,7 @@
     "image_path": "graphs_cropped/Readings_2023-12-10.png",
     "question_id": "Q27",
     "task_type": "temporal",
-    "question": "Identify the time interval where glucose declined after an insulin event.",
+    "question": "Identify the time interval where glucose declined after the largest insulin event",
     "expected_answer_format": "time interval, e.g. HH:MM or HH:MM-HH:MM"
   },
   {
@@ -76,7 +76,7 @@
     "image_path": "graphs_cropped/Readings_2023-12-10.png",
     "question_id": "Q21",
     "task_type": "temporal",
-    "question": "When did the largest glucose spike occur?",
+    "question": "When did the highest glucose value occur?",
     "expected_answer_format": "time interval, e.g. HH:MM or HH:MM-HH:MM"
   },
   {
@@ -106,7 +106,7 @@
     "image_path": "graphs_cropped/Readings_2023-12-11.png",
     "question_id": "Q40",
     "task_type": "temporal",
-    "question": "Identify the period where glucose continuously increased for at least 30 minutes.",
+    "question": "Identify the longest time interval where glucose continuously increased.",
     "expected_answer_format": "time interval, e.g. HH:MM or HH:MM-HH:MM"
   },
   {
@@ -116,7 +116,7 @@
     "image_path": "graphs_cropped/Readings_2023-12-11.png",
     "question_id": "Q21",
     "task_type": "temporal",
-    "question": "When did the largest glucose spike occur?",
+    "question": "When did the largest glucose value occur?",
     "expected_answer_format": "time interval, e.g. HH:MM or HH:MM-HH:MM"
   },
   {
@@ -156,7 +156,7 @@
     "image_path": "graphs_cropped/Readings_2023-12-15.png",
     "question_id": "Q36",
     "task_type": "temporal",
-    "question": "Identify the time interval where glucose remained above 180 mg/dL.",
+    "question": "Identify the longest time interval where glucose remained above 180 mg/dL.",
     "expected_answer_format": "time interval, e.g. HH:MM or HH:MM-HH:MM"
   },
   {
@@ -196,7 +196,7 @@
     "image_path": "graphs_cropped/Readings_2023-12-16.png",
     "question_id": "Q21",
     "task_type": "temporal",
-    "question": "When did the largest glucose spike occur?",
+    "question": "When did the largest glucose value occur?",
     "expected_answer_format": "time interval, e.g. HH:MM or HH:MM-HH:MM"
   },
   {
@@ -236,7 +236,7 @@
     "image_path": "graphs_cropped/Readings_2023-12-17.png",
     "question_id": "Q40",
     "task_type": "temporal",
-    "question": "Identify the period where glucose continuously increased for at least 30 minutes.",
+    "question": "Identify the longest time interval where glucose continuously increased.",
     "expected_answer_format": "time interval, e.g. HH:MM or HH:MM-HH:MM"
   },
   {
@@ -266,7 +266,7 @@
     "image_path": "graphs_cropped/Readings_2023-12-21.png",
     "question_id": "Q33",
     "task_type": "temporal",
-    "question": "Identify the glucose response period following carbohydrate intake.",
+    "question": "Identify the glucose response period 30 minutes after the largest carbohydrate intake.",
     "expected_answer_format": "time interval, e.g. HH:MM or HH:MM-HH:MM"
   },
   {
@@ -276,7 +276,7 @@
     "image_path": "graphs_cropped/Readings_2023-12-21.png",
     "question_id": "Q21",
     "task_type": "temporal",
-    "question": "When did the largest glucose spike occur?",
+    "question": "When did the largest glucose value occur?",
     "expected_answer_format": "time interval, e.g. HH:MM or HH:MM-HH:MM"
   },
   {
@@ -316,7 +316,7 @@
     "image_path": "graphs_cropped/Readings_2023-12-23.png",
     "question_id": "Q21",
     "task_type": "temporal",
-    "question": "When did the largest glucose spike occur?",
+    "question": "When did the largest glucose value occur?",
     "expected_answer_format": "time interval, e.g. HH:MM or HH:MM-HH:MM"
   },
   {
@@ -346,7 +346,7 @@
     "image_path": "graphs_cropped/Readings_2023-12-24.png",
     "question_id": "Q21",
     "task_type": "temporal",
-    "question": "When did the largest glucose spike occur?",
+    "question": "When did the highest glucose value occur?",
     "expected_answer_format": "time interval, e.g. HH:MM or HH:MM-HH:MM"
   },
   {
@@ -386,7 +386,7 @@
     "image_path": "graphs_cropped/Readings_2023-12-30.png",
     "question_id": "Q29",
     "task_type": "temporal",
-    "question": "Identify the period where glucose gradually decreased during the evening.",
+    "question": "Identify the longest time interval during 18:00–22:00 where glucose gradually decreased.",
     "expected_answer_format": "time interval, e.g. HH:MM or HH:MM-HH:MM"
   },
   {
@@ -396,7 +396,7 @@
     "image_path": "graphs_cropped/Readings_2023-12-30.png",
     "question_id": "Q22",
     "task_type": "temporal",
-    "question": "Identify the time interval where glucose first exceeded 180 mg/dL.",
+    "question": "Identify the time when glucose first exceeded 180 mg/dL.",
     "expected_answer_format": "time interval, e.g. HH:MM or HH:MM-HH:MM"
   },
   {
@@ -426,7 +426,7 @@
     "image_path": "graphs_cropped/Readings_2024-01-05.png",
     "question_id": "Q33",
     "task_type": "temporal",
-    "question": "Identify the glucose response period following carbohydrate intake.",
+    "question": "Identify the glucose response period 30 minutes after the largest carbohydrate intake.",
     "expected_answer_format": "time interval, e.g. HH:MM or HH:MM-HH:MM"
   },
   {
@@ -436,7 +436,7 @@
     "image_path": "graphs_cropped/Readings_2024-01-05.png",
     "question_id": "Q29",
     "task_type": "temporal",
-    "question": "Identify the period where glucose gradually decreased during the evening.",
+    "question": "Identify the longest time interval during 18:00–22:00 where glucose gradually decreased.",
     "expected_answer_format": "time interval, e.g. HH:MM or HH:MM-HH:MM"
   },
   {
@@ -466,7 +466,7 @@
     "image_path": "graphs_cropped/Readings_2024-01-06.png",
     "question_id": "Q36",
     "task_type": "temporal",
-    "question": "Identify the time interval where glucose remained above 180 mg/dL.",
+    "question": "Identify the longest time interval where glucose remained above 180 mg/dL.",
     "expected_answer_format": "time interval, e.g. HH:MM or HH:MM-HH:MM"
   },
   {
@@ -476,7 +476,7 @@
     "image_path": "graphs_cropped/Readings_2024-01-06.png",
     "question_id": "Q31",
     "task_type": "temporal",
-    "question": "Identify the time interval where glucose rose after a meal event.",
+    "question": "Identify the time interval corresponding to the larger glucose increase between breakfast and dinner.",
     "expected_answer_format": "time interval, e.g. HH:MM or HH:MM-HH:MM"
   },
   {
@@ -506,7 +506,7 @@
     "image_path": "graphs_cropped/Readings_2024-01-07.png",
     "question_id": "Q22",
     "task_type": "temporal",
-    "question": "Identify the time interval where glucose first exceeded 180 mg/dL.",
+    "question": "Identify the time when glucose first exceeded 180 mg/dL.",
     "expected_answer_format": "time interval, e.g. HH:MM or HH:MM-HH:MM"
   },
   {
@@ -556,7 +556,7 @@
     "image_path": "graphs_cropped/Readings_2024-01-10.png",
     "question_id": "Q31",
     "task_type": "temporal",
-    "question": "Identify the time interval where glucose rose after a meal event.",
+    "question": "Identify the time interval corresponding to the larger glucose increase between breakfast and dinner.",
     "expected_answer_format": "time interval, e.g. HH:MM or HH:MM-HH:MM"
   },
   {
@@ -586,7 +586,7 @@
     "image_path": "graphs_cropped/Readings_2024-02-02.png",
     "question_id": "Q31",
     "task_type": "temporal",
-    "question": "Identify the time interval where glucose rose after a meal event.",
+    "question": "Identify the time interval corresponding to the larger glucose increase between breakfast and dinner.",
     "expected_answer_format": "time interval, e.g. HH:MM or HH:MM-HH:MM"
   },
   {
@@ -636,7 +636,7 @@
     "image_path": "graphs_cropped/Readings_2024-02-03.png",
     "question_id": "Q32",
     "task_type": "temporal",
-    "question": "Locate the segment where glucose dropped after insulin delivery.",
+    "question": "Locate the segment where glucose dropped after the largest insulin delivery.",
     "expected_answer_format": "time interval, e.g. HH:MM or HH:MM-HH:MM"
   },
   {
@@ -666,7 +666,7 @@
     "image_path": "graphs_cropped/Readings_2024-02-07.png",
     "question_id": "Q30",
     "task_type": "temporal",
-    "question": "Locate the segment where glucose remained relatively stable.",
+    "question": "Identify the time period where glucose dropped below 70 mg/dL.",
     "expected_answer_format": "time interval, e.g. HH:MM or HH:MM-HH:MM"
   },
   {
@@ -716,7 +716,7 @@
     "image_path": "graphs_cropped/Readings_2024-02-08.png",
     "question_id": "Q22",
     "task_type": "temporal",
-    "question": "Identify the time interval where glucose first exceeded 180 mg/dL.",
+    "question": "Identify the time when glucose first exceeded 180 mg/dL.",
     "expected_answer_format": "time interval, e.g. HH:MM or HH:MM-HH:MM"
   },
   {
@@ -756,7 +756,7 @@
     "image_path": "graphs_cropped/Readings_2024-02-15.png",
     "question_id": "Q34",
     "task_type": "temporal",
-    "question": "Locate the time interval where glucose changed direction after an insulin event.",
+    "question": "Locate the time interval where glucose decreased the most within 30 minutes after an insulin event.",
     "expected_answer_format": "time interval, e.g. HH:MM or HH:MM-HH:MM"
   },
   {
@@ -796,7 +796,7 @@
     "image_path": "graphs_cropped/Readings_2024-03-04.png",
     "question_id": "Q27",
     "task_type": "temporal",
-    "question": "Identify the time interval where glucose declined after an insulin event.",
+    "question": "Identify the time interval where glucose declined after the largest insulin event",
     "expected_answer_format": "time interval, e.g. HH:MM or HH:MM-HH:MM"
   },
   {
@@ -826,7 +826,7 @@
     "image_path": "graphs_cropped/Readings_2024-03-05.png",
     "question_id": "Q33",
     "task_type": "temporal",
-    "question": "Identify the glucose response period following carbohydrate intake.",
+    "question": "Identify the glucose response period 30 minutes after the largest carbohydrate intake.",
     "expected_answer_format": "time interval, e.g. HH:MM or HH:MM-HH:MM"
   },
   {
@@ -836,7 +836,7 @@
     "image_path": "graphs_cropped/Readings_2024-03-05.png",
     "question_id": "Q32",
     "task_type": "temporal",
-    "question": "Locate the segment where glucose dropped after insulin delivery.",
+    "question": "Locate the segment where glucose dropped after the largest insulin delivery.",
     "expected_answer_format": "time interval, e.g. HH:MM or HH:MM-HH:MM"
   },
   {
@@ -866,7 +866,7 @@
     "image_path": "graphs_cropped/Readings_2024-03-06.png",
     "question_id": "Q40",
     "task_type": "temporal",
-    "question": "Identify the period where glucose continuously increased for at least 30 minutes.",
+    "question": "Identify the longest time interval where glucose continuously increased.",
     "expected_answer_format": "time interval, e.g. HH:MM or HH:MM-HH:MM"
   },
   {
@@ -956,7 +956,7 @@
     "image_path": "graphs_cropped/Readings_2024-03-08.png",
     "question_id": "Q34",
     "task_type": "temporal",
-    "question": "Locate the time interval where glucose changed direction after an insulin event.",
+    "question": "Locate the time interval where glucose decreased the most within 30 minutes after an insulin event.",
     "expected_answer_format": "time interval, e.g. HH:MM or HH:MM-HH:MM"
   },
   {
@@ -986,7 +986,7 @@
     "image_path": "graphs_cropped/Readings_2024-03-09.png",
     "question_id": "Q25",
     "task_type": "temporal",
-    "question": "Identify the time period where glucose dropped below 70 mg/dL.",
+    "question": "Identify the time when the lowest glucose value occurred.",
     "expected_answer_format": "time interval, e.g. HH:MM or HH:MM-HH:MM"
   },
   {
@@ -996,7 +996,7 @@
     "image_path": "graphs_cropped/Readings_2024-03-09.png",
     "question_id": "Q23",
     "task_type": "temporal",
-    "question": "Locate the longest hyperglycemia period in the graph.",
+    "question": "Locate the segment where glucose rose most rapidly.",
     "expected_answer_format": "time interval, e.g. HH:MM or HH:MM-HH:MM"
   }
 ]
