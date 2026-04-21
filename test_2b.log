@@ -1,0 +1,52 @@
+Traceback (most recent call last):
+  File "/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages/transformers/utils/import_utils.py", line 2207, in __getattr__
+    module = self._get_module(self._class_to_module[name])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages/transformers/utils/import_utils.py", line 2441, in _get_module
+    raise e
+  File "/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages/transformers/utils/import_utils.py", line 2439, in _get_module
+    return importlib.import_module("." + module_name, self.__name__)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nas/longleaf/rhel9/apps/python/3.12.4/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages/transformers/models/auto/processing_auto.py", line 25, in <module>
+    from ...image_processing_utils import ImageProcessingMixin
+  File "/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages/transformers/image_processing_utils.py", line 24, in <module>
+    from .image_processing_base import BatchFeature, ImageProcessingMixin
+  File "/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages/transformers/image_processing_base.py", line 25, in <module>
+    from .image_utils import is_valid_image, load_image
+  File "/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages/transformers/image_utils.py", line 53, in <module>
+    from torchvision.transforms import InterpolationMode
+  File "/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages/torchvision/__init__.py", line 10, in <module>
+    from torchvision import _meta_registrations, datasets, io, models, ops, transforms, utils  # usort:skip
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages/torchvision/_meta_registrations.py", line 4, in <module>
+    import torch._custom_ops
+  File "/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages/torch/_custom_ops.py", line 4, in <module>
+    from torch._custom_op.impl import (
+  File "/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages/torch/_custom_op/impl.py", line 12, in <module>
+    import torch._library.infer_schema
+  File "/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages/torch/_library/infer_schema.py", line 12, in <module>
+    from .opaque_object import _OPAQUE_TYPES, is_opaque_type
+  File "/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages/torch/_library/opaque_object.py", line 63, in <module>
+    @register_fake_class("aten::OpaqueObject")
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages/torch/_library/fake_class_registry.py", line 212, in inner
+    for i, inp in enumerate(flat_x)
+              ^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Tried to instantiate class 'aten.OpaqueObject', but it does not exist! Ensure that it is registered via torch::class_
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<string>", line 3, in <module>
+  File "/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages/transformers/utils/import_utils.py", line 2295, in __getattr__
+    raise ModuleNotFoundError(
+ModuleNotFoundError: Could not import module 'AutoProcessor'. Are this object's requirements defined correctly?

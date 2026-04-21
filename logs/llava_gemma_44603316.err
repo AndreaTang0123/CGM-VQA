@@ -1,0 +1,12 @@
+WARNING: Ignoring invalid distribution ~orch (/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages)
+WARNING: Ignoring invalid distribution ~orch (/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages)
+WARNING: Ignoring invalid distribution ~orch (/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages)
+WARNING: Ignoring invalid distribution ~orch (/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages)
+WARNING: Ignoring invalid distribution ~orch (/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages)
+WARNING: Ignoring invalid distribution ~orch (/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages)
+WARNING: Ignoring invalid distribution ~orch (/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages)
+WARNING: Ignoring invalid distribution ~orch (/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages)
+WARNING: Ignoring invalid distribution ~orch (/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages)
+/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages/transformers/utils/hub.py:127: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:12<00:24, 12.41s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:23<00:11, 11.82s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:26<00:00,  7.83s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:26<00:00,  8.97s/it]

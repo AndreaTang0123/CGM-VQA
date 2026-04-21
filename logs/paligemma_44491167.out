@@ -1,0 +1,112 @@
+Job started: Sun Apr 19 11:17:33 PM EDT 2026
+Node: g0305.ll.unc.edu
+/work/users/t/x/txueying/hf_venv_latest/bin/python3
+Python 3.12.4
+Device: cuda
+Loading model: google/paligemma-3b-mix-448
+Model loaded (float16), device: cuda:0
+[001-001/100] S001..S001 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S002..S002 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S003..S003 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S004..S004 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S005..S005 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S006..S006 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S007..S007 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S008..S008 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S009..S009 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S010..S010 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S011..S011 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S012..S012 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S013..S013 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S014..S014 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S015..S015 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S016..S016 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S017..S017 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S018..S018 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S019..S019 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S020..S020 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S021..S021 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S022..S022 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S023..S023 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S024..S024 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S025..S025 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S026..S026 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S027..S027 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S028..S028 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S029..S029 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S030..S030 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S031..S031 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S032..S032 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S033..S033 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S034..S034 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S035..S035 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S036..S036 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S037..S037 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S038..S038 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S039..S039 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S040..S040 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S041..S041 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S042..S042 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S043..S043 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S044..S044 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S045..S045 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S046..S046 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S047..S047 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S048..S048 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S049..S049 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S050..S050 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S051..S051 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S052..S052 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S053..S053 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S054..S054 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S055..S055 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S056..S056 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S057..S057 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S058..S058 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S059..S059 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S060..S060 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S061..S061 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S062..S062 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S063..S063 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S064..S064 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S065..S065 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S066..S066 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S067..S067 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S068..S068 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S069..S069 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S070..S070 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S071..S071 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S072..S072 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S073..S073 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S074..S074 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S075..S075 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S076..S076 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S077..S077 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S078..S078 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S079..S079 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S080..S080 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S081..S081 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S082..S082 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S083..S083 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S084..S084 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S085..S085 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S086..S086 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S087..S087 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S088..S088 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S089..S089 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S090..S090 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S091..S091 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S092..S092 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S093..S093 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S094..S094 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S095..S095 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S096..S096 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S097..S097 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S098..S098 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S099..S099 ... ERROR: GET was unable to find an engine to execute this computation
+[001-001/100] S100..S100 ... ERROR: GET was unable to find an engine to execute this computation
+
+============================================================
+Done. 0 evaluated, 100 errors.
+Results: /nas/longleaf/home/txueying/CGM-VQA/results/paligemma_hf_results.json
+Job finished: Sun Apr 19 11:19:08 PM EDT 2026

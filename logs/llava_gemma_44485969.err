@@ -1,0 +1,30 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+You are using a model of type `llava_gemma` to instantiate a model of type ``. This may be expected if you are loading a checkpoint that shares a subset of the architecture (e.g., loading a `sam2_video` checkpoint into `Sam2Model`), but is otherwise not supported and can yield errors. Please verify that the checkpoint is compatible with the model you are instantiating.
+Invalid model-index. Not loading eval results into CardData.
+Traceback (most recent call last):
+  File "/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages/transformers/models/auto/configuration_auto.py", line 1514, in from_pretrained
+    config_class = CONFIG_MAPPING[config_dict["model_type"]]
+                   ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages/transformers/models/auto/configuration_auto.py", line 1214, in __getitem__
+    raise KeyError(key)
+KeyError: 'llava_gemma'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/nas/longleaf/home/txueying/CGM-VQA/scripts/eval/run_eval_llava_gemma_7b_hf.py", line 188, in <module>
+    run_evaluation(model_id=args.model, batch_size=args.batch_size)
+  File "/nas/longleaf/home/txueying/CGM-VQA/scripts/eval/run_eval_llava_gemma_7b_hf.py", line 128, in run_evaluation
+    model, processor = load_model(model_id)
+                       ^^^^^^^^^^^^^^^^^^^^
+  File "/nas/longleaf/home/txueying/CGM-VQA/scripts/eval/run_eval_llava_gemma_7b_hf.py", line 60, in load_model
+    model = AutoModelForCausalLM.from_pretrained(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages/transformers/models/auto/auto_factory.py", line 329, in from_pretrained
+    config, kwargs = AutoConfig.from_pretrained(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages/transformers/models/auto/configuration_auto.py", line 1516, in from_pretrained
+    raise ValueError(
+ValueError: The checkpoint you are trying to load has model type `llava_gemma` but Transformers does not recognize this architecture. This could be because of an issue with the checkpoint, or because your version of Transformers is out of date.
+
+You can update Transformers with the command `pip install --upgrade transformers`. If this does not work, and the checkpoint is very new, then there may not be a release version that supports this model yet. In this case, you can get the most up-to-date code by installing Transformers from source with the command `pip install git+https://github.com/huggingface/transformers.git`
