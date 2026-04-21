@@ -1,0 +1,11 @@
+Installing dependencies...
+Generating plots...
+Generated statistics/yes_no_accuracy_bar_chart.png
+Generated statistics/temporal_iou_bar_chart.png
+Generated statistics/latency_distribution_boxplot.png
+Generated statistics/mean_latency_bar_chart.png
+Plots generated successfully.
+-rw-r--r-- 1 txueying users 165130 Apr 20 22:38 statistics/latency_distribution_boxplot.png
+-rw-r--r-- 1 txueying users 215203 Apr 20 22:38 statistics/mean_latency_bar_chart.png
+-rw-r--r-- 1 txueying users 216219 Apr 20 22:38 statistics/temporal_iou_bar_chart.png
+-rw-r--r-- 1 txueying users 218993 Apr 20 22:38 statistics/yes_no_accuracy_bar_chart.png

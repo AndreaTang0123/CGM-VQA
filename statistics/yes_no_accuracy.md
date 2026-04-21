@@ -9,3 +9,4 @@
 | llava7b_hf | 28 | 50 | 56.00% |
 | matcha_hf | 16 | 50 | 32.00% |
 | gemma4e2b_hf | 14 | 50 | 28.00% |
+| llava_gemma_2b_hf | 14 | 50 | 28.00% |
