@@ -1209,3 +1209,318 @@ CUDA kernel errors might be asynchronously reported at some other API call, so t
 For debugging consider passing CUDA_LAUNCH_BLOCKING=1
 Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
 
+Traceback (most recent call last):
+  File "/nas/longleaf/home/txueying/CGM-VQA/scripts/eval/run_eval_paligemma_hf.py", line 142, in run_evaluation
+    answers = run_batch(model, processor, batch)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nas/longleaf/home/txueying/CGM-VQA/scripts/eval/run_eval_paligemma_hf.py", line 78, in run_batch
+    ).to(model.device, dtype=torch.bfloat16)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages/transformers/feature_extraction_utils.py", line 234, in to
+    new_data[k] = v.to(device=device)
+                  ^^^^^^^^^^^^^^^^^^^
+RuntimeError: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Traceback (most recent call last):
+  File "/nas/longleaf/home/txueying/CGM-VQA/scripts/eval/run_eval_paligemma_hf.py", line 142, in run_evaluation
+    answers = run_batch(model, processor, batch)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nas/longleaf/home/txueying/CGM-VQA/scripts/eval/run_eval_paligemma_hf.py", line 78, in run_batch
+    ).to(model.device, dtype=torch.bfloat16)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages/transformers/feature_extraction_utils.py", line 234, in to
+    new_data[k] = v.to(device=device)
+                  ^^^^^^^^^^^^^^^^^^^
+RuntimeError: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Traceback (most recent call last):
+  File "/nas/longleaf/home/txueying/CGM-VQA/scripts/eval/run_eval_paligemma_hf.py", line 142, in run_evaluation
+    answers = run_batch(model, processor, batch)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nas/longleaf/home/txueying/CGM-VQA/scripts/eval/run_eval_paligemma_hf.py", line 78, in run_batch
+    ).to(model.device, dtype=torch.bfloat16)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages/transformers/feature_extraction_utils.py", line 234, in to
+    new_data[k] = v.to(device=device)
+                  ^^^^^^^^^^^^^^^^^^^
+RuntimeError: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Traceback (most recent call last):
+  File "/nas/longleaf/home/txueying/CGM-VQA/scripts/eval/run_eval_paligemma_hf.py", line 142, in run_evaluation
+    answers = run_batch(model, processor, batch)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nas/longleaf/home/txueying/CGM-VQA/scripts/eval/run_eval_paligemma_hf.py", line 78, in run_batch
+    ).to(model.device, dtype=torch.bfloat16)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages/transformers/feature_extraction_utils.py", line 234, in to
+    new_data[k] = v.to(device=device)
+                  ^^^^^^^^^^^^^^^^^^^
+RuntimeError: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Traceback (most recent call last):
+  File "/nas/longleaf/home/txueying/CGM-VQA/scripts/eval/run_eval_paligemma_hf.py", line 142, in run_evaluation
+    answers = run_batch(model, processor, batch)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nas/longleaf/home/txueying/CGM-VQA/scripts/eval/run_eval_paligemma_hf.py", line 78, in run_batch
+    ).to(model.device, dtype=torch.bfloat16)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages/transformers/feature_extraction_utils.py", line 234, in to
+    new_data[k] = v.to(device=device)
+                  ^^^^^^^^^^^^^^^^^^^
+RuntimeError: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Traceback (most recent call last):
+  File "/nas/longleaf/home/txueying/CGM-VQA/scripts/eval/run_eval_paligemma_hf.py", line 142, in run_evaluation
+    answers = run_batch(model, processor, batch)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nas/longleaf/home/txueying/CGM-VQA/scripts/eval/run_eval_paligemma_hf.py", line 78, in run_batch
+    ).to(model.device, dtype=torch.bfloat16)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages/transformers/feature_extraction_utils.py", line 234, in to
+    new_data[k] = v.to(device=device)
+                  ^^^^^^^^^^^^^^^^^^^
+RuntimeError: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Traceback (most recent call last):
+  File "/nas/longleaf/home/txueying/CGM-VQA/scripts/eval/run_eval_paligemma_hf.py", line 142, in run_evaluation
+    answers = run_batch(model, processor, batch)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nas/longleaf/home/txueying/CGM-VQA/scripts/eval/run_eval_paligemma_hf.py", line 78, in run_batch
+    ).to(model.device, dtype=torch.bfloat16)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages/transformers/feature_extraction_utils.py", line 234, in to
+    new_data[k] = v.to(device=device)
+                  ^^^^^^^^^^^^^^^^^^^
+RuntimeError: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Traceback (most recent call last):
+  File "/nas/longleaf/home/txueying/CGM-VQA/scripts/eval/run_eval_paligemma_hf.py", line 142, in run_evaluation
+    answers = run_batch(model, processor, batch)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nas/longleaf/home/txueying/CGM-VQA/scripts/eval/run_eval_paligemma_hf.py", line 78, in run_batch
+    ).to(model.device, dtype=torch.bfloat16)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages/transformers/feature_extraction_utils.py", line 234, in to
+    new_data[k] = v.to(device=device)
+                  ^^^^^^^^^^^^^^^^^^^
+RuntimeError: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Traceback (most recent call last):
+  File "/nas/longleaf/home/txueying/CGM-VQA/scripts/eval/run_eval_paligemma_hf.py", line 142, in run_evaluation
+    answers = run_batch(model, processor, batch)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nas/longleaf/home/txueying/CGM-VQA/scripts/eval/run_eval_paligemma_hf.py", line 78, in run_batch
+    ).to(model.device, dtype=torch.bfloat16)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages/transformers/feature_extraction_utils.py", line 234, in to
+    new_data[k] = v.to(device=device)
+                  ^^^^^^^^^^^^^^^^^^^
+RuntimeError: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Traceback (most recent call last):
+  File "/nas/longleaf/home/txueying/CGM-VQA/scripts/eval/run_eval_paligemma_hf.py", line 142, in run_evaluation
+    answers = run_batch(model, processor, batch)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nas/longleaf/home/txueying/CGM-VQA/scripts/eval/run_eval_paligemma_hf.py", line 78, in run_batch
+    ).to(model.device, dtype=torch.bfloat16)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages/transformers/feature_extraction_utils.py", line 234, in to
+    new_data[k] = v.to(device=device)
+                  ^^^^^^^^^^^^^^^^^^^
+RuntimeError: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Traceback (most recent call last):
+  File "/nas/longleaf/home/txueying/CGM-VQA/scripts/eval/run_eval_paligemma_hf.py", line 142, in run_evaluation
+    answers = run_batch(model, processor, batch)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nas/longleaf/home/txueying/CGM-VQA/scripts/eval/run_eval_paligemma_hf.py", line 78, in run_batch
+    ).to(model.device, dtype=torch.bfloat16)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages/transformers/feature_extraction_utils.py", line 234, in to
+    new_data[k] = v.to(device=device)
+                  ^^^^^^^^^^^^^^^^^^^
+RuntimeError: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Traceback (most recent call last):
+  File "/nas/longleaf/home/txueying/CGM-VQA/scripts/eval/run_eval_paligemma_hf.py", line 142, in run_evaluation
+    answers = run_batch(model, processor, batch)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nas/longleaf/home/txueying/CGM-VQA/scripts/eval/run_eval_paligemma_hf.py", line 78, in run_batch
+    ).to(model.device, dtype=torch.bfloat16)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages/transformers/feature_extraction_utils.py", line 234, in to
+    new_data[k] = v.to(device=device)
+                  ^^^^^^^^^^^^^^^^^^^
+RuntimeError: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Traceback (most recent call last):
+  File "/nas/longleaf/home/txueying/CGM-VQA/scripts/eval/run_eval_paligemma_hf.py", line 142, in run_evaluation
+    answers = run_batch(model, processor, batch)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nas/longleaf/home/txueying/CGM-VQA/scripts/eval/run_eval_paligemma_hf.py", line 78, in run_batch
+    ).to(model.device, dtype=torch.bfloat16)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages/transformers/feature_extraction_utils.py", line 234, in to
+    new_data[k] = v.to(device=device)
+                  ^^^^^^^^^^^^^^^^^^^
+RuntimeError: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Traceback (most recent call last):
+  File "/nas/longleaf/home/txueying/CGM-VQA/scripts/eval/run_eval_paligemma_hf.py", line 142, in run_evaluation
+    answers = run_batch(model, processor, batch)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nas/longleaf/home/txueying/CGM-VQA/scripts/eval/run_eval_paligemma_hf.py", line 78, in run_batch
+    ).to(model.device, dtype=torch.bfloat16)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages/transformers/feature_extraction_utils.py", line 234, in to
+    new_data[k] = v.to(device=device)
+                  ^^^^^^^^^^^^^^^^^^^
+RuntimeError: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Traceback (most recent call last):
+  File "/nas/longleaf/home/txueying/CGM-VQA/scripts/eval/run_eval_paligemma_hf.py", line 142, in run_evaluation
+    answers = run_batch(model, processor, batch)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nas/longleaf/home/txueying/CGM-VQA/scripts/eval/run_eval_paligemma_hf.py", line 78, in run_batch
+    ).to(model.device, dtype=torch.bfloat16)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages/transformers/feature_extraction_utils.py", line 234, in to
+    new_data[k] = v.to(device=device)
+                  ^^^^^^^^^^^^^^^^^^^
+RuntimeError: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Traceback (most recent call last):
+  File "/nas/longleaf/home/txueying/CGM-VQA/scripts/eval/run_eval_paligemma_hf.py", line 142, in run_evaluation
+    answers = run_batch(model, processor, batch)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nas/longleaf/home/txueying/CGM-VQA/scripts/eval/run_eval_paligemma_hf.py", line 78, in run_batch
+    ).to(model.device, dtype=torch.bfloat16)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages/transformers/feature_extraction_utils.py", line 234, in to
+    new_data[k] = v.to(device=device)
+                  ^^^^^^^^^^^^^^^^^^^
+RuntimeError: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Traceback (most recent call last):
+  File "/nas/longleaf/home/txueying/CGM-VQA/scripts/eval/run_eval_paligemma_hf.py", line 142, in run_evaluation
+    answers = run_batch(model, processor, batch)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nas/longleaf/home/txueying/CGM-VQA/scripts/eval/run_eval_paligemma_hf.py", line 78, in run_batch
+    ).to(model.device, dtype=torch.bfloat16)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages/transformers/feature_extraction_utils.py", line 234, in to
+    new_data[k] = v.to(device=device)
+                  ^^^^^^^^^^^^^^^^^^^
+RuntimeError: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Traceback (most recent call last):
+  File "/nas/longleaf/home/txueying/CGM-VQA/scripts/eval/run_eval_paligemma_hf.py", line 142, in run_evaluation
+    answers = run_batch(model, processor, batch)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nas/longleaf/home/txueying/CGM-VQA/scripts/eval/run_eval_paligemma_hf.py", line 78, in run_batch
+    ).to(model.device, dtype=torch.bfloat16)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages/transformers/feature_extraction_utils.py", line 234, in to
+    new_data[k] = v.to(device=device)
+                  ^^^^^^^^^^^^^^^^^^^
+RuntimeError: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Traceback (most recent call last):
+  File "/nas/longleaf/home/txueying/CGM-VQA/scripts/eval/run_eval_paligemma_hf.py", line 142, in run_evaluation
+    answers = run_batch(model, processor, batch)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nas/longleaf/home/txueying/CGM-VQA/scripts/eval/run_eval_paligemma_hf.py", line 78, in run_batch
+    ).to(model.device, dtype=torch.bfloat16)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages/transformers/feature_extraction_utils.py", line 234, in to
+    new_data[k] = v.to(device=device)
+                  ^^^^^^^^^^^^^^^^^^^
+RuntimeError: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Traceback (most recent call last):
+  File "/nas/longleaf/home/txueying/CGM-VQA/scripts/eval/run_eval_paligemma_hf.py", line 142, in run_evaluation
+    answers = run_batch(model, processor, batch)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nas/longleaf/home/txueying/CGM-VQA/scripts/eval/run_eval_paligemma_hf.py", line 78, in run_batch
+    ).to(model.device, dtype=torch.bfloat16)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages/transformers/feature_extraction_utils.py", line 234, in to
+    new_data[k] = v.to(device=device)
+                  ^^^^^^^^^^^^^^^^^^^
+RuntimeError: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Traceback (most recent call last):
+  File "/nas/longleaf/home/txueying/CGM-VQA/scripts/eval/run_eval_paligemma_hf.py", line 142, in run_evaluation
+    answers = run_batch(model, processor, batch)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nas/longleaf/home/txueying/CGM-VQA/scripts/eval/run_eval_paligemma_hf.py", line 78, in run_batch
+    ).to(model.device, dtype=torch.bfloat16)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages/transformers/feature_extraction_utils.py", line 234, in to
+    new_data[k] = v.to(device=device)
+                  ^^^^^^^^^^^^^^^^^^^
+RuntimeError: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
