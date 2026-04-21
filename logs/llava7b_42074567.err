@@ -1,3 +1,0 @@
-Error: [Errno 13] Permission denied: '/scratch'
-/var/spool/slurmd/job42074567/slurm_script: line 30: /scratch/txueying/hf_venv/bin/activate: No such file or directory
-[2026-04-07T13:17:11.554] error: *** JOB 42074567 ON g0310 CANCELLED AT 2026-04-07T13:17:11 DUE to SIGNAL Terminated ***

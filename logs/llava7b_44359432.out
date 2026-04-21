@@ -1,7 +1,0 @@
-Job started: Sun Apr 19 11:19:57 AM EDT 2026
-Node: g0305.ll.unc.edu
-/work/users/t/x/txueying/hf_venv/bin/python3
-Python 3.12.4
-Device: cuda
-Loading model: llava-hf/llava-1.5-7b-hf
-Job finished: Sun Apr 19 11:20:06 AM EDT 2026

@@ -1,2 +1,0 @@
-/nas/longleaf/home/txueying/CGM-VQA/statistics/plot_charts.py:92: MatplotlibDeprecationWarning: The 'labels' parameter of boxplot() has been renamed 'tick_labels' since Matplotlib 3.9; support for the old name will be dropped in 3.11.
-  box = plt.boxplot(all_latencies, labels=model_names, vert=False, patch_artist=True,

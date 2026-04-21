@@ -1,50 +1,0 @@
-WARNING: Ignoring invalid distribution ~ransformers (/work/users/t/x/txueying/hf_venv/lib/python3.12/site-packages)
-WARNING: Ignoring invalid distribution ~ransformers (/work/users/t/x/txueying/hf_venv/lib/python3.12/site-packages)
-WARNING: Ignoring invalid distribution ~ransformers (/work/users/t/x/txueying/hf_venv/lib/python3.12/site-packages)
-WARNING: Ignoring invalid distribution ~ransformers (/work/users/t/x/txueying/hf_venv/lib/python3.12/site-packages)
-WARNING: Ignoring invalid distribution ~ransformers (/work/users/t/x/txueying/hf_venv/lib/python3.12/site-packages)
-WARNING: Ignoring invalid distribution ~ransformers (/work/users/t/x/txueying/hf_venv/lib/python3.12/site-packages)
-WARNING: Ignoring invalid distribution ~ransformers (/work/users/t/x/txueying/hf_venv/lib/python3.12/site-packages)
-WARNING: Ignoring invalid distribution ~ransformers (/work/users/t/x/txueying/hf_venv/lib/python3.12/site-packages)
-WARNING: Ignoring invalid distribution ~ransformers (/work/users/t/x/txueying/hf_venv/lib/python3.12/site-packages)
-/work/users/t/x/txueying/hf_venv/lib/python3.12/site-packages/transformers/utils/hub.py:124: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
-  warnings.warn(
-/work/users/t/x/txueying/hf_venv/lib/python3.12/site-packages/huggingface_hub/file_download.py:949: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
-  warnings.warn(
-A new version of the following files was downloaded from https://huggingface.co/OpenGVLab/InternVL2-8B:
-- configuration_internlm2.py
-. Make sure to double-check they do not contain any added malicious code. To avoid downloading new versions of the code file, you can pin a revision.
-A new version of the following files was downloaded from https://huggingface.co/OpenGVLab/InternVL2-8B:
-- configuration_intern_vit.py
-. Make sure to double-check they do not contain any added malicious code. To avoid downloading new versions of the code file, you can pin a revision.
-A new version of the following files was downloaded from https://huggingface.co/OpenGVLab/InternVL2-8B:
-- configuration_internvl_chat.py
-- configuration_internlm2.py
-- configuration_intern_vit.py
-. Make sure to double-check they do not contain any added malicious code. To avoid downloading new versions of the code file, you can pin a revision.
-A new version of the following files was downloaded from https://huggingface.co/OpenGVLab/InternVL2-8B:
-- modeling_intern_vit.py
-. Make sure to double-check they do not contain any added malicious code. To avoid downloading new versions of the code file, you can pin a revision.
-A new version of the following files was downloaded from https://huggingface.co/OpenGVLab/InternVL2-8B:
-- modeling_internlm2.py
-. Make sure to double-check they do not contain any added malicious code. To avoid downloading new versions of the code file, you can pin a revision.
-A new version of the following files was downloaded from https://huggingface.co/OpenGVLab/InternVL2-8B:
-- conversation.py
-. Make sure to double-check they do not contain any added malicious code. To avoid downloading new versions of the code file, you can pin a revision.
-A new version of the following files was downloaded from https://huggingface.co/OpenGVLab/InternVL2-8B:
-- modeling_internvl_chat.py
-- modeling_intern_vit.py
-- modeling_internlm2.py
-- conversation.py
-. Make sure to double-check they do not contain any added malicious code. To avoid downloading new versions of the code file, you can pin a revision.
-/work/users/t/x/txueying/hf_venv/lib/python3.12/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
-  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
-/work/users/t/x/txueying/hf_venv/lib/python3.12/site-packages/huggingface_hub/file_download.py:949: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
-  warnings.warn(
-Downloading shards:   0%|          | 0/4 [00:00<?, ?it/s]Downloading shards:  25%|██▌       | 1/4 [00:08<00:26,  8.98s/it]Downloading shards:  50%|█████     | 2/4 [00:17<00:16,  8.48s/it]Downloading shards:  75%|███████▌  | 3/4 [00:25<00:08,  8.32s/it]Downloading shards: 100%|██████████| 4/4 [00:29<00:00,  6.81s/it]Downloading shards: 100%|██████████| 4/4 [00:29<00:00,  7.44s/it]
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:09<00:27,  9.18s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:18<00:18,  9.37s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:25<00:08,  8.22s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:25<00:00,  5.07s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:25<00:00,  6.45s/it]
-Some parameters are on the meta device because they were offloaded to the cpu.
-A new version of the following files was downloaded from https://huggingface.co/OpenGVLab/InternVL2-8B:
-- tokenization_internlm2.py
-. Make sure to double-check they do not contain any added malicious code. To avoid downloading new versions of the code file, you can pin a revision.
-Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
