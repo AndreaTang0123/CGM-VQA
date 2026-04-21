@@ -1,16 +1,0 @@
-WARNING: Ignoring invalid distribution ~orch (/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages)
-WARNING: Ignoring invalid distribution ~orch (/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages)
-WARNING: Ignoring invalid distribution ~orch (/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages)
-WARNING: Ignoring invalid distribution ~orch (/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages)
-WARNING: Ignoring invalid distribution ~orch (/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages)
-WARNING: Ignoring invalid distribution ~orch (/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages)
-WARNING: Ignoring invalid distribution ~orch (/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages)
-WARNING: Ignoring invalid distribution ~orch (/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages)
-WARNING: Ignoring invalid distribution ~orch (/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages)
-/work/users/t/x/txueying/hf_venv_latest/lib/python3.12/site-packages/transformers/utils/hub.py:127: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
-  warnings.warn(
-`config.hidden_act` is ignored, you should use `config.hidden_activation` instead.
-Gemma's activation function will be set to `gelu_pytorch_tanh`. Please, use
-`config.hidden_activation` if you want to override this behaviour.
-See https://github.com/huggingface/transformers/pull/29402 for more details.
-Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:10<00:20, 10.48s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:20<00:10, 10.27s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:24<00:00,  7.16s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:24<00:00,  8.02s/it]

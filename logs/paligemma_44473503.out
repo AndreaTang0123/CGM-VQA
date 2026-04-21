@@ -1,7 +1,0 @@
-Job started: Sun Apr 19 10:39:33 PM EDT 2026
-Node: g0306.ll.unc.edu
-/work/users/t/x/txueying/hf_venv_latest/bin/python3
-Python 3.12.4
-Device: cuda
-Loading model: google/paligemma-3b-mix-448
-Job finished: Sun Apr 19 10:39:58 PM EDT 2026
