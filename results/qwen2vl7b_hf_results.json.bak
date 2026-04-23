@@ -39,7 +39,7 @@
     "task_type": "temporal",
     "question": "Identify the time interval where glucose declined after the largest insulin event.",
     "model": "Qwen/Qwen2-VL-7B-Instruct",
-    "model_answer": "16:04-16:10",
+    "model_answer": "16:04-16.10",
     "latency_s": 1.8,
     "timestamp": "2026-04-19T12:32:02"
   },
@@ -72,7 +72,7 @@
     "task_type": "temporal",
     "question": "Identify the time interval where glucose declined after the largest insulin event",
     "model": "Qwen/Qwen2-VL-7B-Instruct",
-    "model_answer": "16:04-16:10",
+    "model_answer": "16:04-16.10",
     "latency_s": 1.8,
     "timestamp": "2026-04-19T12:32:06"
   },
@@ -83,7 +83,7 @@
     "task_type": "temporal",
     "question": "When did the highest glucose value occur?",
     "model": "Qwen/Qwen2-VL-7B-Instruct",
-    "model_answer": "16:04-16:10",
+    "model_answer": "16:04-16.10",
     "latency_s": 1.8,
     "timestamp": "2026-04-19T12:32:08"
   },
@@ -160,7 +160,7 @@
     "task_type": "temporal",
     "question": "Locate the segment where glucose rose most rapidly.",
     "model": "Qwen/Qwen2-VL-7B-Instruct",
-    "model_answer": "16:01-16:30",
+    "model_answer": "16:01-16.30",
     "latency_s": 1.79,
     "timestamp": "2026-04-19T12:32:17"
   },
@@ -204,7 +204,7 @@
     "task_type": "temporal",
     "question": "Identify the period where glucose spike follows a meal marker.",
     "model": "Qwen/Qwen2-VL-7B-Instruct",
-    "model_answer": "16:04-16:10",
+    "model_answer": "16:04-16.10",
     "latency_s": 1.79,
     "timestamp": "2026-04-19T12:32:23"
   },
@@ -215,7 +215,7 @@
     "task_type": "temporal",
     "question": "When did the largest glucose value occur?",
     "model": "Qwen/Qwen2-VL-7B-Instruct",
-    "model_answer": "00:00 - 01:01",
+    "model_answer": "00.00 - 01.01",
     "latency_s": 1.86,
     "timestamp": "2026-04-19T12:32:25"
   },
@@ -248,7 +248,7 @@
     "task_type": "temporal",
     "question": "Locate the segment showing the largest upward trend.",
     "model": "Qwen/Qwen2-VL-7B-Instruct",
-    "model_answer": "04:06-04:15",
+    "model_answer": "04:06-04.15",
     "latency_s": 1.79,
     "timestamp": "2026-04-19T12:32:28"
   },
@@ -292,7 +292,7 @@
     "task_type": "temporal",
     "question": "Identify the glucose response period 30 minutes after the largest carbohydrate intake.",
     "model": "Qwen/Qwen2-VL-7B-Instruct",
-    "model_answer": "21:01-21:31",
+    "model_answer": "21:01-21.31",
     "latency_s": 1.79,
     "timestamp": "2026-04-19T12:32:34"
   },
@@ -303,7 +303,7 @@
     "task_type": "temporal",
     "question": "When did the largest glucose value occur?",
     "model": "Qwen/Qwen2-VL-7B-Instruct",
-    "model_answer": "21:04-21:16",
+    "model_answer": "21:04-21.16",
     "latency_s": 1.79,
     "timestamp": "2026-04-19T12:32:36"
   },
@@ -336,7 +336,7 @@
     "task_type": "temporal",
     "question": "When did the lowest glucose value occur?",
     "model": "Qwen/Qwen2-VL-7B-Instruct",
-    "model_answer": "04:05-04:15",
+    "model_answer": "04:05-04.15",
     "latency_s": 1.79,
     "timestamp": "2026-04-19T12:32:40"
   },
@@ -347,7 +347,7 @@
     "task_type": "temporal",
     "question": "When did the largest glucose value occur?",
     "model": "Qwen/Qwen2-VL-7B-Instruct",
-    "model_answer": "21:04-21:16",
+    "model_answer": "21:04-21.16",
     "latency_s": 1.79,
     "timestamp": "2026-04-19T12:32:41"
   },
@@ -380,7 +380,7 @@
     "task_type": "temporal",
     "question": "When did the highest glucose value occur?",
     "model": "Qwen/Qwen2-VL-7B-Instruct",
-    "model_answer": "16:01-16:45",
+    "model_answer": "16:01-16.45",
     "latency_s": 1.79,
     "timestamp": "2026-04-19T12:32:45"
   },
@@ -424,7 +424,7 @@
     "task_type": "temporal",
     "question": "Identify the longest time interval during 18:00\u201322:00 where glucose gradually decreased.",
     "model": "Qwen/Qwen2-VL-7B-Instruct",
-    "model_answer": "18:00 - 19:05",
+    "model_answer": "18.00 - 19.05",
     "latency_s": 2.04,
     "timestamp": "2026-04-19T12:32:51"
   },
@@ -435,7 +435,7 @@
     "task_type": "temporal",
     "question": "Identify the time when glucose first exceeded 180 mg/dL.",
     "model": "Qwen/Qwen2-VL-7B-Instruct",
-    "model_answer": "06:01-06:04",
+    "model_answer": "06:01-06.04",
     "latency_s": 1.78,
     "timestamp": "2026-04-19T12:32:53"
   },
@@ -468,7 +468,7 @@
     "task_type": "temporal",
     "question": "Identify the glucose response period 30 minutes after the largest carbohydrate intake.",
     "model": "Qwen/Qwen2-VL-7B-Instruct",
-    "model_answer": "16:04-16:34",
+    "model_answer": "16:04-16.34",
     "latency_s": 1.78,
     "timestamp": "2026-04-19T12:32:57"
   },
@@ -479,7 +479,7 @@
     "task_type": "temporal",
     "question": "Identify the longest time interval during 18:00\u201322:00 where glucose gradually decreased.",
     "model": "Qwen/Qwen2-VL-7B-Instruct",
-    "model_answer": "18:00 - 19:05",
+    "model_answer": "18.00 - 19.05",
     "latency_s": 1.86,
     "timestamp": "2026-04-19T12:32:59"
   },
@@ -512,7 +512,7 @@
     "task_type": "temporal",
     "question": "Identify the longest time interval where glucose remained above 180 mg/dL.",
     "model": "Qwen/Qwen2-VL-7B-Instruct",
-    "model_answer": "00:00 - 06:04",
+    "model_answer": "00.00 - 06.04",
     "latency_s": 1.86,
     "timestamp": "2026-04-19T12:33:03"
   },
@@ -556,7 +556,7 @@
     "task_type": "temporal",
     "question": "Identify the time when glucose first exceeded 180 mg/dL.",
     "model": "Qwen/Qwen2-VL-7B-Instruct",
-    "model_answer": "06:04-06:05",
+    "model_answer": "06:04-06.05",
     "latency_s": 1.78,
     "timestamp": "2026-04-19T12:33:08"
   },
@@ -567,7 +567,7 @@
     "task_type": "temporal",
     "question": "Locate the segment where glucose remained below 70 mg/dL.",
     "model": "Qwen/Qwen2-VL-7B-Instruct",
-    "model_answer": "00:00 - 06:04",
+    "model_answer": "00.00 - 06.04",
     "latency_s": 1.86,
     "timestamp": "2026-04-19T12:33:10"
   },
@@ -688,7 +688,7 @@
     "task_type": "temporal",
     "question": "Locate the segment showing the largest upward trend.",
     "model": "Qwen/Qwen2-VL-7B-Instruct",
-    "model_answer": "16:01-16:45",
+    "model_answer": "16:01-16.45",
     "latency_s": 1.79,
     "timestamp": "2026-04-19T12:33:25"
   },
@@ -699,7 +699,7 @@
     "task_type": "temporal",
     "question": "Locate the segment where glucose dropped after the largest insulin delivery.",
     "model": "Qwen/Qwen2-VL-7B-Instruct",
-    "model_answer": "16:04-16:10",
+    "model_answer": "16:04-16.10",
     "latency_s": 1.79,
     "timestamp": "2026-04-19T12:33:27"
   },
@@ -732,7 +732,7 @@
     "task_type": "temporal",
     "question": "Identify the time period where glucose dropped below 70 mg/dL.",
     "model": "Qwen/Qwen2-VL-7B-Instruct",
-    "model_answer": "16:04-16:15",
+    "model_answer": "16:04-16.15",
     "latency_s": 1.78,
     "timestamp": "2026-04-19T12:33:31"
   },
@@ -820,7 +820,7 @@
     "task_type": "temporal",
     "question": "When did the lowest glucose value occur?",
     "model": "Qwen/Qwen2-VL-7B-Instruct",
-    "model_answer": "04:04-04:16",
+    "model_answer": "04:04-04.16",
     "latency_s": 1.78,
     "timestamp": "2026-04-19T12:33:42"
   },
@@ -831,7 +831,7 @@
     "task_type": "temporal",
     "question": "Locate the time interval where glucose decreased the most within 30 minutes after an insulin event.",
     "model": "Qwen/Qwen2-VL-7B-Instruct",
-    "model_answer": "16:04-16:34",
+    "model_answer": "16:04-16.34",
     "latency_s": 1.78,
     "timestamp": "2026-04-19T12:33:44"
   },
@@ -875,7 +875,7 @@
     "task_type": "temporal",
     "question": "Identify the time interval where glucose declined after the largest insulin event",
     "model": "Qwen/Qwen2-VL-7B-Instruct",
-    "model_answer": "16:04-16:30",
+    "model_answer": "16:04-16.30",
     "latency_s": 1.78,
     "timestamp": "2026-04-19T12:33:50"
   },
@@ -908,7 +908,7 @@
     "task_type": "temporal",
     "question": "Identify the glucose response period 30 minutes after the largest carbohydrate intake.",
     "model": "Qwen/Qwen2-VL-7B-Instruct",
-    "model_answer": "16:05-16:35",
+    "model_answer": "16:05-16.35",
     "latency_s": 1.78,
     "timestamp": "2026-04-19T12:33:54"
   },
@@ -919,7 +919,7 @@
     "task_type": "temporal",
     "question": "Locate the segment where glucose dropped after the largest insulin delivery.",
     "model": "Qwen/Qwen2-VL-7B-Instruct",
-    "model_answer": "16:04-16:10",
+    "model_answer": "16:04-16.10",
     "latency_s": 1.78,
     "timestamp": "2026-04-19T12:33:55"
   },
@@ -963,7 +963,7 @@
     "task_type": "temporal",
     "question": "Locate the segment where glucose rose most rapidly.",
     "model": "Qwen/Qwen2-VL-7B-Instruct",
-    "model_answer": "21:06-21:45",
+    "model_answer": "21:06-21.45",
     "latency_s": 1.79,
     "timestamp": "2026-04-19T12:34:01"
   },
@@ -996,7 +996,7 @@
     "task_type": "temporal",
     "question": "Identify the period where glucose spike follows a meal marker.",
     "model": "Qwen/Qwen2-VL-7B-Instruct",
-    "model_answer": "16:04-16:14",
+    "model_answer": "16:04-16.14",
     "latency_s": 1.79,
     "timestamp": "2026-04-19T12:34:05"
   },
@@ -1007,7 +1007,7 @@
     "task_type": "temporal",
     "question": "Locate the segment showing the largest upward trend.",
     "model": "Qwen/Qwen2-VL-7B-Instruct",
-    "model_answer": "06:04-06:34",
+    "model_answer": "06:04-06.34",
     "latency_s": 1.79,
     "timestamp": "2026-04-19T12:34:07"
   },
@@ -1040,7 +1040,7 @@
     "task_type": "temporal",
     "question": "Locate the segment where glucose rose most rapidly.",
     "model": "Qwen/Qwen2-VL-7B-Instruct",
-    "model_answer": "06:01-06:30",
+    "model_answer": "06:01-06.30",
     "latency_s": 1.79,
     "timestamp": "2026-04-19T12:34:11"
   },
@@ -1084,7 +1084,7 @@
     "task_type": "temporal",
     "question": "Identify the time when the lowest glucose value occurred.",
     "model": "Qwen/Qwen2-VL-7B-Instruct",
-    "model_answer": "04:05-04:15",
+    "model_answer": "04:05-04.15",
     "latency_s": 1.79,
     "timestamp": "2026-04-19T12:34:17"
   },
@@ -1095,7 +1095,7 @@
     "task_type": "temporal",
     "question": "Locate the segment where glucose rose most rapidly.",
     "model": "Qwen/Qwen2-VL-7B-Instruct",
-    "model_answer": "16:01-16:30",
+    "model_answer": "16:01-16.30",
     "latency_s": 1.79,
     "timestamp": "2026-04-19T12:34:18"
   }

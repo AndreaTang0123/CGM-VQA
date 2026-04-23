@@ -921,7 +921,7 @@
         }
     },
     "internvl2_8b_hf": {
-        "mean_iou": 0.0345,
+        "mean_iou": 0.0383,
         "iou_acc": 0.02,
         "total_samples": 50,
         "per_sample_results": {
@@ -934,13 +934,13 @@
             "S004": {
                 "question": "Identify the time interval where glucose declined after the largest insulin event.",
                 "gt_interval": "11:20-14:30",
-                "pred_raw": "The largest insulin event occurred around 10:00-11:00. After this event, the glucose level declined sharply, reaching its lowest point around 11:00-12:00.",
-                "iou": 0.0
+                "pred_raw": "11:00-12:00",
+                "iou": 0.1905
             },
             "S007": {
                 "question": "Identify the time interval where glucose declined after the largest insulin event",
                 "gt_interval": "17:03-18:30",
-                "pred_raw": "The largest insulin event occurred around 10:00-11:00. After this event, the glucose level declined sharply, reaching its lowest point around 11:00-12:00.",
+                "pred_raw": "11:00-12:00",
                 "iou": 0.0
             },
             "S008": {
@@ -970,7 +970,7 @@
             "S016": {
                 "question": "Identify the longest time interval where glucose remained above 180 mg/dL.",
                 "gt_interval": "18:30-23:50",
-                "pred_raw": "Answer: 17:00-18:00",
+                "pred_raw": "17:00-18:00",
                 "iou": 0.0
             },
             "S019": {
@@ -1084,7 +1084,7 @@
             "S055": {
                 "question": "Locate the longest hyperglycemia period in the graph.",
                 "gt_interval": "19:00-21:30",
-                "pred_raw": "Answer: 23:00-23:59",
+                "pred_raw": "23:00-23:59",
                 "iou": 0.0
             },
             "S056": {
@@ -1144,7 +1144,7 @@
             "S075": {
                 "question": "When did the lowest glucose value occur?",
                 "gt_interval": "18:00-19:00",
-                "pred_raw": "6:46 AM",
+                "pred_raw": "6:46-6:46",
                 "iou": 0.0
             },
             "S076": {
@@ -1162,7 +1162,7 @@
             "S080": {
                 "question": "Identify the time interval where glucose declined after the largest insulin event",
                 "gt_interval": "18:00-19:20",
-                "pred_raw": "The time interval where glucose declined after the largest insulin event is 10:00-11:00.",
+                "pred_raw": "10:00-11:00",
                 "iou": 0.0
             },
             "S083": {
@@ -1174,7 +1174,7 @@
             "S084": {
                 "question": "Locate the segment where glucose dropped after the largest insulin delivery.",
                 "gt_interval": "19:10-19:40",
-                "pred_raw": "The largest insulin delivery is indicated by the peak in the \"Insulin Delivered\" line, which occurs around 18:00. The glucose level dropped sharply after this insulin delivery, reaching its lowest point around 19:00. Therefore, the time interval for the glucose drop after the largest insulin delivery is 18",
+                "pred_raw": "18:00-19:00",
                 "iou": 0.0
             },
             "S087": {
@@ -2149,7 +2149,7 @@
         }
     },
     "qwen2vl7b_hf": {
-        "mean_iou": 0.0548,
+        "mean_iou": 0.0653,
         "iou_acc": 0.04,
         "total_samples": 50,
         "per_sample_results": {
@@ -2162,19 +2162,19 @@
             "S004": {
                 "question": "Identify the time interval where glucose declined after the largest insulin event.",
                 "gt_interval": "11:20-14:30",
-                "pred_raw": "16:04-16.10",
+                "pred_raw": "16:04-16:10",
                 "iou": 0.0
             },
             "S007": {
                 "question": "Identify the time interval where glucose declined after the largest insulin event",
                 "gt_interval": "17:03-18:30",
-                "pred_raw": "16:04-16.10",
+                "pred_raw": "16:04-16:10",
                 "iou": 0.0
             },
             "S008": {
                 "question": "When did the highest glucose value occur?",
                 "gt_interval": "11:00-12:00",
-                "pred_raw": "16:04-16.10",
+                "pred_raw": "16:04-16:10",
                 "iou": 0.0
             },
             "S011": {
@@ -2192,7 +2192,7 @@
             "S015": {
                 "question": "Locate the segment where glucose rose most rapidly.",
                 "gt_interval": "11:30-12:00",
-                "pred_raw": "16:01-16.30",
+                "pred_raw": "16:01-16:30",
                 "iou": 0.0
             },
             "S016": {
@@ -2204,19 +2204,19 @@
             "S019": {
                 "question": "Identify the period where glucose spike follows a meal marker.",
                 "gt_interval": "11:00-12:30",
-                "pred_raw": "16:04-16.10",
+                "pred_raw": "16:04-16:10",
                 "iou": 0.0
             },
             "S020": {
                 "question": "When did the largest glucose value occur?",
                 "gt_interval": "12:00-13:00",
-                "pred_raw": "00.00 - 01.01",
+                "pred_raw": "00:00 - 01:01",
                 "iou": 0.0
             },
             "S023": {
                 "question": "Locate the segment showing the largest upward trend.",
                 "gt_interval": "16:20-16:50",
-                "pred_raw": "04:06-04.15",
+                "pred_raw": "04:06-04:15",
                 "iou": 0.0
             },
             "S024": {
@@ -2228,31 +2228,31 @@
             "S027": {
                 "question": "Identify the glucose response period 30 minutes after the largest carbohydrate intake.",
                 "gt_interval": "13:50-14:20",
-                "pred_raw": "21:01-21.31",
+                "pred_raw": "21:01-21:31",
                 "iou": 0.0
             },
             "S028": {
                 "question": "When did the largest glucose value occur?",
                 "gt_interval": "18:00-18:30",
-                "pred_raw": "21:04-21.16",
+                "pred_raw": "21:04-21:16",
                 "iou": 0.0
             },
             "S031": {
                 "question": "When did the lowest glucose value occur?",
                 "gt_interval": "12:00-13:00",
-                "pred_raw": "04:05-04.15",
+                "pred_raw": "04:05-04:15",
                 "iou": 0.0
             },
             "S032": {
                 "question": "When did the largest glucose value occur?",
                 "gt_interval": "16:30-17:30",
-                "pred_raw": "21:04-21.16",
+                "pred_raw": "21:04-21:16",
                 "iou": 0.0
             },
             "S035": {
                 "question": "When did the highest glucose value occur?",
                 "gt_interval": "15:00-16:00",
-                "pred_raw": "16:01-16.45",
+                "pred_raw": "16:01-16:45",
                 "iou": 0.0
             },
             "S036": {
@@ -2264,31 +2264,31 @@
             "S039": {
                 "question": "Identify the longest time interval during 18:00\u201322:00 where glucose gradually decreased.",
                 "gt_interval": "20:30-21:30",
-                "pred_raw": "18.00 - 19.05",
+                "pred_raw": "18:00 - 19:05",
                 "iou": 0.0
             },
             "S040": {
                 "question": "Identify the time when glucose first exceeded 180 mg/dL.",
                 "gt_interval": "11:30-12:00",
-                "pred_raw": "06:01-06.04",
+                "pred_raw": "06:01-06:04",
                 "iou": 0.0
             },
             "S043": {
                 "question": "Identify the glucose response period 30 minutes after the largest carbohydrate intake.",
                 "gt_interval": "8:10-8:40",
-                "pred_raw": "16:04-16.34",
+                "pred_raw": "16:04-16:34",
                 "iou": 0.0
             },
             "S044": {
                 "question": "Identify the longest time interval during 18:00\u201322:00 where glucose gradually decreased.",
                 "gt_interval": "20:50-21:20",
-                "pred_raw": "18.00 - 19.05",
+                "pred_raw": "18:00 - 19:05",
                 "iou": 0.0
             },
             "S047": {
                 "question": "Identify the longest time interval where glucose remained above 180 mg/dL.",
                 "gt_interval": "17:30-20:30",
-                "pred_raw": "00.00 - 06.04",
+                "pred_raw": "00:00 - 06:04",
                 "iou": 0.0
             },
             "S048": {
@@ -2300,14 +2300,14 @@
             "S051": {
                 "question": "Identify the time when glucose first exceeded 180 mg/dL.",
                 "gt_interval": "09:00-09:30",
-                "pred_raw": "06:04-06.05",
+                "pred_raw": "06:04-06:05",
                 "iou": 0.0
             },
             "S052": {
                 "question": "Locate the segment where glucose remained below 70 mg/dL.",
                 "gt_interval": "02:00-03:30",
-                "pred_raw": "00.00 - 06.04",
-                "iou": 0.0
+                "pred_raw": "00:00 - 06:04",
+                "iou": 0.2473
             },
             "S055": {
                 "question": "Locate the longest hyperglycemia period in the graph.",
@@ -2336,19 +2336,19 @@
             "S063": {
                 "question": "Locate the segment showing the largest upward trend.",
                 "gt_interval": "10:00-11:00",
-                "pred_raw": "16:01-16.45",
+                "pred_raw": "16:01-16:45",
                 "iou": 0.0
             },
             "S064": {
                 "question": "Locate the segment where glucose dropped after the largest insulin delivery.",
                 "gt_interval": "17:00-18:00",
-                "pred_raw": "16:04-16.10",
+                "pred_raw": "16:04-16:10",
                 "iou": 0.0
             },
             "S067": {
                 "question": "Identify the time period where glucose dropped below 70 mg/dL.",
                 "gt_interval": "15:20-15:50",
-                "pred_raw": "16:04-16.15",
+                "pred_raw": "16:04-16:15",
                 "iou": 0.0
             },
             "S068": {
@@ -2372,13 +2372,13 @@
             "S075": {
                 "question": "When did the lowest glucose value occur?",
                 "gt_interval": "18:00-19:00",
-                "pred_raw": "04:04-04.16",
+                "pred_raw": "04:04-04:16",
                 "iou": 0.0
             },
             "S076": {
                 "question": "Locate the time interval where glucose decreased the most within 30 minutes after an insulin event.",
                 "gt_interval": "17:00-18:00",
-                "pred_raw": "16:04-16.34",
+                "pred_raw": "16:04-16:34",
                 "iou": 0.0
             },
             "S079": {
@@ -2390,19 +2390,19 @@
             "S080": {
                 "question": "Identify the time interval where glucose declined after the largest insulin event",
                 "gt_interval": "18:00-19:20",
-                "pred_raw": "16:04-16.30",
+                "pred_raw": "16:04-16:30",
                 "iou": 0.0
             },
             "S083": {
                 "question": "Identify the glucose response period 30 minutes after the largest carbohydrate intake.",
                 "gt_interval": "18:00-18:30",
-                "pred_raw": "16:05-16.35",
+                "pred_raw": "16:05-16:35",
                 "iou": 0.0
             },
             "S084": {
                 "question": "Locate the segment where glucose dropped after the largest insulin delivery.",
                 "gt_interval": "19:10-19:40",
-                "pred_raw": "16:04-16.10",
+                "pred_raw": "16:04-16:10",
                 "iou": 0.0
             },
             "S087": {
@@ -2414,25 +2414,25 @@
             "S088": {
                 "question": "Locate the segment where glucose rose most rapidly.",
                 "gt_interval": "21:30-22:00",
-                "pred_raw": "21:06-21.45",
-                "iou": 0.0
+                "pred_raw": "21:06-21:45",
+                "iou": 0.2778
             },
             "S091": {
                 "question": "Identify the period where glucose spike follows a meal marker.",
                 "gt_interval": "18:00-18:30",
-                "pred_raw": "16:04-16.14",
+                "pred_raw": "16:04-16:14",
                 "iou": 0.0
             },
             "S092": {
                 "question": "Locate the segment showing the largest upward trend.",
                 "gt_interval": "20:50-21:10",
-                "pred_raw": "06:04-06.34",
+                "pred_raw": "06:04-06:34",
                 "iou": 0.0
             },
             "S095": {
                 "question": "Locate the segment where glucose rose most rapidly.",
                 "gt_interval": "11:00-11:10",
-                "pred_raw": "06:01-06.30",
+                "pred_raw": "06:01-06:30",
                 "iou": 0.0
             },
             "S096": {
@@ -2444,13 +2444,13 @@
             "S099": {
                 "question": "Identify the time when the lowest glucose value occurred.",
                 "gt_interval": "14:00-14:00",
-                "pred_raw": "04:05-04.15",
+                "pred_raw": "04:05-04:15",
                 "iou": 0.0
             },
             "S100": {
                 "question": "Locate the segment where glucose rose most rapidly.",
                 "gt_interval": "11:50-12:10",
-                "pred_raw": "16:01-16.30",
+                "pred_raw": "16:01-16:30",
                 "iou": 0.0
             }
         }

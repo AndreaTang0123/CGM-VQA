@@ -1,0 +1,50 @@
+{
+    "chartqa_hf": {
+        "invalid_format": 9,
+        "partial_format": 41,
+        "wrong_structure": 0,
+        "parsing_failure": 0
+    },
+    "gemma4e2b_hf": {
+        "invalid_format": 0,
+        "partial_format": 0,
+        "wrong_structure": 0,
+        "parsing_failure": 0
+    },
+    "internvl2_4b_hf": {
+        "invalid_format": 0,
+        "partial_format": 0,
+        "wrong_structure": 1,
+        "parsing_failure": 0
+    },
+    "internvl2_8b_hf": {
+        "invalid_format": 1,
+        "partial_format": 3,
+        "wrong_structure": 1,
+        "parsing_failure": 0
+    },
+    "llava7b_hf": {
+        "invalid_format": 0,
+        "partial_format": 0,
+        "wrong_structure": 0,
+        "parsing_failure": 0
+    },
+    "llava_gemma_2b_hf": {
+        "invalid_format": 0,
+        "partial_format": 0,
+        "wrong_structure": 0,
+        "parsing_failure": 0
+    },
+    "matcha_hf": {
+        "invalid_format": 6,
+        "partial_format": 44,
+        "wrong_structure": 0,
+        "parsing_failure": 0
+    },
+    "qwen2vl7b_hf": {
+        "invalid_format": 1,
+        "partial_format": 0,
+        "wrong_structure": 0,
+        "parsing_failure": 0
+    }
+}
